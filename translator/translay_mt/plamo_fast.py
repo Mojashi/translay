@@ -86,6 +86,11 @@ class Segment:
     tokens: list[int]
     caches: list[Any]
     logits_from: int
+    # Optional: a token to keep at each predicted position (-1 = none) as long as its logit is
+    # within `keep_within` of the best one. Lets a caller hold on to a previous choice that is
+    # still about as good, instead of flipping between near-ties.
+    keep: list[int] | None = None
+    keep_within: float = 0.0
 
 
 def packed_forward(model: Any, segments: list[Segment]) -> list[list[int]]:
@@ -96,7 +101,8 @@ def packed_forward(model: Any, segments: list[Segment]) -> list[list[int]]:
     per language (decode is bandwidth-bound). Only attention is split per segment, each against its
     own cache and RoPE offset. No padding, and each segment's cache stays separately rewindable.
 
-    Returns the greedy prediction for every position >= logits_from of each segment.
+    Returns the prediction for every position >= logits_from of each segment: the likeliest
+    token, or the segment's `keep` token there when that is within `keep_within` of the likeliest.
     """
     inner = model.model
     decoder = inner.layers
@@ -144,7 +150,20 @@ def packed_forward(model: Any, segments: list[Segment]) -> list[list[int]]:
 
     wanted = [h[:, a + s.logits_from:b] for s, (a, b) in zip(segments, bounds)]
     picked = wanted[0] if len(wanted) == 1 else mx.concatenate(wanted, axis=1)
-    preds = np.array(mx.argmax(model.lm_head(picked), axis=-1)[0]).tolist()
+    logits = model.lm_head(picked)
+    best = mx.argmax(logits, axis=-1)
+    if any(s.keep is not None for s in segments):
+        keep, within = [], []
+        for s, n in zip(segments, lengths):
+            k = n - s.logits_from
+            keep += (s.keep if s.keep is not None else [-1] * k)
+            within += [s.keep_within if s.keep is not None else 0.0] * k
+        assert len(keep) == best.shape[1], "one keep entry per predicted position"
+        kept = mx.array(keep)[None]
+        kept_logit = mx.take_along_axis(logits, mx.maximum(kept, 0)[..., None], axis=-1)[..., 0]
+        close = (kept >= 0) & (logits.max(axis=-1) - kept_logit <= mx.array(within)[None].astype(logits.dtype))
+        best = mx.where(close, kept, best)
+    preds = np.array(best[0]).tolist()
     result, i = [], 0
     for s, n in zip(segments, lengths):
         k = n - s.logits_from

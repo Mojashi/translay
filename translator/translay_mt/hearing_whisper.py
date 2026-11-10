@@ -5,8 +5,8 @@ Whisper large-v3-turbo on MLX, in the whisper_streaming manner but tighter:
   * BUFFER. Only audio since the last committed segment is recognised (≤ 30 s, Whisper's window).
   * SEGMENTS WITH TIMES. Decoding keeps Whisper's timestamp tokens, so each pass yields segments
     with start/end times inside the buffer. A closed segment that came out identically in two
-    consecutive passes and ends clear of the buffer's edge is committed — and its audio is cut
-    away. Nothing committed is ever recognised again, and there are no block seams to stitch.
+    consecutive passes is committed — and its audio cut away — once the next words are heard after
+    it or it ends clear of the buffer's edge. Nothing committed is ever recognised again, and there are no block seams to stitch.
   * ONE SENTENCE, ONE SEGMENT. Whisper is made to close the segment at every sentence end
     (SentenceEndsCloseSegment), and between words once a segment has run long without one
     (LongSegmentsCloseBetweenWords); otherwise it may write the whole window as a single segment
@@ -21,7 +21,7 @@ Whisper large-v3-turbo on MLX, in the whisper_streaming manner but tighter:
   * SILENCE. Passes over audio with no speech energy are skipped, and segments whose audio is
     silent are dropped — Whisper invents "Thank you." from silence otherwise.
 
-Spec in one line: 「確定していない音だけを聞き直し、2回続けて同じだった区間は確定して音ごと手放す」.
+Spec in one line: 「確定していない音だけを聞き直し、2回続けて同じだった区間は、次の言葉が聞こえたら確定して音ごと手放す」.
 """
 from __future__ import annotations
 
@@ -47,6 +47,7 @@ FORCE_COMMIT_AT = 24.0       # buffer length at which closed segments are commit
 KEEP_AFTER_OVERFLOW = 8.0    # when nothing can be committed at that length: keep only this much audio
 MAX_TOKENS = 200
 PROMPT_TOKENS = 160
+WORDS_AFTER_TO_COMMIT = 3    # tokens heard after a closed segment: it need not clear the edge to be committed
 SILENCE_CLOSES = 2.0         # this long without a voice: open segments count as closed
 SPEECH_RMS = 0.008           # frame RMS above which a 30 ms frame counts as speech
 
@@ -494,7 +495,13 @@ class WhisperListener:
             closed = fell_silent or (seg.end is not None and seg.end <= buffer_sec - COMMIT_MARGIN)
             same = i < len(self.previous) and self.previous[i].end is not None and \
                 _norm(self._text(self.previous[i].tokens)) == _norm(self._text(seg.tokens))
-            if closed and (same or force):
+            # 次の言葉がもう聞こえている: the speaker has moved on, so this segment is over and need
+            # not also clear the edge. It must still have come out the same twice — committing on
+            # first hearing was measured to keep Whisper's first guesses ("What? It's a
+            # good-friendly meal." for "This is a budget-friendly meal.").
+            moved_on = seg.end is not None and \
+                sum(len(s.tokens) for s in segments[i + 1:]) >= WORDS_AFTER_TO_COMMIT
+            if (closed or moved_on) and (same or force):
                 agreed = i + 1
             else:
                 break

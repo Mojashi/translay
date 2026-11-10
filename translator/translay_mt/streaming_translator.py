@@ -10,6 +10,8 @@ away between revisions:
   * The previous translation of the current sentence is a draft. It is verified in the same
     forward pass that prefills the changed source tail; accepted tokens cost no sequential steps.
     After a divergence, the draft is re-aligned on the last generated n-gram and retried.
+  * The draft can be sticky (draft_stickiness): a draft token stays as long as it is nearly as
+    likely as the best one, so the wording does not flicker between near-ties.
   * Several target languages are revised together: each forward pass packs every language's
     tokens into one sequence (see plamo_fast.packed_forward), so the weights are read once.
 
@@ -58,11 +60,16 @@ class KVTape:
         return n
 
     @staticmethod
-    def feed_together(requests: list[tuple[KVTape, list[int], int]]) -> list[list[int]]:
-        """Append tokens to several tapes in one packed forward pass; return, per tape, the greedy
-        predictions for its positions >= logits_from."""
+    def feed_together(requests: list[tuple[KVTape, list[int], int]],
+                      keeps: list[tuple[list[int], float] | None] | None = None) -> list[list[int]]:
+        """Append tokens to several tapes in one packed forward pass; return, per tape, the
+        predictions for its positions >= logits_from. `keeps`, per tape: tokens to keep at those
+        positions while they are within a logit margin of the likeliest (see plamo_fast.Segment)."""
         model = requests[0][0].model
-        preds = packed_forward(model, [Segment(tokens, tape.cache, lf) for tape, tokens, lf in requests])
+        each: list[tuple[list[int], float] | None] = keeps if keeps is not None else [None] * len(requests)
+        preds = packed_forward(model, [
+            Segment(tokens, tape.cache, lf) if k is None else Segment(tokens, tape.cache, lf, k[0], k[1])
+            for (tape, tokens, lf), k in zip(requests, each)])
         for tape, tokens, _ in requests:
             tape.tokens.extend(tokens)
         return preds
@@ -115,6 +122,14 @@ class Decoding:
         self.feed = new + self.proposal
         self.logits_from = len(new) - 1
 
+    @property
+    def keep(self) -> tuple[list[int], float] | None:
+        """下書きの語は、最有力と僅差なら残す: one entry per predicted position (the last position
+        follows the whole proposal and is free)."""
+        if not self.proposal or self.translator.draft_stickiness <= 0:
+            return None
+        return self.proposal + [-1], self.translator.draft_stickiness
+
     def absorb(self, preds: list[int]) -> None:
         stats = self.stats
         stats.forward_passes += 1
@@ -147,6 +162,10 @@ class StreamingTranslator:
     tokenizer: TokenizerWrapper
     target_lang: str = "ja"
     use_draft: bool = True
+    # Logit margin within which the previous translation's token is kept although another is now
+    # likelier. 0 = exact greedy. Above 0 the caption does not flip between equally good wordings
+    # each time a word is added.
+    draft_stickiness: float = 0.0
     realign_ngram: int = 2
     realign_span: int = 12
     max_new: int = 200
@@ -256,7 +275,7 @@ def revise_together(translators: list[StreamingTranslator], source_so_far: str) 
     decodings = [tr.begin(source_so_far) for tr in translators]
     active = list(decodings)
     while active:
-        preds = KVTape.feed_together([(d.tape, d.feed, d.logits_from) for d in active])
+        preds = KVTape.feed_together([(d.tape, d.feed, d.logits_from) for d in active], [d.keep for d in active])
         for d, p in zip(active, preds):
             d.absorb(p)
         active = [d for d in active if not d.done]

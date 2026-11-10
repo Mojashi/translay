@@ -14,6 +14,13 @@ TARGET_LANGUAGES = frozenset(
     "ml mr ms my ne nl pa pl ru si sk sl sr sw ta te th tl ur uz vi".split())
 
 
+# A word of the previous draft is kept unless another is likelier by more than this logit margin.
+# Measured with bench/mt_stability.py (0.8B, word-by-word speech): characters rewritten per revision
+# 10.5 → 5.6, and the final translation's jump away from the last draft 14.4 → 11.8, with chrF++ of
+# the finals unchanged (26.5 → 26.9) when the final is sticky too.
+DRAFT_STICKINESS = 2.0
+
+
 def log(s: str) -> None:
     sys.stderr.write(f"translay: {s}\n")
     sys.stderr.flush()
@@ -38,10 +45,11 @@ class Interpreters:
         if unknown:
             raise ValueError(f"PLaMo 3 does not translate into {unknown}; it knows {sorted(TARGET_LANGUAGES)}")
         self.translators = {lang: self.translators.get(lang) or
-                            StreamingTranslator(self.model, self.tokenizer, target_lang=lang) for lang in targets}
+                            StreamingTranslator(self.model, self.tokenizer, target_lang=lang,
+                                                draft_stickiness=DRAFT_STICKINESS) for lang in targets}
 
     def revise(self, text: str, source_lang: str | None) -> dict[str, str]:
-        """話し途中の文を訳し直す"""
+        """話し途中の文を訳し直す（前回の訳の言い回しは、僅差なら変えない）"""
         same = {lang for lang in self.translators if lang.split("-")[0] == source_lang}    # zh-hans is zh
         active = {lang: tr for lang, tr in self.translators.items() if lang not in same}
         texts = {lang: text for lang in same}
@@ -59,7 +67,7 @@ class Interpreters:
 
     def finish(self, text: str, source_lang: str | None) -> dict[str, str]:
         """言い終えた文を確定訳し、履歴に積む"""
-        texts = self.revise(text, source_lang)
+        texts = self.revise(text, source_lang)      # same stickiness: the final does not jump away from the draft
         for tr in self.translators.values():
             tr.commit()            # a no-op for translators that skipped this sentence
         return texts
