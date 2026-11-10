@@ -1,0 +1,371 @@
+[17:25:45.193] [INFO] [FluidAudio.DownloadUtils] Host environment: macOS Version 15.2 (Build 24C101), arch=arm64, chip=Apple M4 Pro, cores=14/14, mem=24 GB, rosetta=false
+[17:25:45.196] [INFO] [FluidAudio.DownloadUtils] Found nemotron-streaming/560ms locally, no download needed
+[17:25:45.196] [INFO] [FluidAudio.NemotronStreaming] Loading Nemotron CoreML models from /Users/mojashi/.cache/fluidaudio/models/nemotron-streaming/560ms...
+[17:25:45.196] [INFO] [FluidAudio.NemotronStreaming] Loaded config: 560ms chunks, 56 mel frames
+[transformers] You are using a model of type `plamo3` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+[17:26:12.159] [INFO] [FluidAudio.NemotronStreaming] Loaded fused decoder_joint (B1) — merged inner-loop path enabled
+models ready in 27020 ms
+[17:26:12.204] [INFO] [FluidAudio.NemotronStreaming] Nemotron models loaded successfully (560ms chunks).
+translator: revise es  313.6ms fed=18 steps=5 draft=0/0 | 'Okay, the next'
+translator: revise ja   44.2ms fed=18 steps=2 draft=0/0 | 'Okay, the next'
+translator: revise es   38.3ms fed=9 steps=3 draft=5/5 | 'Okay, the next video will'
+translator: revise ja   38.2ms fed=9 steps=3 draft=1/2 | 'Okay, the next video will'
+translator: revise es   78.0ms fed=8 steps=8 draft=4/8 | 'Okay, the next video will get'
+translator: revise ja   13.9ms fed=8 steps=0 draft=4/4 | 'Okay, the next video will get'
+translator: revise es   60.7ms fed=9 steps=5 draft=9/12 | 'Okay, the next video will get roofing'
+translator: revise ja   44.9ms fed=9 steps=5 draft=4/4 | 'Okay, the next video will get roofing'
+translator: revise es   97.6ms fed=8 steps=9 draft=9/16 | ' next video will get roofing contractors'
+translator: revise ja   84.0ms fed=8 steps=7 draft=3/11 | ' next video will get roofing contractors'
+translator: revise es  141.2ms fed=10 steps=14 draft=8/35 | 'o will get roofing contractors mad at me'
+translator: revise ja   56.7ms fed=10 steps=6 draft=6/11 | 'o will get roofing contractors mad at me'
+translator: revise es   65.7ms fed=9 steps=6 draft=24/24 | "fing contractors mad at me, but it's not"
+translator: revise ja   85.7ms fed=9 steps=9 draft=4/23 | "fing contractors mad at me, but it's not"
+translator: revise es   51.0ms fed=9 steps=3 draft=28/30 | "ractors mad at me, but it's not for them"
+translator: revise ja   34.1ms fed=9 steps=5 draft=12/15 | "ractors mad at me, but it's not for them"
+translator: revise es   49.8ms fed=9 steps=2 draft=30/33 | "ad at me, but it's not for them it's for"
+translator: revise ja   79.2ms fed=9 steps=10 draft=4/40 | "ad at me, but it's not for them it's for"
+translator: revise es   30.6ms fed=8 steps=2 draft=33/33 | "t me, but it's not for them it's for you"
+translator: revise ja   58.2ms fed=8 steps=8 draft=9/21 | "t me, but it's not for them it's for you"
+translator: revise es   98.5ms fed=8 steps=7 draft=26/68 | " me, but it's not for them it's for you."
+translator: revise ja   63.3ms fed=8 steps=11 draft=6/21 | " me, but it's not for them it's for you."
+[#1] EN: Okay, the next video will get roofing contractors mad at me, but it's not for them it's for you.   (sentence→final 162 ms)
+[#1] ES: Bien, el próximo video hará que los contratistas de techos se enojen de mí, pero no es para ellos, es para ti.
+[#1] JA: よし、次の動画では屋根工事業者にブチギレるけど、それは業者向けじゃなくてお前向けだ。
+translator: settle es    4.2ms prefilled=1 history=1
+translator: settle ja    4.3ms prefilled=1 history=1
+translator: revise es   26.1ms fed=12 steps=4 draft=0/0 | 'If you are that'
+translator: revise ja   26.0ms fed=12 steps=4 draft=0/0 | 'If you are that'
+translator: revise es   25.0ms fed=9 steps=3 draft=3/4 | 'If you are that person that'
+translator: revise ja   29.4ms fed=9 steps=4 draft=0/4 | 'If you are that person that'
+translator: revise es   63.1ms fed=9 steps=6 draft=5/6 | 'f you are that person that cannot afford'
+translator: revise ja   56.5ms fed=9 steps=9 draft=0/4 | 'f you are that person that cannot afford'
+translator: revise es   60.7ms fed=9 steps=5 draft=8/11 | 'are that person that cannot afford a roo'
+translator: revise ja   97.4ms fed=9 steps=9 draft=1/10 | 'are that person that cannot afford a roo'
+translator: revise es   49.9ms fed=10 steps=4 draft=11/13 | 'on that cannot afford a roofing contract'
+translator: revise ja   56.9ms fed=10 steps=8 draft=1/12 | 'on that cannot afford a roofing contract'
+translator: revise es   48.6ms fed=8 steps=5 draft=11/15 | ' that cannot afford a roofing contractor'
+translator: revise ja   80.8ms fed=8 steps=9 draft=3/11 | ' that cannot afford a roofing contractor'
+translator: revise es   49.6ms fed=9 steps=4 draft=16/16 | 'd a roofing contractor, then you have to'
+translator: revise ja   67.3ms fed=9 steps=9 draft=7/24 | 'd a roofing contractor, then you have to'
+translator: revise es   43.9ms fed=11 steps=4 draft=20/20 | 'actor, then you have to watch this video'
+translator: revise ja   76.9ms fed=11 steps=7 draft=7/29 | 'actor, then you have to watch this video'
+translator: revise es   40.0ms fed=8 steps=0 draft=24/24 | 'ctor, then you have to watch this video.'
+translator: revise ja   25.3ms fed=8 steps=2 draft=13/15 | 'ctor, then you have to watch this video.'
+[#2] EN: If you are that person that cannot afford a roofing contractor, then you have to watch this video.   (sentence→final 65 ms)
+[#2] ES: Si eres esa persona que no puede permitirse un contratista de techos, entonces tienes que ver este video.
+[#2] JA: 屋根工事業者を雇う余裕がないっていうタイプなら、この動画を見ておけ。
+translator: settle es    4.8ms prefilled=1 history=2
+translator: settle ja    4.9ms prefilled=1 history=2
+translator: revise es   33.3ms fed=12 steps=5 draft=0/0 | 'This will show'
+translator: revise ja   23.3ms fed=12 steps=3 draft=0/0 | 'This will show'
+translator: revise es   45.1ms fed=9 steps=4 draft=3/6 | 'This will show you how'
+translator: revise ja   32.6ms fed=9 steps=3 draft=1/3 | 'This will show you how'
+translator: revise es   44.3ms fed=9 steps=3 draft=8/8 | 'This will show you how you can do'
+translator: revise ja   44.2ms fed=9 steps=7 draft=0/4 | 'This will show you how you can do'
+translator: revise es   48.4ms fed=9 steps=4 draft=11/11 | 'his will show you how you can do a cover'
+translator: revise ja   60.1ms fed=9 steps=4 draft=4/9 | 'his will show you how you can do a cover'
+translator: revise es   56.8ms fed=9 steps=5 draft=15/15 | ' how you can do a cover over an existing'
+translator: revise ja   60.4ms fed=9 steps=9 draft=2/11 | ' how you can do a cover over an existing'
+translator: revise es   96.6ms fed=9 steps=11 draft=13/27 | 'can do a cover over an existing old roof'
+translator: revise ja   57.4ms fed=9 steps=4 draft=7/18 | 'can do a cover over an existing old roof'
+translator: revise es   98.5ms fed=8 steps=9 draft=18/37 | 'cover over an existing old roof yourself'
+translator: revise ja   50.7ms fed=8 steps=7 draft=6/12 | 'cover over an existing old roof yourself'
+translator: revise es   83.0ms fed=10 steps=4 draft=28/29 | "existing old roof yourself and it's very"
+translator: revise ja   60.8ms fed=10 steps=4 draft=9/13 | "existing old roof yourself and it's very"
+translator: revise es   71.3ms fed=8 steps=4 draft=32/32 | "g old roof yourself and it's very simple"
+translator: revise ja   63.8ms fed=8 steps=7 draft=9/13 | "g old roof yourself and it's very simple"
+translator: revise es   28.7ms fed=8 steps=0 draft=36/36 | " old roof yourself and it's very simple."
+translator: revise ja   76.2ms fed=8 steps=8 draft=10/20 | " old roof yourself and it's very simple."
+translator: revise es   44.5ms fed=1 steps=0 draft=36/36 | " old roof yourself and it's very simple."
+translator: revise ja   22.9ms fed=1 steps=0 draft=19/19 | " old roof yourself and it's very simple."
+[#3] EN: This will show you how you can do a cover over an existing old roof yourself and it's very simple.   (sentence→final 68 ms)
+[#3] ES: Esto te mostrará cómo puedes instalar una cubierta sobre un techo antiguo ya existente por tu cuenta, y es muy sencillo.
+[#3] JA: この動画では、既存の古い屋根を自分でカバーする方法を解説するよ。やり方は至ってシンプルだ。
+translator: settle es    5.7ms prefilled=1 history=3
+translator: settle ja    5.8ms prefilled=1 history=3
+translator: revise es  110.6ms fed=14 steps=12 draft=0/0 | 'Its appeal and stick'
+translator: revise ja   63.8ms fed=14 steps=3 draft=0/0 | 'Its appeal and stick'
+translator: revise es   56.3ms fed=8 steps=5 draft=6/12 | 'Its appeal and stick system'
+translator: revise ja   53.9ms fed=8 steps=5 draft=0/3 | 'Its appeal and stick system'
+translator: revise es   64.7ms fed=9 steps=5 draft=11/11 | 'Its appeal and stick system cheers'
+translator: revise ja   27.3ms fed=9 steps=2 draft=5/5 | 'Its appeal and stick system cheers'
+translator: revise es   59.8ms fed=10 steps=5 draft=11/16 | "Its appeal and stick system cheers y'all"
+translator: revise ja   43.8ms fed=10 steps=3 draft=7/7 | "Its appeal and stick system cheers y'all"
+translator: revise es  381.6ms fed=9 steps=10 draft=11/16 | "ick system cheers y'all now check it out"
+translator: revise ja  235.4ms fed=9 steps=10 draft=5/10 | "ick system cheers y'all now check it out"
+translator: revise es   37.7ms fed=8 steps=0 draft=21/21 | "ck system cheers y'all now check it out."
+translator: revise ja  134.3ms fed=8 steps=2 draft=12/17 | "ck system cheers y'all now check it out."
+[#4] EN: Its appeal and stick system cheers y'all now check it out.   (sentence→final 181 ms)
+[#4] ES: Su atractivo y su sistema de montaje te ayudan a verlo ahora mismo.
+[#4] JA: Its appeal and stick systemがみんなを後押ししてるよ。今すぐチェックしてくれ。
+translator: settle es   10.5ms prefilled=1 history=4
+translator: settle ja    8.7ms prefilled=1 history=4
+translator: revise es   81.0ms fed=12 steps=4 draft=0/0 | "I really didn't"
+translator: revise ja   95.5ms fed=12 steps=4 draft=0/0 | "I really didn't"
+translator: revise es  114.2ms fed=9 steps=7 draft=3/4 | "I really didn't even eat"
+translator: revise ja   61.6ms fed=9 steps=5 draft=1/4 | "I really didn't even eat"
+translator: revise es  149.0ms fed=9 steps=9 draft=4/15 | "I really didn't even eat enough to be"
+translator: revise ja   99.7ms fed=9 steps=8 draft=2/6 | "I really didn't even eat enough to be"
+translator: revise es  237.0ms fed=10 steps=4 draft=13/14 | "y didn't even eat enough to be wiping my"
+translator: revise ja  369.9ms fed=10 steps=12 draft=3/16 | "y didn't even eat enough to be wiping my"
+translator: revise es  314.4ms fed=8 steps=5 draft=16/17 | "'t even eat enough to be wiping my mouth"
+translator: revise ja  137.7ms fed=8 steps=8 draft=2/16 | "'t even eat enough to be wiping my mouth"
+translator: revise es  147.2ms fed=9 steps=5 draft=20/21 | ' enough to be wiping my mouth, but I can'
+translator: revise ja  226.8ms fed=9 steps=9 draft=0/16 | ' enough to be wiping my mouth, but I can'
+translator: revise es  157.3ms fed=9 steps=5 draft=25/25 | 'wiping my mouth, but I can tell you this'
+translator: revise ja   66.5ms fed=9 steps=3 draft=8/10 | 'wiping my mouth, but I can tell you this'
+translator: revise es  201.6ms fed=10 steps=9 draft=22/40 | 'uth, but I can tell you this my mouth is'
+translator: revise ja  208.5ms fed=10 steps=9 draft=5/12 | 'uth, but I can tell you this my mouth is'
+translator: revise es  325.1ms fed=9 steps=8 draft=26/61 | 'can tell you this my mouth is salivating'
+translator: revise ja  539.7ms fed=9 steps=12 draft=5/22 | 'can tell you this my mouth is salivating'
+translator: revise es  285.8ms fed=9 steps=6 draft=32/70 | 's my mouth is salivating though you know'
+translator: revise ja  370.8ms fed=9 steps=11 draft=11/22 | 's my mouth is salivating though you know'
+translator: revise es  394.2ms fed=9 steps=11 draft=34/66 | 's salivating though you know what I mean'
+translator: revise ja  320.3ms fed=9 steps=8 draft=11/43 | 's salivating though you know what I mean'
+translator: revise es  251.8ms fed=8 steps=3 draft=42/80 | ' salivating though you know what I mean.'
+translator: revise ja  263.5ms fed=8 steps=2 draft=17/33 | ' salivating though you know what I mean.'
+[#5] EN: I really didn't even eat enough to be wiping my mouth, but I can tell you this my mouth is salivating though you know what I mean.   (sentence→final 519 ms)
+[#5] ES: Realmente ni siquiera comí lo suficiente para limpiarme la boca, pero te puedo decir que me está saliendo la boca, aunque ya sabes a qué me refiero.
+[#5] JA: 口を拭うほど食べたわけじゃないけど、これだけは言える。口の中がよだれ出てるよ。まあ、わかるだろ。
+translator: settle es    9.0ms prefilled=1 history=5
+translator: settle ja   10.3ms prefilled=1 history=5
+translator: revise es  106.8ms fed=12 steps=5 draft=0/0 | 'So look'
+translator: revise ja   50.3ms fed=12 steps=3 draft=0/0 | 'So look'
+translator: revise es  167.9ms fed=9 steps=5 draft=5/5 | 'So look, this is what I'
+translator: revise ja   67.9ms fed=9 steps=2 draft=2/3 | 'So look, this is what I'
+translator: revise es  153.6ms fed=10 steps=5 draft=9/10 | "So look, this is what I'm"
+translator: revise ja   50.7ms fed=10 steps=5 draft=2/4 | "So look, this is what I'm"
+translator: revise es  196.4ms fed=9 steps=5 draft=14/14 | "So look, this is what I'm fixing to do"
+translator: revise ja  198.3ms fed=9 steps=8 draft=2/7 | "So look, this is what I'm fixing to do"
+translator: revise es  110.0ms fed=8 steps=1 draft=19/19 | "So look, this is what I'm fixing to do."
+translator: revise ja   78.9ms fed=8 steps=1 draft=9/10 | "So look, this is what I'm fixing to do."
+[#6] EN: So look, this is what I'm fixing to do.   (sentence→final 198 ms)
+[#6] ES: Así que mira, esto es lo que estoy haciendo para arreglarlo.
+[#6] JA: ほら見てくれ、今これを直してるところだよ。
+translator: settle es    9.1ms prefilled=1 history=6
+translator: settle ja    6.7ms prefilled=1 history=6
+translator: revise es   46.2ms fed=12 steps=3 draft=0/0 | 'You guys'
+translator: revise ja   35.1ms fed=12 steps=1 draft=0/0 | 'You guys'
+translator: revise es  128.3ms fed=8 steps=9 draft=0/3 | 'You guys let me know'
+translator: revise ja   75.9ms fed=8 steps=3 draft=1/1 | 'You guys let me know'
+translator: revise es  251.6ms fed=9 steps=14 draft=0/9 | 'You guys let me know down in the'
+translator: revise ja   69.9ms fed=9 steps=2 draft=2/4 | 'You guys let me know down in the'
+translator: revise es  273.6ms fed=9 steps=14 draft=0/18 | 'uys let me know down in the comment sect'
+translator: revise ja  108.6ms fed=9 steps=4 draft=2/4 | 'uys let me know down in the comment sect'
+translator: revise es  316.6ms fed=9 steps=11 draft=8/22 | 'e know down in the comment section below'
+translator: revise ja  166.8ms fed=9 steps=2 draft=4/8 | 'e know down in the comment section below'
+translator: revise es  200.5ms fed=10 steps=6 draft=19/20 | ' comment section below what would you do'
+translator: revise ja  119.6ms fed=10 steps=5 draft=5/7 | ' comment section below what would you do'
+translator: revise es  328.4ms fed=10 steps=7 draft=19/43 | 'on below what would you do, what type of'
+translator: revise ja   81.3ms fed=10 steps=4 draft=10/10 | 'on below what would you do, what type of'
+translator: revise es   70.6ms fed=11 steps=3 draft=30/35 | 'ld you do, what type of veggie would you'
+translator: revise ja   61.4ms fed=11 steps=3 draft=11/14 | 'ld you do, what type of veggie would you'
+translator: revise es  310.3ms fed=10 steps=8 draft=31/34 | 'type of veggie would you serve this with'
+translator: revise ja  219.3ms fed=10 steps=3 draft=12/14 | 'type of veggie would you serve this with'
+translator: revise es  147.7ms fed=8 steps=10 draft=27/50 | 'ype of veggie would you serve this with?'
+translator: revise ja   94.8ms fed=8 steps=0 draft=15/15 | 'ype of veggie would you serve this with?'
+[#7] EN: You guys let me know down in the comment section below what would you do, what type of veggie would you serve this with?   (sentence→final 244 ms)
+[#7] ES: Ya me habéis dicho en la sección de comentarios de abajo qué haríais, ¿qué tipo de verdura serviríais esto con?
+[#7] JA: みんな、下のコメント欄でどうしたいか教えてね。どんな野菜と一緒に出す？
+translator: settle es    9.3ms prefilled=1 history=7
+translator: settle ja   12.4ms prefilled=1 history=7
+translator: revise es   90.8ms fed=13 steps=6 draft=0/0 | "And don't forget"
+translator: revise ja   41.9ms fed=13 steps=4 draft=0/0 | "And don't forget"
+translator: revise es  154.4ms fed=9 steps=5 draft=5/6 | "And don't forget this is"
+translator: revise ja   68.0ms fed=9 steps=3 draft=1/5 | "And don't forget this is"
+translator: revise es   86.8ms fed=9 steps=4 draft=9/10 | "And don't forget this is a budget"
+translator: revise ja  121.8ms fed=9 steps=7 draft=1/5 | "And don't forget this is a budget"
+translator: revise es   98.1ms fed=9 steps=8 draft=8/13 | "'t forget this is a budget friendly meal"
+translator: revise ja   84.6ms fed=9 steps=8 draft=2/8 | "'t forget this is a budget friendly meal"
+translator: revise es   39.6ms fed=8 steps=0 draft=16/16 | 't forget this is a budget friendly meal.'
+translator: revise ja   48.1ms fed=8 steps=3 draft=7/11 | 't forget this is a budget friendly meal.'
+[#8] EN: And don't forget this is a budget friendly meal.   (sentence→final 88 ms)
+[#8] ES: Y no olvidéis que este es un plato económico.
+[#8] JA: あと、これはコスパ抜群のメニューだってことも忘れないでね。
+translator: settle es    6.3ms prefilled=1 history=8
+translator: settle ja    6.2ms prefilled=1 history=8
+translator: revise es   36.6ms fed=12 steps=3 draft=0/0 | 'Alright'
+translator: revise ja   29.7ms fed=12 steps=2 draft=0/0 | 'Alright'
+translator: revise es  198.3ms fed=10 steps=8 draft=0/3 | 'Alright, so let me'
+translator: revise ja   70.9ms fed=10 steps=3 draft=0/2 | 'Alright, so let me'
+translator: revise es   46.7ms fed=9 steps=2 draft=8/8 | 'Alright, so let me just go'
+translator: revise ja   44.7ms fed=9 steps=3 draft=2/3 | 'Alright, so let me just go'
+translator: revise es   91.6ms fed=9 steps=4 draft=8/10 | 'Alright, so let me just go ahead and'
+translator: revise ja   53.7ms fed=9 steps=2 draft=2/5 | 'Alright, so let me just go ahead and'
+translator: revise es  175.4ms fed=9 steps=3 draft=10/12 | ' so let me just go ahead and pour myself'
+translator: revise ja  113.7ms fed=9 steps=3 draft=3/4 | ' so let me just go ahead and pour myself'
+translator: revise es  102.0ms fed=10 steps=6 draft=9/16 | 'just go ahead and pour myself a glass of'
+translator: revise ja  162.8ms fed=10 steps=3 draft=3/6 | 'just go ahead and pour myself a glass of'
+translator: revise es  223.5ms fed=9 steps=6 draft=12/22 | 'ad and pour myself a glass of this great'
+translator: revise ja  152.2ms fed=9 steps=10 draft=2/6 | 'ad and pour myself a glass of this great'
+translator: revise es  182.9ms fed=10 steps=8 draft=14/23 | 'ur myself a glass of this great Kool Aid'
+translator: revise ja   63.0ms fed=10 steps=3 draft=10/17 | 'ur myself a glass of this great Kool Aid'
+translator: revise es   43.0ms fed=8 steps=0 draft=23/23 | 'r myself a glass of this great Kool Aid.'
+translator: revise ja   20.1ms fed=8 steps=0 draft=14/14 | 'r myself a glass of this great Kool Aid.'
+[#9] EN: Alright, so let me just go ahead and pour myself a glass of this great Kool Aid.   (sentence→final 64 ms)
+[#9] ES: Bien, así que déjame simplemente servirme un vaso de este genial Kool Aid.
+[#9] JA: よし、じゃあ早速、この絶品クールエイドを一杯注いでいくよ。
+translator: settle es    6.3ms prefilled=1 history=9
+translator: settle ja    6.3ms prefilled=1 history=9
+translator: revise es   98.2ms fed=12 steps=5 draft=0/0 | 'Yes sir'
+translator: revise ja   46.2ms fed=12 steps=2 draft=0/0 | 'Yes sir'
+translator: revise es   57.5ms fed=9 steps=3 draft=4/5 | 'Yes sir, welcome'
+translator: revise ja   14.9ms fed=9 steps=0 draft=2/2 | 'Yes sir, welcome'
+translator: revise es   71.4ms fed=8 steps=3 draft=6/10 | 'Yes sir, welcome to'
+translator: revise ja  101.8ms fed=8 steps=12 draft=2/2 | 'Yes sir, welcome to'
+translator: revise es  179.0ms fed=9 steps=4 draft=9/10 | 'Yes sir, welcome to Cosa'
+translator: revise ja  113.0ms fed=9 steps=4 draft=1/14 | 'Yes sir, welcome to Cosa'
+translator: revise es  116.5ms fed=8 steps=2 draft=12/13 | 'Yes sir, welcome to Cosa in Italy'
+translator: revise ja  135.2ms fed=8 steps=3 draft=3/5 | 'Yes sir, welcome to Cosa in Italy'
+translator: revise es   99.0ms fed=8 steps=0 draft=11/21 | 'Yes sir, welcome to Cosa in Italy.'
+translator: revise ja   16.8ms fed=8 steps=0 draft=6/6 | 'Yes sir, welcome to Cosa in Italy.'
+[#10] EN: Yes sir, welcome to Cosa in Italy.   (sentence→final 116 ms)
+[#10] ES: Sí, bienvenidos a Cosa in Italy.
+[#10] JA: はい、Cosa in Italyへようこそ。
+translator: settle es    6.3ms prefilled=1 history=10
+translator: settle ja    6.4ms prefilled=1 history=10
+translator: revise es   35.1ms fed=12 steps=2 draft=0/0 | 'Cosa'
+translator: revise ja  129.7ms fed=12 steps=2 draft=0/0 | 'Cosa'
+translator: revise es   71.7ms fed=10 steps=4 draft=2/2 | 'Cosa is believed to be'
+translator: revise ja   51.5ms fed=10 steps=3 draft=2/2 | 'Cosa is believed to be'
+translator: revise es   96.1ms fed=9 steps=4 draft=3/7 | 'Cosa is believed to be an ancient'
+translator: revise ja   61.0ms fed=9 steps=7 draft=2/5 | 'Cosa is believed to be an ancient'
+translator: revise es   75.2ms fed=8 steps=5 draft=6/8 | 'Cosa is believed to be an ancient Roman'
+translator: revise ja  206.4ms fed=8 steps=8 draft=0/14 | 'Cosa is believed to be an ancient Roman'
+translator: revise es  140.3ms fed=8 steps=6 draft=7/13 | 'lieved to be an ancient Roman settlement'
+translator: revise ja  162.4ms fed=8 steps=4 draft=6/9 | 'lieved to be an ancient Roman settlement'
+translator: revise es  125.5ms fed=8 steps=1 draft=14/14 | 'ieved to be an ancient Roman settlement.'
+translator: revise ja  131.4ms fed=8 steps=5 draft=4/16 | 'ieved to be an ancient Roman settlement.'
+[#11] EN: Cosa is believed to be an ancient Roman settlement.   (sentence→final 259 ms)
+[#11] ES: Cosa que se cree que es un asentamiento romano antiguo.
+[#11] JA: Cosaは古代ローマの集落だと考えられている。
+translator: settle es   11.0ms prefilled=1 history=11
+translator: settle ja    7.6ms prefilled=1 history=11
+translator: revise es   46.2ms fed=11 steps=1 draft=0/0 | 'The'
+translator: revise ja   39.8ms fed=11 steps=1 draft=0/0 | 'The'
+translator: revise es   78.6ms fed=11 steps=6 draft=0/1 | 'The site was exca'
+translator: revise ja   76.0ms fed=11 steps=5 draft=0/1 | 'The site was exca'
+translator: revise es   39.5ms fed=9 steps=1 draft=6/6 | 'The site was excavated'
+translator: revise ja   32.2ms fed=9 steps=2 draft=3/5 | 'The site was excavated'
+translator: revise es  317.5ms fed=9 steps=6 draft=7/7 | 'e site was excavated at least four times'
+translator: revise ja  121.5ms fed=9 steps=5 draft=3/5 | 'e site was excavated at least four times'
+translator: revise es  181.7ms fed=8 steps=2 draft=12/13 | 's excavated at least four times over the'
+translator: revise ja  306.6ms fed=8 steps=5 draft=3/11 | 's excavated at least four times over the'
+translator: revise es  353.1ms fed=9 steps=5 draft=14/14 | 'd at least four times over the last cent'
+translator: revise ja  316.8ms fed=9 steps=9 draft=4/13 | 'd at least four times over the last cent'
+translator: revise es  204.8ms fed=8 steps=3 draft=18/19 | 't least four times over the last century'
+translator: revise ja  332.4ms fed=8 steps=4 draft=7/17 | 't least four times over the last century'
+translator: revise es  189.0ms fed=8 steps=0 draft=21/21 | ' least four times over the last century.'
+translator: revise ja  121.1ms fed=8 steps=1 draft=11/12 | ' least four times over the last century.'
+[#12] EN: The site was excavated at least four times over the last century.   (sentence→final 452 ms)
+[#12] ES: El sitio fue excavado al menos cuatro veces durante el último siglo.
+[#12] JA: その遺跡は、過去1世紀の間に少なくとも4回発掘されている。
+translator: settle es   11.6ms prefilled=1 history=12
+translator: settle ja    8.6ms prefilled=1 history=12
+translator: revise es  117.9ms fed=12 steps=5 draft=0/0 | 'What is there'
+translator: revise ja   75.9ms fed=12 steps=4 draft=0/0 | 'What is there'
+translator: revise es   89.0ms fed=10 steps=4 draft=4/5 | 'What is there to exca'
+translator: revise ja  141.7ms fed=10 steps=4 draft=0/4 | 'What is there to exca'
+translator: revise es  174.5ms fed=10 steps=1 draft=7/8 | 'What is there to excavate if'
+translator: revise ja   95.5ms fed=10 steps=6 draft=1/4 | 'What is there to excavate if'
+translator: revise es   48.7ms fed=10 steps=3 draft=8/8 | 'What is there to excavate if Cosa is'
+translator: revise ja  177.5ms fed=10 steps=10 draft=0/7 | 'What is there to excavate if Cosa is'
+translator: revise es  201.0ms fed=10 steps=8 draft=11/11 | ' to excavate if Cosa is originally a Rom'
+translator: revise ja  167.8ms fed=10 steps=10 draft=2/21 | ' to excavate if Cosa is originally a Rom'
+translator: revise es  163.5ms fed=9 steps=6 draft=13/19 | 'avate if Cosa is originally a Roman site'
+translator: revise ja  319.1ms fed=9 steps=5 draft=7/28 | 'avate if Cosa is originally a Roman site'
+translator: revise es  162.7ms fed=8 steps=0 draft=19/19 | 'e if Cosa is originally a Roman site was'
+translator: revise ja  309.4ms fed=8 steps=7 draft=6/29 | 'e if Cosa is originally a Roman site was'
+translator: revise es  190.2ms fed=11 steps=6 draft=19/19 | 'originally a Roman site was the Pantheon'
+translator: revise ja  151.6ms fed=11 steps=5 draft=14/15 | 'originally a Roman site was the Pantheon'
+translator: revise es  109.7ms fed=9 steps=3 draft=24/25 | 'ly a Roman site was the Pantheon in Rome'
+translator: revise ja  146.7ms fed=9 steps=4 draft=15/33 | 'ly a Roman site was the Pantheon in Rome'
+translator: revise es  276.7ms fed=10 steps=7 draft=22/31 | ' site was the Pantheon in Rome excavated'
+translator: revise ja  346.7ms fed=10 steps=10 draft=10/47 | ' site was the Pantheon in Rome excavated'
+translator: revise es  188.1ms fed=8 steps=5 draft=22/40 | 'site was the Pantheon in Rome excavated?'
+translator: revise ja  194.4ms fed=8 steps=6 draft=17/43 | 'site was the Pantheon in Rome excavated?'
+[#13] EN: What is there to excavate if Cosa is originally a Roman site was the Pantheon in Rome excavated?   (sentence→final 484 ms)
+[#13] ES: ¿Qué hay que excavar si Cosa es originalmente un sitio romano fue el Panteón de Roma excavado?
+[#13] JA: もしCosaがもともとローマの遺跡だとしたら、何を発掘すればいいんだろう？ローマのパンテオンが発掘されたのかな？
+translator: settle es   25.5ms prefilled=1 history=13
+translator: settle ja   40.3ms prefilled=1 history=13
+translator: revise es   28.0ms fed=11 steps=1 draft=0/0 | 'No'
+translator: revise ja   51.8ms fed=11 steps=2 draft=0/0 | 'No'
+translator: revise es   90.6ms fed=9 steps=5 draft=1/1 | 'No, the Pan'
+translator: revise ja   78.1ms fed=9 steps=3 draft=0/2 | 'No, the Pan'
+translator: revise es   63.8ms fed=11 steps=3 draft=6/6 | 'No, the Pantheon is even'
+translator: revise ja   57.4ms fed=11 steps=4 draft=3/3 | 'No, the Pantheon is even'
+translator: revise es   63.6ms fed=8 steps=2 draft=9/9 | 'No, the Pantheon is even at the same'
+translator: revise ja   48.8ms fed=8 steps=3 draft=4/7 | 'No, the Pantheon is even at the same'
+translator: revise es  108.1ms fed=9 steps=9 draft=6/13 | 'antheon is even at the same ground level'
+translator: revise ja  243.6ms fed=9 steps=4 draft=5/7 | 'antheon is even at the same ground level'
+translator: revise es   81.0ms fed=9 steps=2 draft=15/16 | ' is even at the same ground level as the'
+translator: revise ja   80.3ms fed=9 steps=6 draft=4/9 | ' is even at the same ground level as the'
+translator: revise es  100.5ms fed=8 steps=7 draft=16/17 | 'the same ground level as the surrounding'
+translator: revise ja   60.0ms fed=8 steps=5 draft=5/12 | 'the same ground level as the surrounding'
+translator: revise es  261.9ms fed=8 steps=8 draft=18/27 | 'nd level as the surrounding contemporary'
+translator: revise ja  355.3ms fed=8 steps=9 draft=5/11 | 'nd level as the surrounding contemporary'
+translator: revise es  369.0ms fed=8 steps=9 draft=20/38 | 's the surrounding contemporary buildings'
+translator: revise ja  342.9ms fed=8 steps=4 draft=7/28 | 's the surrounding contemporary buildings'
+translator: revise es  244.8ms fed=8 steps=0 draft=31/31 | ' the surrounding contemporary buildings.'
+translator: revise ja   43.7ms fed=8 steps=0 draft=14/14 | ' the surrounding contemporary buildings.'
+[#14] EN: No, the Pantheon is even at the same ground level as the surrounding contemporary buildings.   (sentence→final 487 ms)
+[#14] ES: No, el Panteón está incluso al mismo nivel del suelo que los edificios contemporáneos circundantes.
+[#14] JA: いや、パンテオンは周囲の当時の建物と同じ高さにあるんだ。
+translator: settle es   17.6ms prefilled=1 history=14
+translator: settle ja   13.1ms prefilled=1 history=14
+translator: revise es  103.2ms fed=12 steps=4 draft=0/0 | 'And why'
+translator: revise ja   74.6ms fed=12 steps=3 draft=0/0 | 'And why'
+translator: revise es  254.4ms fed=9 steps=5 draft=2/6 | 'And why is that'
+translator: revise ja   63.6ms fed=9 steps=3 draft=0/3 | 'And why is that'
+translator: revise es  176.4ms fed=8 steps=0 draft=8/8 | 'And why is that?'
+translator: revise ja   38.4ms fed=8 steps=0 draft=3/3 | 'And why is that?'
+[#15] EN: And why is that?   (sentence→final 215 ms)
+[#15] ES: ¿Y por qué es así?
+[#15] JA: それはどうして？
+translator: settle es    8.6ms prefilled=1 history=15
+translator: settle ja    5.4ms prefilled=1 history=15
+translator: revise es   47.5ms fed=12 steps=3 draft=0/0 | 'Because the'
+translator: revise ja   30.4ms fed=12 steps=2 draft=0/0 | 'Because the'
+translator: revise es   78.6ms fed=10 steps=3 draft=3/3 | 'Because the Pantheon'
+translator: revise ja  105.1ms fed=10 steps=4 draft=1/2 | 'Because the Pantheon'
+translator: revise es  223.9ms fed=9 steps=3 draft=6/6 | 'Because the Pantheon was probably'
+translator: revise ja   42.3ms fed=9 steps=1 draft=4/5 | 'Because the Pantheon was probably'
+translator: revise es  132.1ms fed=9 steps=3 draft=9/9 | 'e the Pantheon was probably built during'
+translator: revise ja   78.4ms fed=9 steps=6 draft=5/5 | 'e the Pantheon was probably built during'
+translator: revise es  319.6ms fed=9 steps=3 draft=12/12 | 'heon was probably built during the Roman'
+translator: revise ja  186.2ms fed=9 steps=3 draft=7/13 | 'heon was probably built during the Roman'
+translator: revise es  175.7ms fed=8 steps=5 draft=12/15 | ' was probably built during the Roman era'
+translator: revise ja  160.5ms fed=8 steps=0 draft=11/11 | ' was probably built during the Roman era'
+translator: revise es  222.0ms fed=8 steps=0 draft=17/17 | 'was probably built during the Roman era.'
+translator: revise ja   35.1ms fed=8 steps=0 draft=11/11 | 'was probably built during the Roman era.'
+[#16] EN: Because the Pantheon was probably built during the Roman era.   (sentence→final 260 ms)
+[#16] ES: Porque el Panteón probablemente fue construido durante la época romana.
+[#16] JA: だって、パンテオンはおそらくローマ時代に建てられたから。
+translator: settle es   12.9ms prefilled=1 history=16
+translator: settle ja   11.5ms prefilled=1 history=16
+translator: revise es   77.9ms fed=11 steps=4 draft=0/0 | 'It is also'
+translator: revise ja   44.2ms fed=11 steps=1 draft=0/0 | 'It is also'
+translator: revise es   48.0ms fed=8 steps=1 draft=4/4 | 'It is also almost'
+translator: revise ja   32.8ms fed=8 steps=2 draft=1/1 | 'It is also almost'
+translator: revise es  139.6ms fed=9 steps=2 draft=5/5 | 'It is also almost cardinally'
+translator: revise ja   39.1ms fed=9 steps=2 draft=1/3 | 'It is also almost cardinally'
+translator: revise es  176.5ms fed=8 steps=7 draft=3/7 | 'It is also almost cardinally oriented'
+translator: revise ja   59.7ms fed=8 steps=5 draft=2/3 | 'It is also almost cardinally oriented'
+translator: revise es  118.8ms fed=9 steps=4 draft=9/10 | 'ardinally oriented, which indicates that'
+translator: revise ja   69.8ms fed=9 steps=4 draft=4/7 | 'ardinally oriented, which indicates that'
+translator: revise es  476.9ms fed=9 steps=3 draft=12/13 | 'ented, which indicates that it cannot be'
+translator: revise ja   85.5ms fed=9 steps=4 draft=7/8 | 'ented, which indicates that it cannot be'
+translator: revise es  110.5ms fed=8 steps=1 draft=15/15 | ', which indicates that it cannot be very'
+translator: revise ja   88.2ms fed=8 steps=3 draft=6/11 | ', which indicates that it cannot be very'
+translator: revise es  200.0ms fed=8 steps=3 draft=16/16 | 'indicates that it cannot be very ancient'
+translator: revise ja  232.6ms fed=8 steps=11 draft=2/9 | 'indicates that it cannot be very ancient'
+translator: revise es   73.0ms fed=1 steps=0 draft=19/19 | 'indicates that it cannot be very ancient'
+translator: revise ja   37.0ms fed=1 steps=0 draft=13/13 | 'indicates that it cannot be very ancient'
+[#17] EN: It is also almost cardinally oriented, which indicates that it cannot be very ancient   (sentence→final 550 ms)
+[#17] ES: También está orientado casi radicalmente, lo que indica que no puede ser muy antiguo.
+[#17] JA: それに、ほぼ柱が垂直に立っているから、それほど古くはないってことだ。
+translator: settle es    9.1ms prefilled=1 history=17
+translator: settle ja    9.6ms prefilled=1 history=17
+lines=17 sentence→final median=215 ms p90=519 ms max=550 ms
+wall 77556 ms (realtime=true)

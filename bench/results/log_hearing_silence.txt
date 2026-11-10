@@ -1,0 +1,99 @@
+[  0.1s] pass     0ms window= 0.0s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  0.2s] pass     0ms window= 0.0s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  0.3s] pass   463ms window= 0.3s encoded= 0.3s prefilled= 23 draft=0/0 stepped= 4 | …Oh, yeah.
+[  0.8s] pass   362ms window= 0.8s encoded= 0.8s prefilled= 19 draft=3/3 stepped= 0 | …Oh, yeah.
+[  1.2s] pass   296ms window= 1.2s encoded= 1.2s prefilled= 24 draft=0/0 stepped= 2 | …I.
+[  1.5s] pass   505ms window= 1.5s encoded= 1.5s prefilled= 28 draft=1/1 stepped= 0 | …I.
+[  2.0s] pass   324ms window= 2.0s encoded= 2.0s prefilled= 34 draft=1/1 stepped= 0 | …I.
+[  2.3s] pass   390ms window= 2.3s encoded= 2.3s prefilled= 39 draft=0/0 stepped= 2 | …Today.
+[  2.7s] pass   613ms window= 2.7s encoded= 2.7s prefilled= 44 draft=0/1 stepped= 4 | …Today, I want.
+[  3.3s] pass   785ms window= 3.3s encoded= 3.3s prefilled= 52 draft=0/5 stepped= 3 | …Today I want to.
+[  4.1s] pass   716ms window= 4.1s encoded= 4.1s prefilled= 62 draft=3/4 stepped= 4 | …Today I want to walk you through.
+[  4.8s] pass   704ms window= 4.8s encoded= 4.8s prefilled= 71 draft=6/7 stepped= 3 | …Today I want to walk you through the actual.
+[  5.5s] pass   550ms window= 5.5s encoded= 5.5s prefilled= 81 draft=7/9 stepped= 4 | …Today I want to walk you through the architecture of our.
+[  6.1s] pass   630ms window= 6.1s encoded= 6.1s prefilled= 88 draft=7/12 stepped= 4 | …Today I want to walk you through the activation of our new.
+[  6.7s] pass   836ms window= 6.7s encoded= 6.7s prefilled= 96 draft=9/22 stepped= 5 | … to walk you through the activation of our new search agent.
+[  7.5s] pass   645ms window= 7.5s encoded= 7.5s prefilled=107 draft=9/31 stepped= 6 | …through the architecture of our new search agent. The front.
+[  8.2s] pass   533ms window= 8.2s encoded= 8.2s prefilled=115 draft=13/17 stepped= 4 | …ough the architecture of our new search agent, the frontend.
+[  8.7s] pass   212ms window= 8.7s encoded= 0.7s prefilled= 18 draft=17/17 stepped= 0 | …ough the architecture of our new search agent, the frontend.
+[  8.9s] pass   299ms window= 8.9s encoded= 0.9s prefilled= 21 draft=16/17 stepped= 3 | … architecture of our new search agent, the frontend and the.
+[  9.2s] pass   320ms window= 9.2s encoded= 1.2s prefilled= 25 draft=18/19 stepped= 2 | …tecture of our new search agent, the frontend and the query.
+[  9.5s] pass   242ms window= 9.5s encoded= 1.5s prefilled= 29 draft=20/20 stepped= 0 | …tecture of our new search agent, the frontend and the query.
+[  9.8s] pass   310ms window= 9.8s encoded= 1.8s prefilled= 32 draft=13/20 stepped= 7 | …tecture of our new search agent. The frontend sends a query.
+[ 10.1s] pass   292ms window=10.1s encoded= 2.1s prefilled= 36 draft=19/20 stepped= 2 | …ture of our new search agent. The frontend sends a query to.
+[ 10.4s] pass   412ms window=10.4s encoded= 2.4s prefilled= 40 draft=20/28 stepped= 2 | …r new search agent. The frontend sends a query to the agent.
+[ 10.8s] pass   311ms window=10.8s encoded= 2.8s prefilled= 45 draft=21/23 stepped= 3 | …w search agent. The frontend sends a query to the API again.
+[ 11.1s] pass   467ms window=11.1s encoded= 3.1s prefilled= 50 draft=22/24 stepped= 2 | …search agent. The frontend sends a query to the API gateway.
+[ 11.6s] pass   229ms window=11.6s encoded= 3.6s prefilled= 55 draft=23/24 stepped= 3 | …agent. The frontend sends a query to the API gateway, which.
+[ 11.8s] pass   552ms window=11.8s encoded= 3.8s prefilled= 58 draft=25/26 stepped= 2 | …The frontend sends a query to the API gateway, which routes.
+[ 12.3s] pass   558ms window=12.3s encoded= 4.3s prefilled= 66 draft=26/33 stepped= 3 | …nd sends a query to the API gateway, which routes it to the.
+[ 12.9s] pass   520ms window=12.9s encoded= 4.9s prefilled= 73 draft=29/30 stepped= 3 | …ery to the API gateway, which routes it to the orchestrator.
+[ 13.4s] pass   411ms window=13.4s encoded= 5.4s prefilled= 80 draft=32/32 stepped= 0 | …ery to the API gateway, which routes it to the orchestrator.
+[ 13.8s] pass   357ms window=13.8s encoded= 5.8s prefilled= 85 draft=32/32 stepped= 0 | …ery to the API gateway, which routes it to the orchestrator.
+[ 14.2s] pass   685ms window=14.2s encoded= 6.2s prefilled= 90 draft=32/49 stepped= 1 | …teway, which routes it to the orchestrator. The orchestrator
+[ 14.9s] pass   535ms window=14.9s encoded= 6.9s prefilled= 98 draft=35/35 stepped= 2 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 15.4s] pass   426ms window=15.4s encoded= 7.4s prefilled=106 draft=37/37 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 15.8s] pass   419ms window=15.8s encoded= 7.8s prefilled=111 draft=37/37 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 16.3s] pass   443ms window=16.3s encoded= 8.3s prefilled=117 draft=37/37 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 16.7s] pass   266ms window=16.7s encoded= 0.7s prefilled= 18 draft=37/37 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 17.0s] pass   331ms window=17.0s encoded= 1.0s prefilled= 22 draft=37/37 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 17.3s] pass   333ms window=17.3s encoded= 1.3s prefilled= 26 draft=37/37 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 17.6s] pass   284ms window=17.6s encoded= 1.6s prefilled= 30 draft=37/37 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 17.9s] pass   345ms window=17.9s encoded= 1.9s prefilled= 34 draft=37/37 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 18.3s] pass   451ms window=18.3s encoded= 2.3s prefilled= 39 draft=36/37 stepped= 2 | … routes it to the orchestrator. The orchestrator breaks the.
+[ 18.7s] pass   403ms window=18.7s encoded= 2.7s prefilled= 44 draft=36/38 stepped= 1 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 19.1s] pass   321ms window=19.1s encoded= 3.1s prefilled= 50 draft=37/37 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 19.4s] pass   357ms window=19.4s encoded= 3.4s prefilled= 54 draft=37/37 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 19.8s] pass   417ms window=19.8s encoded= 3.8s prefilled= 58 draft=37/37 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 20.2s] pass   517ms window=20.2s encoded= 4.2s prefilled= 64 draft=37/37 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 20.7s] pass   383ms window=20.7s encoded= 4.7s prefilled= 71 draft=36/37 stepped= 2 | … routes it to the orchestrator. The orchestrator breaks the.
+[ 21.1s] pass   448ms window=21.1s encoded= 5.1s prefilled= 76 draft=36/38 stepped= 1 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 21.6s] pass   607ms window=21.6s encoded= 5.6s prefilled= 81 draft=37/37 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 22.2s] pass   652ms window=22.2s encoded= 6.2s prefilled= 90 draft=36/37 stepped= 2 | … routes it to the orchestrator. The orchestrator breaks the.
+[ 22.8s] pass   732ms window=22.8s encoded= 6.8s prefilled= 98 draft=38/38 stepped= 0 | … routes it to the orchestrator. The orchestrator breaks the.
+[ 23.6s] pass   648ms window=23.6s encoded= 7.6s prefilled=107 draft=36/38 stepped= 1 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 24.2s] pass   754ms window=16.2s encoded= 8.2s prefilled=250 draft=16/16 stepped= 4 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 25.0s] pass   280ms window=17.0s encoded= 1.0s prefilled= 21 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 25.2s] pass   312ms window=17.2s encoded= 1.2s prefilled= 25 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 25.6s] pass   202ms window=17.6s encoded= 1.6s prefilled= 29 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 25.8s] pass   318ms window=17.8s encoded= 1.8s prefilled= 32 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 26.1s] pass   255ms window=18.1s encoded= 2.1s prefilled= 36 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 26.3s] pass   291ms window=18.3s encoded= 2.3s prefilled= 40 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 26.6s] pass   388ms window=18.6s encoded= 2.6s prefilled= 43 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 27.0s] pass   355ms window=19.0s encoded= 3.0s prefilled= 49 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 27.4s] pass   389ms window=19.4s encoded= 3.4s prefilled= 53 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 27.8s] pass   363ms window=19.8s encoded= 3.8s prefilled= 58 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 28.1s] pass   397ms window=20.1s encoded= 4.1s prefilled= 63 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 28.5s] pass   454ms window=20.5s encoded= 4.5s prefilled= 68 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 29.0s] pass   460ms window=21.0s encoded= 5.0s prefilled= 74 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 29.4s] pass   541ms window=21.4s encoded= 5.4s prefilled= 80 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 30.0s] pass   450ms window=22.0s encoded= 6.0s prefilled= 87 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 30.4s] pass   381ms window=22.4s encoded= 6.4s prefilled= 93 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 30.8s] pass   738ms window=22.8s encoded= 6.8s prefilled= 98 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 31.6s] pass   563ms window=23.6s encoded= 7.6s prefilled=107 draft=20/20 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 32.1s] pass   919ms window=16.1s encoded= 8.1s prefilled=269 draft=0/0 stepped= 3 | …outes it to the orchestrator. The orchestrator breaks. said.
+[ 33.0s] pass  1710ms window=17.0s encoded= 1.0s prefilled= 23 draft=1/2 stepped=39 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 34.7s] pass   489ms window=18.7s encoded= 2.7s prefilled= 45 draft=40/40 stepped= 0 | …hich routes it to the orchestrator. The orchestrator breaks.
+[ 35.2s] pass   336ms window=19.2s encoded= 3.2s prefilled= 51 draft=0/0 stepped= 2 | …ch routes it to the orchestrator. The orchestrator breaks. .
+[ 35.6s] pass   363ms window=19.6s encoded= 3.6s prefilled= 55 draft=0/0 stepped= 3 | …s it to the orchestrator. The orchestrator breaks. question.
+[ 35.9s] pass   401ms window=19.9s encoded= 3.9s prefilled= 60 draft=1/2 stepped= 2 | …to the orchestrator. The orchestrator breaks. question into.
+[ 36.3s] pass   509ms window=20.3s encoded= 4.3s prefilled= 66 draft=2/3 stepped= 3 | …rchestrator. The orchestrator breaks. question into subtask.
+[ 36.8s] pass   498ms window=20.8s encoded= 4.8s prefilled= 72 draft=3/5 stepped= 2 | …hestrator. The orchestrator breaks. question into sub tasks.
+[ 37.3s] pass   666ms window=21.3s encoded= 5.3s prefilled= 79 draft=4/5 stepped= 2 | …rator. The orchestrator breaks. question into sub tasks and.
+[ 38.0s] pass   887ms window=22.0s encoded= 6.0s prefilled= 87 draft=5/6 stepped= 4 | …rchestrator breaks. question into sub tasks and run them in.
+[ 38.9s] pass   562ms window=22.9s encoded= 6.9s prefilled= 99 draft=8/9 stepped= 2 | …or breaks. question into sub tasks and run them in parallel.
+[ 39.5s] pass   587ms window=23.5s encoded= 7.5s prefilled=106 draft=10/10 stepped= 3 | …estion into sub tasks and run them in parallel. Each worker.
+[ 40.0s] pass  1465ms window=16.0s encoded= 8.0s prefilled=268 draft=7/18 stepped= 6 | …n into subtasks and run them in parallel. Each worker calls.
+[ 41.5s] pass   551ms window=17.5s encoded= 1.5s prefilled= 29 draft=13/14 stepped= 4 | … run them in parallel. Each worker calls the language model.
+[ 42.1s] pass   400ms window=18.1s encoded= 2.1s prefilled= 36 draft=16/17 stepped= 2 | … them in parallel. Each worker calls the language model and.
+[ 42.5s] pass   705ms window=18.5s encoded= 2.5s prefilled= 41 draft=11/32 stepped= 6 | … them in parallel. Each worker calls a language model and a.
+[ 43.2s] pass   382ms window=19.2s encoded= 3.2s prefilled= 50 draft=18/19 stepped= 3 | …rallel. Each worker calls a language model and a web search.
+[ 43.6s] pass   556ms window=19.6s encoded= 3.6s prefilled= 55 draft=20/21 stepped= 2 | …l. Each worker calls a language model and a web search tool.
+[ 44.1s] pass   534ms window=20.1s encoded= 4.1s prefilled= 63 draft=22/22 stepped= 3 | …worker calls a language model and a web search tool. We can.
+[ 44.6s] pass   883ms window=20.6s encoded= 4.6s prefilled= 69 draft=19/43 stepped= 6 | …a language model and a web search tool. We cast the results.
+[ 45.5s] pass   716ms window=21.5s encoded= 5.5s prefilled= 81 draft=25/27 stepped= 3 | …e model and a web search tool. We cast the resulting values.
+[ 46.2s] pass  1154ms window=22.2s encoded= 6.2s prefilled= 90 draft=21/49 stepped= 8 | …l and a web search tool. We cast the results in Redis so we.
+[ 47.4s] pass   690ms window=23.4s encoded= 7.4s prefilled=105 draft=25/55 stepped= 5 | …ch tool. We cast the results in Redis so repeated questions.
+[ 48.1s] pass  1258ms window=16.1s encoded= 8.1s prefilled=270 draft=24/41 stepped= 7 | …ool. We cast the results in Redis so repeated questions can.
+[ 49.3s] pass   628ms window=17.3s encoded= 1.3s prefilled= 27 draft=31/33 stepped= 7 | … in Redis so repeated questions come back in under a second.
+[ 50.0s] pass   485ms window=18.0s encoded= 2.0s prefilled= 35 draft=38/38 stepped= 3 | …is so repeated questions come back in under a second. Let's.

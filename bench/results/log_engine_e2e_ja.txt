@@ -1,0 +1,83 @@
+[transformers] You are using a model of type `plamo3` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+translay: revise   43.4ms es:passes=5,steps=4,draft=0/0 ja:passes=2,steps=1,draft=0/0 | 'Okay so'
+translay: revise   33.4ms es:passes=5,steps=4,draft=3/4 ja:passes=5,steps=4,draft=0/1 | "Okay so let's get started."
+translay: revise   14.4ms es:passes=1,steps=0,draft=7/7 ja:passes=1,steps=0,draft=4/4 | "Okay so let's get started."
+translay: settle    6.1ms prefilled=[1, 1]
+translay: ready in 3.4s (asr=/Users/mojashi/repos/translay/models/Qwen3-ASR-1.7B-4bit, mt=/Users/mojashi/repos/translay/models/plamo-3-translate-0.8b-MLX-4bit)
+engine ready in 4484 ms
+translay: revise   24.1ms es:passes=4,steps=3,draft=0/0 | '今日。'
+translay: revise   10.2ms es:passes=1,steps=0,draft=3/3 | '今日は。'
+translay: revise   23.6ms es:passes=4,steps=3,draft=2/3 | '今日はあっ。'
+translay: revise   37.8ms es:passes=6,steps=5,draft=2/5 | '今日は当たる。'
+translay: revise   30.4ms es:passes=4,steps=3,draft=2/7 | '今日は新しい。'
+translay: revise   50.6ms es:passes=7,steps=6,draft=2/5 | '今日は新しい計画。'
+translay: revise   52.1ms es:passes=7,steps=5,draft=2/10 | '今日は新しい検査。'
+translay: revise   67.5ms es:passes=10,steps=9,draft=2/8 | '今日は新しい検索エス。'
+translay: revise   63.7ms es:passes=8,steps=6,draft=7/14 | '今日は新しい検索エージェント。'
+translay: revise   16.7ms es:passes=1,steps=0,draft=14/14 | '今日は新しい検索エージェントのせ。'
+translay: revise   46.5ms es:passes=6,steps=4,draft=9/21 | '今日は新しい検索エージェントの設定。'
+translay: revise   56.0ms es:passes=8,steps=6,draft=10/22 | '今日は新しい検索エージェントの設定に。'
+translay: revise   96.7ms es:passes=11,steps=8,draft=9/35 | '今日は新しい検索エージェントの設定について。'
+translay: revise   53.6ms es:passes=5,steps=3,draft=14/31 | '今日は新しい検索エージェントの設定について説明します。'
+translay: revise   20.7ms es:passes=1,steps=0,draft=18/18 | '今日は新しい検索エージェントの設定について説明。'
+translay: revise   18.6ms es:passes=1,steps=0,draft=18/18 | '今日は新しい検索エージェントの設定について説明します。'
+translay: revise   28.3ms es:passes=3,steps=2,draft=18/18 | '今日は新しい検索エージェントの設定について説明します。フロント。'
+translay: revise   20.0ms es:passes=1,steps=0,draft=18/20 | '今日は新しい検索エージェントの設定について説明します。'
+[#1] EN: 今日は新しい検索エージェントの設定について説明します。   (finished→final 20 ms)
+[#1] ES: Hoy explicaré la configuración del nuevo agente de búsqueda.
+[#1] JA: 今日は新しい検索エージェントの設定について説明します。
+translay: settle   11.4ms prefilled=[1, 5]
+translay: revise   31.8ms es:passes=4,steps=3,draft=0/0 | 'フロントエンド。'
+translay: revise   41.6ms es:passes=6,steps=5,draft=0/3 | 'フロントエンドは。'
+translay: revise   31.9ms es:passes=4,steps=3,draft=4/5 | 'フロントエンドは API。'
+translay: revise   17.3ms es:passes=1,steps=0,draft=7/7 | 'フロントエンドはAPI。'
+translay: revise   16.2ms es:passes=1,steps=0,draft=7/7 | 'フロントエンドはAPI レッ。'
+translay: revise   31.0ms es:passes=4,steps=3,draft=6/7 | 'フロントエンドは API デートウェイ。'
+translay: revise   40.8ms es:passes=6,steps=5,draft=3/9 | 'フロントエンドはAPI Gatewayに。'
+translay: revise   44.4ms es:passes=6,steps=4,draft=3/9 | 'フロントエンドはAPI Gatewayにクエリ'
+translay: revise   58.6ms es:passes=9,steps=7,draft=4/9 | 'フロントエンドはAPI Gatewayにクエリを。'
+translay: revise   45.7ms es:passes=5,steps=3,draft=7/16 | 'フロントエンドはAPI Gatewayにクエリを送ります。'
+translay: revise   38.4ms es:passes=4,steps=3,draft=11/11 | 'フロントエンドはAPI Gatewayにクエリを送ります。結果。'
+translay: revise   17.2ms es:passes=1,steps=0,draft=11/14 | 'フロントエンドはAPI Gatewayにクエリを送ります。'
+[#2] EN: フロントエンドはAPI Gatewayにクエリを送ります。   (finished→final 17 ms)
+[#2] ES: El frontend envía consultas a API Gateway.
+[#2] JA: フロントエンドはAPI Gatewayにクエリを送ります。
+translay: settle    6.3ms prefilled=[1, 1]
+translay: revise   34.3ms es:passes=5,steps=4,draft=0/0 | '結果はRed'
+translay: revise   34.4ms es:passes=4,steps=3,draft=3/4 | '結果はRedis。'
+translay: revise   75.0ms es:passes=10,steps=8,draft=1/7 | '結果はRedisに記録されます。'
+translay: revise   66.4ms es:passes=8,steps=6,draft=6/12 | '結果はRedisにキャッシュ。'
+translay: revise   21.7ms es:passes=1,steps=0,draft=13/13 | '結果はRedisにキャッシュする。'
+translay: revise   75.8ms es:passes=10,steps=7,draft=3/25 | '結果はRedisにキャッシュするので。'
+translay: revise   85.2ms es:passes=12,steps=10,draft=6/19 | '結果はRedisにキャッシュするので同じ。'
+translay: revise   62.7ms es:passes=9,steps=8,draft=12/17 | '結果はRedisにキャッシュするので同じ質。'
+translay: revise   74.9ms es:passes=9,steps=6,draft=8/36 | '結果はRedisにキャッシュするので、同じ質問な'
+translay: revise   91.2ms es:passes=12,steps=9,draft=10/31 | '結果はRedisにキャッシュするので、同じ質問なら。'
+translay: revise   50.9ms es:passes=7,steps=6,draft=20/21 | '結果はRedisにキャッシュするので、同じ質問なら1秒。'
+translay: revise  107.3ms es:passes=12,steps=10,draft=19/35 | '結果はRedisにキャッシュするので、同じ質問なら1秒以内。'
+translay: revise  133.4ms es:passes=11,steps=8,draft=21/45 | '結果はRedisにキャッシュするので、同じ質問なら1秒以内に返。'
+translay: revise  191.8ms es:passes=11,steps=8,draft=23/47 | '結果はRedisにキャッシュするので、同じ質問なら1秒以内に返ってきます。'
+translay: revise   75.9ms es:passes=4,steps=1,draft=29/49 | '結果はRedisにキャッシュするので、同じ質問なら1秒以内に返ってきます。来'
+translay: revise   44.3ms es:passes=1,steps=0,draft=32/32 | '結果はRedisにキャッシュするので、同じ質問なら1秒以内に返ってきます。'
+[#3] EN: 結果はRedisにキャッシュするので、同じ質問なら1秒以内に返ってきます。   (finished→final 44 ms)
+[#3] ES: Los resultados se cachen en Redis, por lo que, si se hace la misma pregunta, se devolven en menos de un segundo.
+[#3] JA: 結果はRedisにキャッシュするので、同じ質問なら1秒以内に返ってきます。
+translay: settle    7.7ms prefilled=[1, 1]
+translay: revise   76.5ms es:passes=10,steps=9,draft=0/0 | '来月ま。'
+translay: revise   50.0ms es:passes=4,steps=2,draft=5/14 | '来月までに。'
+translay: revise   61.6ms es:passes=8,steps=6,draft=5/13 | '来月までにデプロイ。'
+translay: revise   61.6ms es:passes=7,steps=5,draft=7/20 | '来月までにデプロイの計'
+translay: revise   83.0ms es:passes=6,steps=4,draft=8/21 | '来月までにデプロイの計画。'
+translay: revise   55.0ms es:passes=6,steps=4,draft=10/22 | '来月までにデプロイの計画を。'
+translay: revise  126.2ms es:passes=10,steps=8,draft=9/24 | '来月までにデプロイの計画を決めたい。'
+translay: revise  129.6ms es:passes=8,steps=5,draft=13/31 | '来月までにデプロイの計画を決めたいと思います。'
+translay: revise   34.1ms es:passes=1,steps=0,draft=20/20 | '来月までにデプロイの計画を決めたいと思います。'
+[#4] EN: 来月までにデプロイの計画を決めたいと思います。   (finished→final 34 ms)
+[#4] ES: Me gustaría definir el plan de despliegue para el próximo mes.
+[#4] JA: 来月までにデプロイの計画を決めたいと思います。
+translay: settle   14.0ms prefilled=[1, 1]
+passes=76 pass median=209 ms p90=332 ms
+recogniser lag behind real time: median=176 ms p90=318 ms max=593 ms
+lines=4 finished→final median=34 ms p90=44 ms
+wall 23369 ms (realtime=true)
+FINISHED_ENGLISH: 今日は新しい検索エージェントの設定について説明します。 フロントエンドはAPI Gatewayにクエリを送ります。 結果はRedisにキャッシュするので、同じ質問なら1秒以内に返ってきます。 来月までにデプロイの計画を決めたいと思います。

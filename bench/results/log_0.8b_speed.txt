@@ -1,0 +1,21 @@
+[transformers] You are using a model of type `plamo3` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+{
+ "model": "plamo-3-translate-0.8b-MLX-4bit",
+ "variant": "fast",
+ "applied": {
+  "norms": true,
+  "rope": true,
+  "mlp": true,
+  "quant_params_cast": 128
+ },
+ "decode_ms_per_token_median": 4.687645500780491,
+ "decode_tok_per_s": 213.32671163668422,
+ "short_prefill_ms_median": 35.45981249953911,
+ "short_prompt_tokens_median": 25.5,
+ "long_prefill_tokens": 118,
+ "long_prefill_ms": 69.8140839995176,
+ "sentence_latency_ms_median": 83.87991599920497,
+ "sentence_latency_ms_p90": 165.22004199941875,
+ "out_tokens_median": 9.5,
+ "peak_mem_gb": 1.23676432
+}

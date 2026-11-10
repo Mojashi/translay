@@ -1,0 +1,109 @@
+[17:27:53.948] [INFO] [FluidAudio.DownloadUtils] Host environment: macOS Version 15.2 (Build 24C101), arch=arm64, chip=Apple M4 Pro, cores=14/14, mem=24 GB, rosetta=false
+[17:27:53.952] [INFO] [FluidAudio.DownloadUtils] Found nemotron-streaming/560ms locally, no download needed
+[17:27:53.952] [INFO] [FluidAudio.NemotronStreaming] Loading Nemotron CoreML models from /Users/mojashi/.cache/fluidaudio/models/nemotron-streaming/560ms...
+[17:27:53.952] [INFO] [FluidAudio.NemotronStreaming] Loaded config: 560ms chunks, 56 mel frames
+[17:27:54.274] [INFO] [FluidAudio.NemotronStreaming] Loaded fused decoder_joint (B1) — merged inner-loop path enabled
+[17:27:54.351] [INFO] [FluidAudio.NemotronStreaming] Nemotron models loaded successfully (560ms chunks).
+[transformers] You are using a model of type `plamo3` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+models ready in 10137 ms
+translator: revise es   54.4ms fed=18 steps=5 draft=0/0 | 'Okay, the next'
+translator: revise ja   26.9ms fed=18 steps=2 draft=0/0 | 'Okay, the next'
+translator: revise es   75.0ms fed=9 steps=8 draft=4/5 | 'Okay, the next video will get'
+translator: revise ja   54.8ms fed=9 steps=3 draft=1/2 | 'Okay, the next video will get'
+translator: revise es  145.2ms fed=10 steps=10 draft=9/12 | ' next video will get roofing contractors'
+translator: revise ja  124.0ms fed=10 steps=8 draft=3/4 | ' next video will get roofing contractors'
+translator: revise es  351.0ms fed=17 steps=25 draft=8/35 | "t me, but it's not for them it's for you"
+translator: revise ja  202.9ms fed=17 steps=12 draft=6/11 | "t me, but it's not for them it's for you"
+translator: revise es  182.3ms fed=8 steps=7 draft=26/68 | " me, but it's not for them it's for you."
+translator: revise ja  147.9ms fed=8 steps=11 draft=6/21 | " me, but it's not for them it's for you."
+[#1] EN: Okay, the next video will get roofing contractors mad at me, but it's not for them it's for you.   (sentence→final 892 ms)
+[#1] ES: Bien, el próximo video hará que los contratistas de techos se enojen de mí, pero no es para ellos, es para ti.
+[#1] JA: よし、次の動画では屋根工事業者にブチギレるけど、それは業者向けじゃなくてお前向けだ。
+translator: settle es    9.8ms prefilled=1 history=1
+translator: settle ja    8.9ms prefilled=1 history=1
+translator: revise es  364.2ms fed=24 steps=24 draft=0/0 | 'ctor, then you have to watch this video.'
+translator: revise ja  221.0ms fed=24 steps=15 draft=0/0 | 'ctor, then you have to watch this video.'
+[#2] EN: If you are that person that cannot afford a roofing contractor, then you have to watch this video.   (sentence→final 997 ms)
+[#2] ES: Si eres esa persona que no puede permitirse un contratista de techos, entonces tienes que ver este video.
+[#2] JA: 屋根工事業者を雇う余裕がないっていうタイプなら、この動画を見ておけ。
+translator: settle es   14.7ms prefilled=1 history=2
+translator: settle ja   15.2ms prefilled=1 history=2
+translator: revise es  665.0ms fed=26 steps=36 draft=0/0 | " old roof yourself and it's very simple."
+translator: revise ja  250.0ms fed=26 steps=19 draft=0/0 | " old roof yourself and it's very simple."
+[#3] EN: This will show you how you can do a cover over an existing old roof yourself and it's very simple.   (sentence→final 1310 ms)
+[#3] ES: Esto te mostrará cómo puedes instalar una cubierta sobre un techo antiguo ya existente por tu cuenta, y es muy sencillo.
+[#3] JA: この動画では、既存の古い屋根を自分でカバーする方法を解説するよ。やり方は至ってシンプルだ。
+translator: settle es    6.8ms prefilled=1 history=3
+translator: settle ja   11.1ms prefilled=1 history=3
+translator: revise es  405.9ms fed=23 steps=21 draft=0/0 | "ck system cheers y'all now check it out."
+translator: revise ja  171.6ms fed=23 steps=15 draft=0/0 | "ck system cheers y'all now check it out."
+[#4] EN: Its appeal and stick system cheers y'all now check it out.   (sentence→final 1509 ms)
+[#4] ES: Su atractivo y su sistema de montaje te ayudan a verlo ahora mismo.
+[#4] JA: Its appeal and stick systemがみんなを後押ししてるよ。今すぐチェックしてくれ。
+translator: settle es   12.6ms prefilled=1 history=4
+translator: settle ja   13.3ms prefilled=1 history=4
+translator: revise es  593.9ms fed=33 steps=48 draft=0/0 | ' salivating though you know what I mean.'
+translator: revise ja  308.3ms fed=33 steps=21 draft=0/0 | ' salivating though you know what I mean.'
+[#5] EN: I really didn't even eat enough to be wiping my mouth, but I can tell you this my mouth is salivating though you know what I mean.   (sentence→final 1706 ms)
+[#5] ES: Realmente ni siquiera comí lo suficiente para limpiarme la boca, pero te puedo decir que me está saliendo la boca, aunque ya sabes a qué me refiero.
+[#5] JA: 口を拭うほど食事をしたわけじゃないけど、これだけは言える。口の中がよだれ出てるよ。まあ、わかるだろ。
+translator: settle es    6.7ms prefilled=1 history=5
+translator: settle ja    6.8ms prefilled=1 history=5
+translator: revise es  214.2ms fed=18 steps=20 draft=0/0 | "So look, this is what I'm fixing to do."
+translator: revise ja  182.9ms fed=18 steps=10 draft=0/0 | "So look, this is what I'm fixing to do."
+[#6] EN: So look, this is what I'm fixing to do.   (sentence→final 1862 ms)
+[#6] ES: Así que mira, esto es lo que estoy haciendo para arreglarlo.
+[#6] JA: ほら見てくれ、今これを直してるところだよ。
+translator: settle es    7.2ms prefilled=1 history=6
+translator: settle ja    9.9ms prefilled=1 history=6
+translator: revise es  477.6ms fed=32 steps=38 draft=0/0 | 'ype of veggie would you serve this with?'
+translator: revise ja  186.3ms fed=32 steps=15 draft=0/0 | 'ype of veggie would you serve this with?'
+[#7] EN: You guys let me know down in the comment section below what would you do, what type of veggie would you serve this with?   (sentence→final 1979 ms)
+[#7] ES: Ya me habéis dicho en la sección de comentarios de abajo qué haríais, ¿qué tipo de verdura serviríais esto con?
+[#7] JA: みんな、下のコメント欄でどうしたいか教えてね。どんな野菜と一緒に出す？
+translator: settle es    7.1ms prefilled=1 history=7
+translator: settle ja    9.3ms prefilled=1 history=7
+translator: revise es  270.3ms fed=18 steps=16 draft=0/0 | 't forget this is a budget friendly meal.'
+translator: revise ja  194.7ms fed=18 steps=11 draft=0/0 | 't forget this is a budget friendly meal.'
+[#8] EN: And don't forget this is a budget friendly meal.   (sentence→final 2194 ms)
+[#8] ES: Y no olvidéis que este es un plato económico.
+[#8] JA: あと、これはコスパ抜群のメニューだってことも忘れないでね。
+translator: settle es    9.5ms prefilled=1 history=8
+translator: settle ja   15.5ms prefilled=1 history=8
+translator: revise es  255.5ms fed=29 steps=23 draft=0/0 | 'r myself a glass of this great Kool Aid.'
+translator: revise ja  195.5ms fed=29 steps=13 draft=0/0 | 'r myself a glass of this great Kool Aid.'
+[#9] EN: Alright, so let me just go ahead and pour myself a glass of this great Kool Aid.   (sentence→final 2214 ms)
+[#9] ES: Bien, así que déjame simplemente servirme un vaso de este genial Kool Aid.
+[#9] JA: よし、じゃあ、この絶品クールエイドを一杯注いでいくよ。
+translator: settle es   13.6ms prefilled=1 history=9
+translator: settle ja   12.1ms prefilled=1 history=9
+translator: revise es  271.0ms fed=18 steps=14 draft=0/0 | 'Yes sir, welcome to Cosa in Italy.'
+translator: revise ja  107.6ms fed=18 steps=6 draft=0/0 | 'Yes sir, welcome to Cosa in Italy.'
+[#10] EN: Yes sir, welcome to Cosa in Italy.   (sentence→final 2390 ms)
+[#10] ES: Sí, bien, bienvenidos a Cosa in Italy.
+[#10] JA: はい、Cosa in Italyへようこそ。
+translator: settle es    7.0ms prefilled=1 history=10
+translator: settle ja   10.1ms prefilled=1 history=10
+translator: revise es  195.7ms fed=19 steps=15 draft=0/0 | 'ieved to be an ancient Roman settlement.'
+translator: revise ja  135.1ms fed=19 steps=10 draft=0/0 | 'ieved to be an ancient Roman settlement.'
+[#11] EN: Cosa is believed to be an ancient Roman settlement.   (sentence→final 2480 ms)
+[#11] ES: Cosa que se cree que es un asentamiento romano antiguo.
+[#11] JA: Cosaは古代ローマの集落だと考えられている。
+translator: settle es    6.4ms prefilled=1 history=11
+translator: settle ja    8.4ms prefilled=1 history=11
+translator: revise es  265.9ms fed=21 steps=21 draft=0/0 | ' least four times over the last century.'
+translator: revise ja  140.5ms fed=21 steps=12 draft=0/0 | ' least four times over the last century.'
+[#12] EN: The site was excavated at least four times over the last century.   (sentence→final 2572 ms)
+[#12] ES: El sitio fue excavado al menos cuatro veces durante el último siglo.
+[#12] JA: その遺跡は、過去1世紀の間に少なくとも4回発掘されている。
+translator: settle es   20.3ms prefilled=1 history=12
+translator: settle ja   16.8ms prefilled=1 history=12
+translator: revise es  338.2ms fed=35 steps=29 draft=0/0 | 'site was the Pantheon in Rome excavated?'
+translator: revise ja  275.5ms fed=35 steps=25 draft=0/0 | 'site was the Pantheon in Rome excavated?'
+[#13] EN: What is there to excavate if Cosa is originally a Roman site was the Pantheon in Rome excavated?   (sentence→final 2737 ms)
+[#13] ES: ¿Qué hay que excavar si Cosa es originalmente un sitio romano fue el Panteón de Roma excavado?
+[#13] JA: もしCosaがもともとローマの遺跡だとしたら、何を発掘すればいいんだろう？ローマのパンテオンが発掘されたのかな？
+translator: settle es   12.1ms prefilled=1 history=13
+translator: settle ja   15.0ms prefilled=1 history=13
+lines=13 sentence→final median=1979 ms p90=2572 ms max=2737 ms
+wall 8788 ms (realtime=false)

@@ -1,0 +1,12 @@
+vendor/
+.venv/
+*.wav
+bench/data/
+bench/results/raw/
+.build/
+app/build/
+models/
+__pycache__/
+app/*.o
+app/*.d
+app/*.swiftdeps

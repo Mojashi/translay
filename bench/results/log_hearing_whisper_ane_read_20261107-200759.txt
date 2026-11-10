@@ -1,0 +1,173 @@
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+[  0.1s] pass     0ms window= 0.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  0.2s] pass     0ms window= 0.2s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  0.4s] pass     0ms window= 0.4s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  0.5s] pass     0ms window= 0.5s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  0.6s] pass     0ms window= 0.6s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  0.7s] pass     0ms window= 0.7s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  0.8s] pass     0ms window= 0.8s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  0.9s] pass     0ms window= 0.9s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  1.0s] pass     0ms window= 1.0s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  1.2s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  1.3s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  1.4s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  1.5s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  1.6s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  1.7s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  1.8s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  2.0s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  2.1s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  2.2s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  2.3s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  2.4s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  2.5s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  2.7s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  2.8s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  2.9s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  3.0s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  3.1s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  3.2s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  3.3s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  3.5s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  3.6s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  3.7s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  3.8s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  3.9s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  4.0s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  4.2s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  4.3s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  4.4s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  4.5s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  4.6s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …
+[  4.7s] pass  1244ms window= 1.1s encoded= 1.1s prefilled=  3 draft=0/0 stepped= 3 | …Yeah.
+[  6.0s] pass   667ms window= 2.4s encoded= 2.4s prefilled=  3 draft=1/3 stepped= 7 | …Today I want to talk to you
+[  6.7s] pass   696ms window= 3.0s encoded= 3.0s prefilled=  3 draft=8/8 stepped= 0 | …Today I want to talk to you
+[  7.4s] pass   640ms window= 3.7s encoded= 3.7s prefilled=  3 draft=8/8 stepped= 4 | …Today I want to talk to you, talk about kids
+[  8.0s] pass   649ms window= 4.4s encoded= 4.4s prefilled=  3 draft=11/12 stepped= 1 | …Today I want to talk to you, talk about you
+[  8.6s] pass   666ms window= 5.0s encoded= 5.0s prefilled=  3 draft=8/13 stepped= 6 | … want to talk to you talk about your so the architecture and
+[  9.3s] pass   647ms window= 5.7s encoded= 5.7s prefilled=  3 draft=9/16 stepped= 6 | …to talk to you talk walk through the architecture of our new
+[ 10.0s] pass   654ms window= 6.3s encoded= 6.3s prefilled=  3 draft=12/29 stepped= 6 | …talk to walk you through the architecture of our new subject
+[ 10.6s] pass   654ms window= 7.0s encoded= 7.0s prefilled=  3 draft=19/20 stepped= 3 | …o walk you through the architecture of our new search agent.
+[ 11.3s] pass   643ms window= 7.6s encoded= 7.6s prefilled=  3 draft=15/31 stepped= 3 | …k walk you through the architecture of our new search agent.
+[ 11.9s] pass   629ms window= 8.3s encoded= 8.3s prefilled=  3 draft=19/19 stepped= 0 | …k walk you through the architecture of our new search agent.
+[ 12.5s] pass   659ms window= 8.9s encoded= 8.9s prefilled=  3 draft=19/19 stepped= 6 | … architecture of our new search agent. The front-end sends a
+[ 13.2s] pass   642ms window= 9.6s encoded= 9.6s prefilled=  3 draft=24/25 stepped= 2 | …re of our new search agent. The front-end sends according to
+[ 13.8s] pass   639ms window=10.2s encoded=10.2s prefilled=  3 draft=26/26 stepped= 3 | … new search agent. The front-end sends according to the API.
+[ 14.5s] pass   697ms window=10.9s encoded=10.9s prefilled=  3 draft=28/29 stepped= 1 | …arch agent. The front-end sends according to the API gateway
+[ 15.2s] pass   635ms window=11.6s encoded=11.6s prefilled=  3 draft=28/29 stepped= 2 | …rch agent. The front-end sends according to the API Gateway.
+[ 15.8s] pass   656ms window=12.2s encoded=12.2s prefilled=  3 draft=23/48 stepped=10 | …front-end sends according to the API Gateway, which rules it
+[ 16.5s] pass   682ms window=12.8s encoded=12.8s prefilled=  3 draft=28/64 stepped= 6 | …nd sends according to the API gateway, which rules it to the
+[ 17.2s] pass   679ms window=13.5s encoded=13.5s prefilled=  3 draft=30/81 stepped= 7 | …ding to the API Gateway, which rules it to the orchestrated.
+[ 17.8s] pass   666ms window=14.2s encoded=14.2s prefilled=  3 draft=36/70 stepped= 2 | …ding to the API Gateway, which rules it to the orchestrated.
+[ 18.5s] pass   682ms window=14.9s encoded=14.9s prefilled=  3 draft=36/64 stepped= 7 | … which rules it to the orchestrator. The orchestrator breaks
+[ 19.2s] pass   643ms window=15.6s encoded=15.6s prefilled=  3 draft=45/45 stepped= 2 | …it to the orchestrator. The orchestrator breaks the question
+[ 19.8s] pass   640ms window=16.2s encoded=16.2s prefilled=  3 draft=47/47 stepped= 3 | …chestrator. The orchestrator breaks the question into sound.
+[ 20.5s] pass   650ms window=16.8s encoded=16.8s prefilled=  3 draft=48/50 stepped= 6 | …trator. The orchestrator breaks the question into sub-tasks.
+[ 21.1s] pass   668ms window=17.5s encoded=17.5s prefilled=  3 draft=40/120 stepped= 5 | …tor. The orchestrator breaks the question into sub-tasks and
+[ 21.8s] pass   710ms window=18.2s encoded=18.2s prefilled=  3 draft=41/116 stepped=11 | …estrator breaks the question into sub-tasks and runs them in
+[ 22.5s] pass   674ms window=18.9s encoded=18.9s prefilled=  3 draft=49/98 stepped= 2 | …reaks the question into sub-tasks and runs them in parallel.
+[ 23.2s] pass   637ms window=19.5s encoded=19.5s prefilled=  3 draft=54/54 stepped= 0 | …reaks the question into sub-tasks and runs them in parallel.
+[ 23.8s] pass   654ms window=20.2s encoded=20.2s prefilled=  3 draft=53/99 stepped= 5 | … into sub-tasks and runs them in parallel. Each worker calls
+[ 24.5s] pass   710ms window=20.8s encoded=20.8s prefilled=  3 draft=53/107 stepped= 9 | …asks and runs them in parallel. Each worker calls a language
+[ 25.2s] pass   667ms window=21.5s encoded=21.5s prefilled=  3 draft=56/145 stepped= 3 | …d runs them in parallel. Each worker calls a language module
+[ 25.8s] pass   642ms window=22.2s encoded=22.2s prefilled=  3 draft=64/64 stepped= 3 | …m in parallel. Each worker calls a language module and a web
+[ 26.5s] pass   660ms window=22.9s encoded=22.9s prefilled=  3 draft=65/67 stepped= 4 | …el. Each worker calls a language module and web search tool.
+[ 27.1s] pass   646ms window=23.5s encoded=23.5s prefilled=  3 draft=69/69 stepped= 2 | …h worker calls a language module and web search tool. We can
+[ 27.8s] pass   688ms window=24.2s encoded=24.2s prefilled=  3 draft=59/135 stepped=10 | … calls a language module and web source to recast the result
+[ 28.5s] pass   680ms window=24.8s encoded=24.8s prefilled=  3 draft=66/110 stepped= 6 | … a language module and a web source to recast the results in
+[ 29.2s] pass   693ms window=25.5s encoded=25.5s prefilled=  3 draft=61/150 stepped=11 | …le and web search tool. We cast the results in ready-solving
+[ 29.8s] pass   702ms window=26.2s encoded=26.2s prefilled=  3 draft=68/167 stepped=10 | …web search tool. We cast the results in ready, sub-repeated,
+[ 30.5s] pass   673ms window=26.9s encoded=26.9s prefilled=  3 draft=76/131 stepped= 4 | …h tool. We cast the results in ready, sub-repeated questions
+[ 31.2s] pass   686ms window=27.6s encoded=27.6s prefilled=  3 draft=69/92 stepped=12 | …recast the results in ready, so repeated questions came back
+[ 31.9s] pass   654ms window=28.3s encoded=28.3s prefilled=  3 draft=75/127 stepped= 5 | …e results in ready, so repeated questions came back in under
+[ 32.6s] pass   770ms window=28.9s encoded=28.9s prefilled=  3 draft=68/197 stepped=12 | …re these sub-repeated questions came back in under a second.
+[ 33.3s] pass   699ms window=29.7s encoded=29.7s prefilled=  3 draft=74/158 stepped= 7 | …in ready, so repeated questions came back in under a second.
+[ 34.0s] pass   723ms window=30.4s encoded=30.0s prefilled=  3 draft=68/205 stepped=20 | … these, some repeated questions came back in under a second.
+[ 34.8s] pass   748ms window= 5.9s encoded= 5.9s prefilled= 79 draft=8/22 stepped= 9 | …e back in under a second. Light entry is our biggest concern
+[ 35.5s] pass   664ms window= 6.6s encoded= 6.6s prefilled= 79 draft=17/18 stepped= 4 | …nder a second. Light entry is our biggest concern right now.
+[ 36.2s] pass   639ms window= 7.3s encoded= 7.3s prefilled= 79 draft=19/21 stepped= 2 | …nder a second. Light entry is our biggest concern right now,
+[ 36.8s] pass   660ms window= 7.9s encoded= 7.9s prefilled= 79 draft=20/21 stepped= 8 | …r biggest concern right now, especially for long-term users.
+[ 37.5s] pass   659ms window= 8.6s encoded= 8.6s prefilled= 79 draft=23/28 stepped= 3 | …ur biggest concern right now, especially for long documents.
+[ 38.1s] pass   669ms window= 9.2s encoded= 9.2s prefilled= 79 draft=21/37 stepped= 4 | …ur biggest concern right now, especially for long documents.
+[ 38.8s] pass   676ms window= 9.9s encoded= 9.9s prefilled= 79 draft=21/37 stepped= 7 | …ncern right now, especially for long documents. Next for the
+[ 39.5s] pass   663ms window=10.6s encoded=10.6s prefilled= 79 draft=25/43 stepped= 6 | … now, especially for long documents. Next for the replant of
+[ 40.1s] pass   674ms window=11.2s encoded=11.2s prefilled= 79 draft=26/51 stepped= 8 | …ally for long documents. Next, for the replant of pine tune,
+[ 40.8s] pass   646ms window=11.9s encoded=11.9s prefilled= 79 draft=35/36 stepped= 3 | …ong documents. Next, for the replant of pine tune, a smaller
+[ 41.5s] pass   666ms window=12.6s encoded=12.6s prefilled= 79 draft=33/60 stepped= 5 | …uments. Next, for the replant of pine tune, a smaller model,
+[ 42.1s] pass   676ms window=13.2s encoded=13.2s prefilled= 79 draft=25/59 stepped=12 | …cuments. Next, we'll plant a fine tune in a smaller model on
+[ 42.8s] pass   675ms window=13.9s encoded=13.9s prefilled= 79 draft=34/62 stepped= 6 | …, we'll plant a fine tune in a smaller model on our website.
+[ 43.5s] pass   678ms window=14.6s encoded=14.6s prefilled= 79 draft=35/68 stepped= 6 | … we'll plant a fine tune in a smaller model on our own data.
+[ 44.2s] pass   668ms window=15.3s encoded=15.3s prefilled= 79 draft=35/71 stepped= 4 | …s. Next, we'll plant a fine tune in a smaller model on data.
+[ 44.8s] pass   681ms window=15.9s encoded=15.9s prefilled= 79 draft=32/48 stepped=13 | …able to find a smaller model on our own data. Let me know if
+[ 45.5s] pass   689ms window=16.6s encoded=16.6s prefilled= 79 draft=34/81 stepped=12 | …maller model on data. Let me know if you have any questions.
+[ 46.2s] pass   684ms window=17.3s encoded=17.3s prefilled= 79 draft=33/113 stepped=10 | …maller model on data. Let me know if you have any questions.
+[ 46.9s] pass   688ms window=18.0s encoded=18.0s prefilled= 79 draft=38/79 stepped= 9 | … Let me know if you have any questions about the department.
+[ 47.6s] pass   688ms window=18.7s encoded=18.7s prefilled= 79 draft=38/81 stepped=13 | …now if you have any questions about the department schedule.
+[ 48.3s] pass   661ms window=19.4s encoded=19.4s prefilled= 79 draft=41/86 stepped= 7 | …now if you have any questions about the department schedule.
+[ 48.9s] pass   649ms window=20.0s encoded=20.0s prefilled= 79 draft=51/51 stepped= 0 | …now if you have any questions about the department schedule.
+[ 49.6s] pass     0ms window= 2.0s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 49.7s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 49.8s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 49.9s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 50.1s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 50.2s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 50.3s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 50.4s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 50.5s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 50.6s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 50.8s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 50.9s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 51.0s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 51.1s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 51.2s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 51.4s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 51.5s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 51.6s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 51.7s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 51.8s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 52.0s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 52.1s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 52.2s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 52.3s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 52.4s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 52.5s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 52.6s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 52.8s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 52.9s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 53.0s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 53.1s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 53.2s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 53.3s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 53.5s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 53.6s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 53.7s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 53.8s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 53.9s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 54.0s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 54.2s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 54.3s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 54.4s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 54.5s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 54.6s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 54.7s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 54.9s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 55.0s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 55.1s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 55.2s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 55.3s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 55.5s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 55.6s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 55.7s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 55.8s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 55.9s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 56.0s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 56.1s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 56.3s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 56.4s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 56.5s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+[ 56.6s] pass     0ms window= 1.1s encoded= 0.0s prefilled=  0 draft=0/0 stepped= 0 | …now if you have any questions about the department schedule.
+
+passes=167 median=0ms p90=684ms encoded/pass=5.9s prefilled/pass=11 accept=55%
+
+TEXT: Today I want to talk to you, talk to you through the architecture of our new search agent. The front-end sends according to the API Gateway, which rules it to the orchestrator. The orchestrator breaks the question into sub-tasks and runs them in parallel. Each worker calls a language module and web source to recast the results in where these, some repeated questions came back in the second. Latency is our biggest concern right now, especially for long documents. Next, we'll plan to find a smaller model on data. Let me know if you have any questions about the department schedule.
+WER vs script: 25.5%

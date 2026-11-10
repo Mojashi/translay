@@ -1,0 +1,1202 @@
+{
+ "naive": {
+  "mode": "naive",
+  "revisions": 596,
+  "revision_ms_median": 66.08799999958137,
+  "revision_ms_p90": 174.63866700018116,
+  "final_ms_median": 84.81504200062773,
+  "final_ms_p90": 214.15425000122923,
+  "prompt_tokens_fed_mean": 22.023489932885905,
+  "sequential_steps_mean": 7.145973154362416,
+  "forward_passes_mean": 8.145973154362416,
+  "draft_acceptance": null,
+  "chrF_vs_human": 32.39802320326002,
+  "_finals": [
+   {
+    "source": "Okay, the next video will get roofing contractors mad at me, but it's not for them.",
+    "ja": "まあ、次の動画では屋根工事業者にブチギレられるだろうけど、あいつらには関係ないよ。",
+    "seconds": 0.4203006660009123
+   },
+   {
+    "source": "It's for you.",
+    "ja": "君のためだよ。",
+    "seconds": 0.05472074999852339
+   },
+   {
+    "source": "If you are that person that cannot afford a roofing contractor, then you have to watch this video.",
+    "ja": "屋根工事業者を雇う余裕がない方は、ぜひこの動画をご覧ください。",
+    "seconds": 0.1550379590007651
+   },
+   {
+    "source": "This will show you how you can do a cover over an existing old roof yourself.",
+    "ja": "これで、既存の古い屋根をご自身でカバーする方法が分かります。",
+    "seconds": 0.11082758300108253
+   },
+   {
+    "source": "And it's very simple.",
+    "ja": "そして、とても簡単です。",
+    "seconds": 0.05029416700017464
+   },
+   {
+    "source": "It's a peel and stick system.",
+    "ja": "剥がして貼るタイプです。",
+    "seconds": 0.054761958001108724
+   },
+   {
+    "source": "Cheers, y'all.",
+    "ja": "みんな、乾杯。",
+    "seconds": 0.0686390000009851
+   },
+   {
+    "source": "Now check it out.",
+    "ja": "さあ、見てごらん。",
+    "seconds": 0.046139250000123866
+   },
+   {
+    "source": "I really didn't even eat enough to be wiping my mouth, but I can tell you this, my mouth is salivating though.",
+    "ja": "口を拭うほど食べたわけじゃないけど、これだけは言っておくね。口がよだれ出てるよ。",
+    "seconds": 0.2315217080013099
+   },
+   {
+    "source": "You know what I mean?",
+    "ja": "意味わかる？",
+    "seconds": 0.05630258299970592
+   },
+   {
+    "source": "So look, this is what I'm fixin' to do.",
+    "ja": "ほら見て、これを直すんだよ。",
+    "seconds": 0.07062595899878943
+   },
+   {
+    "source": "You guys let me know down in the comment section below, what would you do?",
+    "ja": "みんな、下のコメント欄で教えて。どうしたい？",
+    "seconds": 0.1618352089990367
+   },
+   {
+    "source": "What type of veggie would you serve this with?",
+    "ja": "これ、どんな野菜と一緒に出しますか？",
+    "seconds": 0.07611204199929489
+   },
+   {
+    "source": "And don't forget, this is a budget-friendly meal, alright?",
+    "ja": "あと、忘れちゃいけないんだけど、これは格安の食事なんだよ。いい？",
+    "seconds": 0.26928037499965285
+   },
+   {
+    "source": "So let me just go ahead and pour myself a glass of this grape Kool-Aid.",
+    "ja": "じゃあ、このグレープ・クールエイドを一杯注いでくるね。",
+    "seconds": 0.11148716600109765
+   },
+   {
+    "source": "Yes, sir.",
+    "ja": "はい、はい。",
+    "seconds": 0.05891850000080012
+   },
+   {
+    "source": "Welcome to Cosa, in Italy.",
+    "ja": "イタリアのコーザへようこそ。",
+    "seconds": 0.09948637500019686
+   },
+   {
+    "source": "Cosa is believed to be an ancient Roman settlement.",
+    "ja": "古代ローマの集落と考えられているもの。",
+    "seconds": 0.08243204200152832
+   },
+   {
+    "source": "The site was excavated at least four times over the last century.",
+    "ja": "その遺跡は、過去1世紀の間に少なくとも4回発掘された。",
+    "seconds": 0.31219112500002666
+   },
+   {
+    "source": "What is there to excavate if Cosa is originally a Roman site?",
+    "ja": "コサがもともとローマ時代の遺跡だとしたら、何を発掘すればいいのだろうか？",
+    "seconds": 0.1928577500002575
+   },
+   {
+    "source": "Was the Pantheon in Rome excavated?",
+    "ja": "ローマのパンテオンは発掘されたのですか？",
+    "seconds": 0.08727633299895388
+   },
+   {
+    "source": "No, the Pantheon is even at the same ground level as the surrounding, contemporary buildings.",
+    "ja": "いいえ、パンテオンは周囲の現代の建物と同じ地上レベルにあります。",
+    "seconds": 0.19239262500013865
+   },
+   {
+    "source": "And why is that?",
+    "ja": "それはどうしてですか？",
+    "seconds": 0.048558458000115934
+   },
+   {
+    "source": "Because the Pantheon was probably built during the Roman era.",
+    "ja": "パンテオンはおそらくローマ時代に建設されたからだ。",
+    "seconds": 0.10318829200150503
+   },
+   {
+    "source": "It is also almost cardinally oriented, which indicates that it cannot be very ancient.",
+    "ja": "また、ほぼ基数方位を向いており、これは非常に古いものではないことを示唆している。",
+    "seconds": 0.21415425000122923
+   },
+   {
+    "source": "Venice, city on the water.",
+    "ja": "ヴェネツィア、水上の都市。",
+    "seconds": 0.09501137500046752
+   },
+   {
+    "source": "A place of beauty and romance that attracts millions of visitors every year.",
+    "ja": "毎年数百万人もの観光客が訪れる、美しさとロマンあふれる場所。",
+    "seconds": 0.1975893750004616
+   },
+   {
+    "source": "Just a few steps from the well-trodden tourist routes, there's a very different Venice, one populated by fascinating creatures.",
+    "ja": "定番の観光ルートからわずか数歩のところに、魅力的な生き物たちが暮らす、全く異なるヴェネツィアがあります。",
+    "seconds": 0.24072970900124346
+   },
+   {
+    "source": "This film explores a Venice that few people ever see, a city that has a surprising double life.",
+    "ja": "本作は、ごく少数の人しか目にすることのないヴェネツィア――驚くべき二面性を併せ持つ街――を描いている。",
+    "seconds": 0.1616253329993924
+   },
+   {
+    "source": "We're not ready.",
+    "ja": "準備ができていません。",
+    "seconds": 0.03713695899932645
+   },
+   {
+    "source": "And it's going to be more dangerous out there because you fired Greg.",
+    "ja": "それに、グレッグをクビにしたから、外はもっと危険になるぞ。",
+    "seconds": 0.09302958400076022
+   },
+   {
+    "source": "Because we don't have any money to pay him, Burt.",
+    "ja": "バート、彼に払うお金がないから。",
+    "seconds": 0.06889345799936564
+   },
+   {
+    "source": "You're doing this, not me.",
+    "ja": "やってるのは君で、僕じゃない。",
+    "seconds": 0.05881583299924387
+   },
+   {
+    "source": "The hell I am.",
+    "ja": "なんてこった。",
+    "seconds": 0.040581917000963585
+   },
+   {
+    "source": "Do you not understand what I had to do to get these kids out here?",
+    "ja": "この子たちをここに連れてくるために、私が何をしなきゃならなかったか分かってないの？",
+    "seconds": 0.14611062500080152
+   },
+   {
+    "source": "The bond that I had to put up for the insurance company, you want to lose all that?",
+    "ja": "保険会社に köte を払わなきゃならなかったのに、全部失いたいのか？",
+    "seconds": 0.12249954100116156
+   },
+   {
+    "source": "Rather than risk hurting one of the kids?",
+    "ja": "子供の一人を傷つけるリスクを冒すよりは？",
+    "seconds": 0.10120037500018952
+   },
+   {
+    "source": "Yeah.",
+    "ja": "うん。",
+    "seconds": 0.030006875000253785
+   },
+   {
+    "source": "Why?",
+    "ja": "なぜ？",
+    "seconds": 0.03423545799887506
+   },
+   {
+    "source": "Never bothered you before.",
+    "ja": "今まで気にしたことなかったよ。",
+    "seconds": 0.055428707999453763
+   },
+   {
+    "source": "Now I need to quickly mention the reactor's name, as it was considered a zero power installation.",
+    "ja": "さて、この原子炉はゼロ出力設備とされていたため、早急に名称を記載しておく必要があります。",
+    "seconds": 0.11684229099955701
+   },
+   {
+    "source": "You see, a zero power nuclear reactor is capable of sustaining a stable fission chain reaction, with no significant increase or decline in the reaction rate.",
+    "ja": "というのも、出力0の原子炉であれば、反応速度に著しい増減が生じることなく、安定した核分裂連鎖反応を維持できるからです。",
+    "seconds": 0.20589604199994938
+   },
+   {
+    "source": "This type of installation is essential to gain practical experience of reactor operation, but can still be deadly if the delicate balance isn't maintained.",
+    "ja": "この種の設置は、原子炉運転の実務経験を積む上で不可欠だが、繊細なバランスが保たれていなければ、依然として致命的となり得る。",
+    "seconds": 0.17180641699997068
+   },
+   {
+    "source": "This is a super, super easy project, surprisingly.",
+    "ja": "これ、意外と超、超簡単なプロジェクトだよ。",
+    "seconds": 0.0668353750006645
+   },
+   {
+    "source": "Like, it's not hard to match things up.",
+    "ja": "なんか、照らし合わせるのって難しくないんだよね。",
+    "seconds": 0.08481504200062773
+   },
+   {
+    "source": "So that's the nice thing about this project.",
+    "ja": "そういうところがこのプロジェクトのいいところだね。",
+    "seconds": 0.05020100000001548
+   },
+   {
+    "source": "Okay, so that's down, right?",
+    "ja": "よし、じゃあこれで終わりだよね？",
+    "seconds": 0.05176200000096287
+   },
+   {
+    "source": "So now I'm going to start this way.",
+    "ja": "じゃあ、まずはこう始めるよ。",
+    "seconds": 0.046215750000556
+   },
+   {
+    "source": "I'm just going to run the glue all the way around and do one side at a time.",
+    "ja": "接着剤を一周ぐるりと塗って、片側ずつやっていくよ。",
+    "seconds": 0.07752458399954776
+   },
+   {
+    "source": "So here we go.",
+    "ja": "さあ、いくぞ。",
+    "seconds": 0.033488375000160886
+   },
+   {
+    "source": "I'm running it right above the tin, the rin... the rim tin.",
+    "ja": "缶の真上に被せてるんだ。リン……リム缶。",
+    "seconds": 0.09710958299910999
+   },
+   {
+    "source": "Jeez.",
+    "ja": "ったく。",
+    "seconds": 0.02792050000061863
+   },
+   {
+    "source": "So I'm just going to take this and move it along.",
+    "ja": "じゃあ、これを持って先に進めておくよ。",
+    "seconds": 0.05945362500096962
+   },
+   {
+    "source": "This is an authentic and real old footage of a true certain giant individual from Japan, walking in some military parade.",
+    "ja": "これは、日本の実在したある巨漢が、軍事パレードを歩く様子を捉えた、本物の古い映像です。",
+    "seconds": 0.12799891699978616
+   },
+   {
+    "source": "What's shocking about it is his actual size.",
+    "ja": "衝撃的なのは、彼の実際のサイズだ。",
+    "seconds": 0.06457045800016203
+   },
+   {
+    "source": "He has a stature of at least 4 meters high, which is minimum 13 in feet.",
+    "ja": "彼は少なくとも4メートルの身長があり、最低でも13フィートある。",
+    "seconds": 0.08042816700071853
+   },
+   {
+    "source": "Thus, he is genuinely taller and more massive than each and every other original NBA player, for example, like Shaquille O'Neal, or",
+    "ja": "したがって、彼はシャキール・オニールのような他のNBAオリジナル選手一人ひとりよりも、明らかに背が高く、体格もがっしりしている。あるいは",
+    "seconds": 0.2002249170000141
+   }
+  ]
+ },
+ "naive+history": {
+  "mode": "naive+history",
+  "revisions": 596,
+  "revision_ms_median": 96.67641700070817,
+  "revision_ms_p90": 196.50258399997256,
+  "final_ms_median": 128.939915999581,
+  "final_ms_p90": 280.8149169995886,
+  "prompt_tokens_fed_mean": 115.28859060402685,
+  "sequential_steps_mean": 7.365771812080537,
+  "forward_passes_mean": 8.365771812080537,
+  "draft_acceptance": null,
+  "chrF_vs_human": 30.748399632480776,
+  "_finals": [
+   {
+    "source": "Okay, the next video will get roofing contractors mad at me, but it's not for them.",
+    "ja": "まあ、次の動画では屋根工事業者にブチギレられるだろうけど、あいつらには関係ないよ。",
+    "seconds": 0.18298791699999128
+   },
+   {
+    "source": "It's for you.",
+    "ja": "お前のためだよ。",
+    "seconds": 0.06641154099997948
+   },
+   {
+    "source": "If you are that person that cannot afford a roofing contractor, then you have to watch this video.",
+    "ja": "屋根工事業者を雇う余裕がないっていうなら、この動画を見てくれ。",
+    "seconds": 0.12561612500030606
+   },
+   {
+    "source": "This will show you how you can do a cover over an existing old roof yourself.",
+    "ja": "この動画では、既存の古い屋根を自力でカバーする方法を解説するよ。",
+    "seconds": 0.128939915999581
+   },
+   {
+    "source": "And it's very simple.",
+    "ja": "しかも、すごく簡単だよ。",
+    "seconds": 0.08378579199961678
+   },
+   {
+    "source": "It's a peel and stick system.",
+    "ja": "剥がして貼るだけの仕組みだよ。",
+    "seconds": 0.09886883299986948
+   },
+   {
+    "source": "Cheers, y'all.",
+    "ja": "みんな、乾杯。",
+    "seconds": 0.03496941699995659
+   },
+   {
+    "source": "Now check it out.",
+    "ja": "さあ、見てみて。",
+    "seconds": 0.05062208399976953
+   },
+   {
+    "source": "I really didn't even eat enough to be wiping my mouth, but I can tell you this, my mouth is salivating though.",
+    "ja": "口を拭うほどは食べてないけど、これだけは言えるよ。口がよだれ出てる。",
+    "seconds": 0.15470949999871664
+   },
+   {
+    "source": "You know what I mean?",
+    "ja": "わかるだろ？",
+    "seconds": 0.06268850000014936
+   },
+   {
+    "source": "So look, this is what I'm fixin' to do.",
+    "ja": "ほら見て、これをやろうと思ってるんだ。",
+    "seconds": 0.08837587500056543
+   },
+   {
+    "source": "You guys let me know down in the comment section below, what would you do?",
+    "ja": "みんな、下のコメント欄で教えてね。どうする？",
+    "seconds": 0.1591342089996033
+   },
+   {
+    "source": "What type of veggie would you serve this with?",
+    "ja": "これ、どんな野菜と一緒に出す？",
+    "seconds": 0.3827415830000973
+   },
+   {
+    "source": "And don't forget, this is a budget-friendly meal, alright?",
+    "ja": "あと、これはコスパいいメニューだから、忘れないでね？",
+    "seconds": 0.17486979200111818
+   },
+   {
+    "source": "So let me just go ahead and pour myself a glass of this grape Kool-Aid.",
+    "ja": "じゃあ、さっそくこのグレープ・クールエイドを一杯注いでいくね。",
+    "seconds": 0.23951470900101413
+   },
+   {
+    "source": "Yes, sir.",
+    "ja": "はい。",
+    "seconds": 0.11034220799956529
+   },
+   {
+    "source": "Welcome to Cosa, in Italy.",
+    "ja": "イタリアのコーザへようこそ。",
+    "seconds": 0.053051917000630056
+   },
+   {
+    "source": "Cosa is believed to be an ancient Roman settlement.",
+    "ja": "コーザは古代ローマの集落と考えられています。",
+    "seconds": 0.09442999999919266
+   },
+   {
+    "source": "The site was excavated at least four times over the last century.",
+    "ja": "その遺跡は、過去1世紀の間に少なくとも4回発掘されました。",
+    "seconds": 0.12938758400014194
+   },
+   {
+    "source": "What is there to excavate if Cosa is originally a Roman site?",
+    "ja": "コーザがもともとローマ時代の遺跡であるなら、何を発掘すればよいのでしょうか？",
+    "seconds": 0.17316645899882133
+   },
+   {
+    "source": "Was the Pantheon in Rome excavated?",
+    "ja": "ローマのパンテオンは発掘されましたか？",
+    "seconds": 0.1214342499988561
+   },
+   {
+    "source": "No, the Pantheon is even at the same ground level as the surrounding, contemporary buildings.",
+    "ja": "いいえ、パンテオンは周囲の同時代の建造物と同じ地上レベルにあります。",
+    "seconds": 0.19650258399997256
+   },
+   {
+    "source": "And why is that?",
+    "ja": "それはなぜでしょうか？",
+    "seconds": 0.13084012499894015
+   },
+   {
+    "source": "Because the Pantheon was probably built during the Roman era.",
+    "ja": "パンテオンはおそらくローマ時代に建設されたからです。",
+    "seconds": 0.135307250000551
+   },
+   {
+    "source": "It is also almost cardinally oriented, which indicates that it cannot be very ancient.",
+    "ja": "また、ほぼ柱頭方位を向いており、これはそれほど古くない可能性を示唆しています。",
+    "seconds": 0.293752042000051
+   },
+   {
+    "source": "Venice, city on the water.",
+    "ja": "ヴェネツィア、水上の都市。",
+    "seconds": 0.07467791700037196
+   },
+   {
+    "source": "A place of beauty and romance that attracts millions of visitors every year.",
+    "ja": "毎年数百万人もの観光客が訪れる、美しさとロマンあふれる場所。",
+    "seconds": 0.1414765420013282
+   },
+   {
+    "source": "Just a few steps from the well-trodden tourist routes, there's a very different Venice, one populated by fascinating creatures.",
+    "ja": "人通りの多い観光ルートからわずか数歩のところに、魅力的な生き物たちが暮らす、全く異なるヴェネツィアがある。",
+    "seconds": 0.1905228339983296
+   },
+   {
+    "source": "This film explores a Venice that few people ever see, a city that has a surprising double life.",
+    "ja": "この映画は、ごく少数の人しか目にすることのないヴェネツィア、驚くべき二面性を併せ持つ街を描いている。",
+    "seconds": 0.15982850000000326
+   },
+   {
+    "source": "We're not ready.",
+    "ja": "準備ができていません。",
+    "seconds": 0.03171466699859593
+   },
+   {
+    "source": "And it's going to be more dangerous out there because you fired Greg.",
+    "ja": "それに、グレッグをクビにしたから、外はもっと危険になるよ。",
+    "seconds": 0.08880162500099686
+   },
+   {
+    "source": "Because we don't have any money to pay him, Burt.",
+    "ja": "バート、あいつに払う金がないからな。",
+    "seconds": 0.3455307090007409
+   },
+   {
+    "source": "You're doing this, not me.",
+    "ja": "やってるのはお前で、俺じゃない。",
+    "seconds": 0.07354108300023654
+   },
+   {
+    "source": "The hell I am.",
+    "ja": "俺がやってるんだ。",
+    "seconds": 0.10466508300123678
+   },
+   {
+    "source": "Do you not understand what I had to do to get these kids out here?",
+    "ja": "この連中をここに連れてくるために、俺が何をしたか分かってないのか？",
+    "seconds": 0.1525396670003829
+   },
+   {
+    "source": "The bond that I had to put up for the insurance company, you want to lose all that?",
+    "ja": "保険会社のために結ばなきゃならなかった絆金、全部失いたいのか？",
+    "seconds": 0.2953899589992943
+   },
+   {
+    "source": "Rather than risk hurting one of the kids?",
+    "ja": "子供の一人を傷つけるリスクを冒すよりは？",
+    "seconds": 0.13830691699877207
+   },
+   {
+    "source": "Yeah.",
+    "ja": "ああ。",
+    "seconds": 0.08854495900050097
+   },
+   {
+    "source": "Why?",
+    "ja": "なんで？",
+    "seconds": 0.1964761670005828
+   },
+   {
+    "source": "Never bothered you before.",
+    "ja": "今まで気にしたことなかったのに。",
+    "seconds": 0.24133908299882023
+   },
+   {
+    "source": "Now I need to quickly mention the reactor's name, as it was considered a zero power installation.",
+    "ja": "さて、この原子炉はゼロ出力設備とされていたため、早急に名称を記載しておく必要があります。",
+    "seconds": 0.11264537500028382
+   },
+   {
+    "source": "You see, a zero power nuclear reactor is capable of sustaining a stable fission chain reaction, with no significant increase or decline in the reaction rate.",
+    "ja": "というのも、ゼロ出力の原子炉は、反応速度に著しい増減が生じることなく、安定した核分裂連鎖反応を維持できるからです。",
+    "seconds": 0.1235912920001283
+   },
+   {
+    "source": "This type of installation is essential to gain practical experience of reactor operation, but can still be deadly if the delicate balance isn't maintained.",
+    "ja": "この種の設備は、原子炉運転の実戦経験を積むために不可欠ですが、繊細なバランスが維持されなければ、依然として致命的な結果を招きかねません。",
+    "seconds": 0.2808149169995886
+   },
+   {
+    "source": "This is a super, super easy project, surprisingly.",
+    "ja": "これ、意外と超、超簡単なプロジェクトだよ。",
+    "seconds": 0.08414204099972267
+   },
+   {
+    "source": "Like, it's not hard to match things up.",
+    "ja": "というか、組み合わせるのは難しくないよ。",
+    "seconds": 0.13041245800013712
+   },
+   {
+    "source": "So that's the nice thing about this project.",
+    "ja": "このプロジェクトのいいところはそこだね。",
+    "seconds": 0.08230112500132236
+   },
+   {
+    "source": "Okay, so that's down, right?",
+    "ja": "よし、これで大丈夫だよね？",
+    "seconds": 0.08146529199984798
+   },
+   {
+    "source": "So now I'm going to start this way.",
+    "ja": "じゃあ、ここから始めるね。",
+    "seconds": 0.09497829200154229
+   },
+   {
+    "source": "I'm just going to run the glue all the way around and do one side at a time.",
+    "ja": "じゃあ、この接着剤を一周通して、片側ずつやっていくよ。",
+    "seconds": 0.15755591700144578
+   },
+   {
+    "source": "So here we go.",
+    "ja": "じゃあ、いくよ。",
+    "seconds": 0.05738129099881917
+   },
+   {
+    "source": "I'm running it right above the tin, the rin... the rim tin.",
+    "ja": "缶のすぐ上、リン……リムの缶に通してるよ。",
+    "seconds": 0.15832191700064868
+   },
+   {
+    "source": "Jeez.",
+    "ja": "ったく。",
+    "seconds": 0.09375220899892156
+   },
+   {
+    "source": "So I'm just going to take this and move it along.",
+    "ja": "じゃあ、これをそのまま進めていくよ。",
+    "seconds": 0.08617654100089567
+   },
+   {
+    "source": "This is an authentic and real old footage of a true certain giant individual from Japan, walking in some military parade.",
+    "ja": "これは、日本の実在したある巨漢が、軍事パレードを歩く様子を捉えた、本物の古い映像です。",
+    "seconds": 0.13348358400071447
+   },
+   {
+    "source": "What's shocking about it is his actual size.",
+    "ja": "驚くべきは、その実際の大きさです。",
+    "seconds": 0.06104774999948859
+   },
+   {
+    "source": "He has a stature of at least 4 meters high, which is minimum 13 in feet.",
+    "ja": "彼の身長は少なくとも4メートルあり、最低でも13フィートあります。",
+    "seconds": 0.13184758300121757
+   },
+   {
+    "source": "Thus, he is genuinely taller and more massive than each and every other original NBA player, for example, like Shaquille O'Neal, or",
+    "ja": "したがって、彼はシャキール・オニールのような他のNBAオリジナル選手一人ひとりよりも、間違いなく背が高く、体格もがっしりしています。あるいは",
+    "seconds": 0.4965005829999427
+   }
+  ]
+ },
+ "tape": {
+  "mode": "tape",
+  "revisions": 596,
+  "revision_ms_median": 54.30037550013367,
+  "revision_ms_p90": 131.10116700045182,
+  "final_ms_median": 68.3601250002539,
+  "final_ms_p90": 165.66912499911268,
+  "prompt_tokens_fed_mean": 8.61241610738255,
+  "sequential_steps_mean": 7.3624161073825505,
+  "forward_passes_mean": 8.36241610738255,
+  "draft_acceptance": null,
+  "chrF_vs_human": 30.747290609992444,
+  "_finals": [
+   {
+    "source": "Okay, the next video will get roofing contractors mad at me, but it's not for them.",
+    "ja": "まあ、次の動画では屋根工事業者にブチギレられるだろうけど、あいつらには関係ないよ。",
+    "seconds": 0.13992791700002272
+   },
+   {
+    "source": "It's for you.",
+    "ja": "お前のためだよ。",
+    "seconds": 0.030586041999413283
+   },
+   {
+    "source": "If you are that person that cannot afford a roofing contractor, then you have to watch this video.",
+    "ja": "屋根工事業者を雇う余裕がないっていうなら、この動画を見てくれ。",
+    "seconds": 0.08585741700153449
+   },
+   {
+    "source": "This will show you how you can do a cover over an existing old roof yourself.",
+    "ja": "この動画では、既存の古い屋根を自分でカバーする方法を解説するよ。",
+    "seconds": 0.07981554199977836
+   },
+   {
+    "source": "And it's very simple.",
+    "ja": "しかも、すごく簡単だよ。",
+    "seconds": 0.03211204100080067
+   },
+   {
+    "source": "It's a peel and stick system.",
+    "ja": "剥がして貼るだけの仕組みだよ。",
+    "seconds": 0.041530083000907325
+   },
+   {
+    "source": "Cheers, y'all.",
+    "ja": "みんな、乾杯。",
+    "seconds": 0.03387379099876853
+   },
+   {
+    "source": "Now check it out.",
+    "ja": "さあ、見てみて。",
+    "seconds": 0.030183790999217308
+   },
+   {
+    "source": "I really didn't even eat enough to be wiping my mouth, but I can tell you this, my mouth is salivating though.",
+    "ja": "口を拭うほどは食べてないけど、これだけは言えるよ。口がよだれ出てる。",
+    "seconds": 0.09408770899972296
+   },
+   {
+    "source": "You know what I mean?",
+    "ja": "わかるだろ？",
+    "seconds": 0.028379542000038782
+   },
+   {
+    "source": "So look, this is what I'm fixin' to do.",
+    "ja": "ほら見て、これをやろうと思ってるんだ。",
+    "seconds": 0.05887766699925123
+   },
+   {
+    "source": "You guys let me know down in the comment section below, what would you do?",
+    "ja": "みんな、下のコメント欄で教えてね。どうする？",
+    "seconds": 0.060288582999419305
+   },
+   {
+    "source": "What type of veggie would you serve this with?",
+    "ja": "これ、どんな野菜と一緒に出す？",
+    "seconds": 0.04581299999881594
+   },
+   {
+    "source": "And don't forget, this is a budget-friendly meal, alright?",
+    "ja": "あと、これはコスパいいメニューだから、忘れないでね？",
+    "seconds": 0.06297054199967533
+   },
+   {
+    "source": "So let me just go ahead and pour myself a glass of this grape Kool-Aid.",
+    "ja": "じゃあ、さっそくこのグレープ・クールエイドを一杯注いでいくね。",
+    "seconds": 0.09464945800027635
+   },
+   {
+    "source": "Yes, sir.",
+    "ja": "はい。",
+    "seconds": 0.019445249999989755
+   },
+   {
+    "source": "Welcome to Cosa, in Italy.",
+    "ja": "イタリアのコーザへようこそ。",
+    "seconds": 0.03844112499973562
+   },
+   {
+    "source": "Cosa is believed to be an ancient Roman settlement.",
+    "ja": "コーザは古代ローマの集落と考えられています。",
+    "seconds": 0.05542437499934749
+   },
+   {
+    "source": "The site was excavated at least four times over the last century.",
+    "ja": "その遺跡は、過去1世紀の間に少なくとも4回発掘されました。",
+    "seconds": 0.0683601250002539
+   },
+   {
+    "source": "What is there to excavate if Cosa is originally a Roman site?",
+    "ja": "コーザがもともとローマ時代の遺跡であるなら、何を発掘すればよいのでしょうか？",
+    "seconds": 0.07237645799978054
+   },
+   {
+    "source": "Was the Pantheon in Rome excavated?",
+    "ja": "ローマのパンテオンは発掘されましたか？",
+    "seconds": 0.060756374999982654
+   },
+   {
+    "source": "No, the Pantheon is even at the same ground level as the surrounding, contemporary buildings.",
+    "ja": "いいえ、パンテオンは周囲の同時代の建造物と同じ地上レベルにあります。",
+    "seconds": 0.07892449999962992
+   },
+   {
+    "source": "And why is that?",
+    "ja": "それはなぜでしょうか？",
+    "seconds": 0.025688708999950904
+   },
+   {
+    "source": "Because the Pantheon was probably built during the Roman era.",
+    "ja": "パンテオンはおそらくローマ時代に建設されたからです。",
+    "seconds": 0.08280124999873806
+   },
+   {
+    "source": "It is also almost cardinally oriented, which indicates that it cannot be very ancient.",
+    "ja": "また、ほぼ柱頭方位を向いており、これはそれほど古くない可能性を示唆しています。",
+    "seconds": 0.11198875000081898
+   },
+   {
+    "source": "Venice, city on the water.",
+    "ja": "ヴェネツィア、水上の都市。",
+    "seconds": 0.07430062499952328
+   },
+   {
+    "source": "A place of beauty and romance that attracts millions of visitors every year.",
+    "ja": "毎年数百万人もの観光客を惹きつける、美しさとロマンあふれる場所。",
+    "seconds": 0.12864045899914345
+   },
+   {
+    "source": "Just a few steps from the well-trodden tourist routes, there's a very different Venice, one populated by fascinating creatures.",
+    "ja": "定番の観光ルートからわずか数歩のところに、魅力的な生き物たちが暮らす、全く異なるヴェネツィアがある。",
+    "seconds": 0.1771112920014275
+   },
+   {
+    "source": "This film explores a Venice that few people ever see, a city that has a surprising double life.",
+    "ja": "この映画は、ごく少数の人しか目にすることのないヴェネツィア、驚くべき二面性を併せ持つ街を描いている。",
+    "seconds": 0.296624165999674
+   },
+   {
+    "source": "We're not ready.",
+    "ja": "準備ができていません。",
+    "seconds": 0.03401662500073144
+   },
+   {
+    "source": "And it's going to be more dangerous out there because you fired Greg.",
+    "ja": "それに、グレッグをクビにしたから、外はもっと危険になるよ。",
+    "seconds": 0.20954400000118767
+   },
+   {
+    "source": "Because we don't have any money to pay him, Burt.",
+    "ja": "バート、あいつに払う金がないからな。",
+    "seconds": 0.16566912499911268
+   },
+   {
+    "source": "You're doing this, not me.",
+    "ja": "やってるのはお前で、俺じゃない。",
+    "seconds": 0.16081033400041633
+   },
+   {
+    "source": "The hell I am.",
+    "ja": "俺がやってるんだ。",
+    "seconds": 0.036307207999925595
+   },
+   {
+    "source": "Do you not understand what I had to do to get these kids out here?",
+    "ja": "この連中をここに連れてくるために、俺が何をしたか分かってないのか？",
+    "seconds": 0.1243004160005512
+   },
+   {
+    "source": "The bond that I had to put up for the insurance company, you want to lose all that?",
+    "ja": "保険会社のために結ばなきゃならなかった絆金、全部失いたいのか？",
+    "seconds": 0.10497299999951792
+   },
+   {
+    "source": "Rather than risk hurting one of the kids?",
+    "ja": "子供の一人を傷つけるリスクを冒すよりは？",
+    "seconds": 0.1271002089997637
+   },
+   {
+    "source": "Yeah.",
+    "ja": "ああ。",
+    "seconds": 0.04017600000042876
+   },
+   {
+    "source": "Why?",
+    "ja": "なんで？",
+    "seconds": 0.02529208299893071
+   },
+   {
+    "source": "Never bothered you before.",
+    "ja": "今まで気にしたことなかったのに。",
+    "seconds": 0.05155025000021851
+   },
+   {
+    "source": "Now I need to quickly mention the reactor's name, as it was considered a zero power installation.",
+    "ja": "さて、この原子炉はゼロ出力設備とされていたため、早急に名称を記載しておく必要があります。",
+    "seconds": 0.11197291700045753
+   },
+   {
+    "source": "You see, a zero power nuclear reactor is capable of sustaining a stable fission chain reaction, with no significant increase or decline in the reaction rate.",
+    "ja": "というのも、ゼロ出力の原子炉は、反応速度に著しい増減が生じることなく、安定した核分裂連鎖反応を維持できるからです。",
+    "seconds": 0.14707316699968942
+   },
+   {
+    "source": "This type of installation is essential to gain practical experience of reactor operation, but can still be deadly if the delicate balance isn't maintained.",
+    "ja": "この種の設備は、原子炉運転の実戦経験を積むために不可欠ですが、繊細なバランスが維持されなければ、依然として致命的な結果を招きかねません。",
+    "seconds": 0.20244666600046912
+   },
+   {
+    "source": "This is a super, super easy project, surprisingly.",
+    "ja": "これ、意外と超、超簡単なプロジェクトだよ。",
+    "seconds": 0.05491712500042922
+   },
+   {
+    "source": "Like, it's not hard to match things up.",
+    "ja": "というか、組み合わせるのは難しくないよ。",
+    "seconds": 0.07510879199980991
+   },
+   {
+    "source": "So that's the nice thing about this project.",
+    "ja": "このプロジェクトのいいところはそこだね。",
+    "seconds": 0.044370124998749816
+   },
+   {
+    "source": "Okay, so that's down, right?",
+    "ja": "よし、これで大丈夫だよね？",
+    "seconds": 0.037784415999340126
+   },
+   {
+    "source": "So now I'm going to start this way.",
+    "ja": "じゃあ、ここから始めるね。",
+    "seconds": 0.034290792000319925
+   },
+   {
+    "source": "I'm just going to run the glue all the way around and do one side at a time.",
+    "ja": "じゃあ、この接着剤を一周通して、片側ずつやっていくよ。",
+    "seconds": 0.10755829200024891
+   },
+   {
+    "source": "So here we go.",
+    "ja": "じゃあ、いくよ。",
+    "seconds": 0.035206249998736894
+   },
+   {
+    "source": "I'm running it right above the tin, the rin... the rim tin.",
+    "ja": "缶のすぐ上、リン……リムの缶に通すよ。",
+    "seconds": 0.0730699169998843
+   },
+   {
+    "source": "Jeez.",
+    "ja": "ったく。",
+    "seconds": 0.02487062500040338
+   },
+   {
+    "source": "So I'm just going to take this and move it along.",
+    "ja": "じゃあ、これをそのまま進めていくよ。",
+    "seconds": 0.05197000000043772
+   },
+   {
+    "source": "This is an authentic and real old footage of a true certain giant individual from Japan, walking in some military parade.",
+    "ja": "これは、日本の実在したある巨漢が、軍事パレードを歩く様子を捉えた、本物の古い映像です。",
+    "seconds": 0.12449366600048961
+   },
+   {
+    "source": "What's shocking about it is his actual size.",
+    "ja": "驚くべきは、その実際の大きさです。",
+    "seconds": 0.04381854100029159
+   },
+   {
+    "source": "He has a stature of at least 4 meters high, which is minimum 13 in feet.",
+    "ja": "彼の身長は少なくとも4メートルあり、最低でも13フィートあります。",
+    "seconds": 0.09462574999997742
+   },
+   {
+    "source": "Thus, he is genuinely taller and more massive than each and every other original NBA player, for example, like Shaquille O'Neal, or",
+    "ja": "したがって、彼はシャキール・オニールのような他のあらゆるNBAオリジナル選手よりも、実際に背が高く、体格もがっしりしています。あるいは、",
+    "seconds": 0.21583895799994934
+   }
+  ]
+ },
+ "tape+draft": {
+  "mode": "tape+draft",
+  "revisions": 596,
+  "revision_ms_median": 35.26433299975906,
+  "revision_ms_p90": 71.28258299962908,
+  "final_ms_median": 48.41162499906204,
+  "final_ms_p90": 89.35525000015332,
+  "prompt_tokens_fed_mean": 8.61241610738255,
+  "sequential_steps_mean": 3.459731543624161,
+  "forward_passes_mean": 4.761744966442953,
+  "draft_acceptance": 0.4619354838709677,
+  "chrF_vs_human": 30.748399632480776,
+  "_finals": [
+   {
+    "source": "Okay, the next video will get roofing contractors mad at me, but it's not for them.",
+    "ja": "まあ、次の動画では屋根工事業者にブチギレられるだろうけど、あいつらには関係ないよ。",
+    "seconds": 0.04288329099836119
+   },
+   {
+    "source": "It's for you.",
+    "ja": "お前のためだよ。",
+    "seconds": 0.02581195899983868
+   },
+   {
+    "source": "If you are that person that cannot afford a roofing contractor, then you have to watch this video.",
+    "ja": "屋根工事業者を雇う余裕がないっていうなら、この動画を見てくれ。",
+    "seconds": 0.03555770799903257
+   },
+   {
+    "source": "This will show you how you can do a cover over an existing old roof yourself.",
+    "ja": "この動画では、既存の古い屋根を自力でカバーする方法を解説するよ。",
+    "seconds": 0.05036958299933758
+   },
+   {
+    "source": "And it's very simple.",
+    "ja": "しかも、すごく簡単だよ。",
+    "seconds": 0.038817624999865075
+   },
+   {
+    "source": "It's a peel and stick system.",
+    "ja": "剥がして貼るだけの仕組みだよ。",
+    "seconds": 0.03551675000016985
+   },
+   {
+    "source": "Cheers, y'all.",
+    "ja": "みんな、乾杯。",
+    "seconds": 0.04011904100116226
+   },
+   {
+    "source": "Now check it out.",
+    "ja": "さあ、見てみて。",
+    "seconds": 0.034136458998546004
+   },
+   {
+    "source": "I really didn't even eat enough to be wiping my mouth, but I can tell you this, my mouth is salivating though.",
+    "ja": "口を拭うほどは食べてないけど、これだけは言えるよ。口がよだれ出てる。",
+    "seconds": 0.06303574999947159
+   },
+   {
+    "source": "You know what I mean?",
+    "ja": "わかるだろ？",
+    "seconds": 0.04210908299864968
+   },
+   {
+    "source": "So look, this is what I'm fixin' to do.",
+    "ja": "ほら見て、これをやろうと思ってるんだ。",
+    "seconds": 0.058215584000208764
+   },
+   {
+    "source": "You guys let me know down in the comment section below, what would you do?",
+    "ja": "みんな、下のコメント欄で教えてね。どうする？",
+    "seconds": 0.03156116599893721
+   },
+   {
+    "source": "What type of veggie would you serve this with?",
+    "ja": "これ、どんな野菜と一緒に出す？",
+    "seconds": 0.050808916999812936
+   },
+   {
+    "source": "And don't forget, this is a budget-friendly meal, alright?",
+    "ja": "あと、これはコスパいいメニューだから、忘れないでね？",
+    "seconds": 0.02864491600121255
+   },
+   {
+    "source": "So let me just go ahead and pour myself a glass of this grape Kool-Aid.",
+    "ja": "じゃあ、さっそくこのグレープ・クールエイドを一杯注いでいくね。",
+    "seconds": 0.05079166600080498
+   },
+   {
+    "source": "Yes, sir.",
+    "ja": "はい。",
+    "seconds": 0.022262541000600322
+   },
+   {
+    "source": "Welcome to Cosa, in Italy.",
+    "ja": "イタリアのコーザへようこそ。",
+    "seconds": 0.052988290999564924
+   },
+   {
+    "source": "Cosa is believed to be an ancient Roman settlement.",
+    "ja": "コーザは古代ローマの集落と考えられています。",
+    "seconds": 0.05140449999998964
+   },
+   {
+    "source": "The site was excavated at least four times over the last century.",
+    "ja": "その遺跡は、過去1世紀の間に少なくとも4回発掘されました。",
+    "seconds": 0.07780920799996238
+   },
+   {
+    "source": "What is there to excavate if Cosa is originally a Roman site?",
+    "ja": "コーザがもともとローマ時代の遺跡であるなら、何を発掘すればよいのでしょうか？",
+    "seconds": 0.05192779199933284
+   },
+   {
+    "source": "Was the Pantheon in Rome excavated?",
+    "ja": "ローマのパンテオンは発掘されましたか？",
+    "seconds": 0.07100883299972338
+   },
+   {
+    "source": "No, the Pantheon is even at the same ground level as the surrounding, contemporary buildings.",
+    "ja": "いいえ、パンテオンは周囲の同時代の建造物と同じ地上レベルにあります。",
+    "seconds": 0.05304562499986787
+   },
+   {
+    "source": "And why is that?",
+    "ja": "それはなぜでしょうか？",
+    "seconds": 0.033700291000059224
+   },
+   {
+    "source": "Because the Pantheon was probably built during the Roman era.",
+    "ja": "パンテオンはおそらくローマ時代に建設されたからです。",
+    "seconds": 0.024084874999971362
+   },
+   {
+    "source": "It is also almost cardinally oriented, which indicates that it cannot be very ancient.",
+    "ja": "また、ほぼ柱頭方位を向いており、これはそれほど古くない可能性を示唆しています。",
+    "seconds": 0.08478820800155518
+   },
+   {
+    "source": "Venice, city on the water.",
+    "ja": "ヴェネツィア、水上の都市。",
+    "seconds": 0.036465625000346336
+   },
+   {
+    "source": "A place of beauty and romance that attracts millions of visitors every year.",
+    "ja": "毎年数百万人もの観光客が訪れる、美しさとロマンあふれる場所。",
+    "seconds": 0.07710025000051246
+   },
+   {
+    "source": "Just a few steps from the well-trodden tourist routes, there's a very different Venice, one populated by fascinating creatures.",
+    "ja": "人通りの多い観光ルートからわずか数歩のところに、魅力的な生き物たちが暮らす、全く異なるヴェネツィアがある。",
+    "seconds": 0.10666116700122075
+   },
+   {
+    "source": "This film explores a Venice that few people ever see, a city that has a surprising double life.",
+    "ja": "この映画は、ごく少数の人しか目にすることのないヴェネツィア、驚くべき二面性を併せ持つ街を描いている。",
+    "seconds": 0.045064792000630405
+   },
+   {
+    "source": "We're not ready.",
+    "ja": "準備ができていません。",
+    "seconds": 0.024788417000308982
+   },
+   {
+    "source": "And it's going to be more dangerous out there because you fired Greg.",
+    "ja": "それに、グレッグをクビにしたから、外はもっと危険になるよ。",
+    "seconds": 0.06693758400069783
+   },
+   {
+    "source": "Because we don't have any money to pay him, Burt.",
+    "ja": "バート、あいつに払う金がないからな。",
+    "seconds": 0.0704493339999317
+   },
+   {
+    "source": "You're doing this, not me.",
+    "ja": "やってるのはお前で、俺じゃない。",
+    "seconds": 0.04841162499906204
+   },
+   {
+    "source": "The hell I am.",
+    "ja": "俺がやってるんだ。",
+    "seconds": 0.030998374999398948
+   },
+   {
+    "source": "Do you not understand what I had to do to get these kids out here?",
+    "ja": "この連中をここに連れてくるために、俺が何をしたか分かってないのか？",
+    "seconds": 0.08920849999958591
+   },
+   {
+    "source": "The bond that I had to put up for the insurance company, you want to lose all that?",
+    "ja": "保険会社のために結ばなきゃならなかった絆金、全部失いたいのか？",
+    "seconds": 0.050526540999271674
+   },
+   {
+    "source": "Rather than risk hurting one of the kids?",
+    "ja": "子供の一人を傷つけるリスクを冒すよりは？",
+    "seconds": 0.059934625000096275
+   },
+   {
+    "source": "Yeah.",
+    "ja": "ああ。",
+    "seconds": 0.02645779199883691
+   },
+   {
+    "source": "Why?",
+    "ja": "なんで？",
+    "seconds": 0.025446958001339226
+   },
+   {
+    "source": "Never bothered you before.",
+    "ja": "今まで気にしたことなかったのに。",
+    "seconds": 0.05500937500073633
+   },
+   {
+    "source": "Now I need to quickly mention the reactor's name, as it was considered a zero power installation.",
+    "ja": "さて、この原子炉はゼロ出力設備とされていたため、早急に名称を記載しておく必要があります。",
+    "seconds": 0.11479891700037115
+   },
+   {
+    "source": "You see, a zero power nuclear reactor is capable of sustaining a stable fission chain reaction, with no significant increase or decline in the reaction rate.",
+    "ja": "というのも、ゼロ出力の原子炉は、反応速度に著しい増減が生じることなく、安定した核分裂連鎖反応を維持できるからです。",
+    "seconds": 0.12298462500075402
+   },
+   {
+    "source": "This type of installation is essential to gain practical experience of reactor operation, but can still be deadly if the delicate balance isn't maintained.",
+    "ja": "この種の設備は、原子炉運転の実戦経験を積むために不可欠ですが、繊細なバランスが維持されなければ、依然として致命的な結果を招きかねません。",
+    "seconds": 0.052849041001536534
+   },
+   {
+    "source": "This is a super, super easy project, surprisingly.",
+    "ja": "これ、意外と超、超簡単なプロジェクトだよ。",
+    "seconds": 0.04091175000030489
+   },
+   {
+    "source": "Like, it's not hard to match things up.",
+    "ja": "というか、組み合わせるのは難しくないよ。",
+    "seconds": 0.019050332999540842
+   },
+   {
+    "source": "So that's the nice thing about this project.",
+    "ja": "このプロジェクトのいいところはそこだね。",
+    "seconds": 0.041553333001502324
+   },
+   {
+    "source": "Okay, so that's down, right?",
+    "ja": "よし、これで大丈夫だよね？",
+    "seconds": 0.03224291700098547
+   },
+   {
+    "source": "So now I'm going to start this way.",
+    "ja": "じゃあ、ここから始めるね。",
+    "seconds": 0.02905970800020441
+   },
+   {
+    "source": "I'm just going to run the glue all the way around and do one side at a time.",
+    "ja": "じゃあ、この接着剤を一周通して、片側ずつやっていくよ。",
+    "seconds": 0.08928487499906623
+   },
+   {
+    "source": "So here we go.",
+    "ja": "じゃあ、いくよ。",
+    "seconds": 0.041606165999837685
+   },
+   {
+    "source": "I'm running it right above the tin, the rin... the rim tin.",
+    "ja": "缶のすぐ上、リン……リムの缶に通してるよ。",
+    "seconds": 0.08411066600092454
+   },
+   {
+    "source": "Jeez.",
+    "ja": "ったく。",
+    "seconds": 0.028247083000678685
+   },
+   {
+    "source": "So I'm just going to take this and move it along.",
+    "ja": "じゃあ、これをそのまま進めていくよ。",
+    "seconds": 0.03500716600137821
+   },
+   {
+    "source": "This is an authentic and real old footage of a true certain giant individual from Japan, walking in some military parade.",
+    "ja": "これは、日本の実在したある巨漢が、軍事パレードを歩く様子を捉えた、本物の古い映像です。",
+    "seconds": 0.13076691599962942
+   },
+   {
+    "source": "What's shocking about it is his actual size.",
+    "ja": "驚くべきは、その実際の大きさです。",
+    "seconds": 0.03551287499976752
+   },
+   {
+    "source": "He has a stature of at least 4 meters high, which is minimum 13 in feet.",
+    "ja": "彼の身長は少なくとも4メートルあり、最低でも13フィートあります。",
+    "seconds": 0.08935525000015332
+   },
+   {
+    "source": "Thus, he is genuinely taller and more massive than each and every other original NBA player, for example, like Shaquille O'Neal, or",
+    "ja": "したがって、彼はシャキール・オニールのような他のNBAオリジナル選手一人ひとりよりも、間違いなく背が高く、体格もがっしりしています。あるいは",
+    "seconds": 0.11712204200011911
+   }
+  ]
+ }
+}

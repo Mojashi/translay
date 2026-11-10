@@ -1,0 +1,14 @@
+t=0s disk_free=5893MB engine_rss=MB footprint= swap_used=7678.31M
+t=2s disk_free=6917MB engine_rss=1473MB footprint=1609MB swap_used=7403.62M
+t=4s disk_free=6917MB engine_rss=2814MB footprint=2708MB swap_used=7395.62M
+t=6s disk_free=6917MB engine_rss=2871MB footprint=5052MB swap_used=7363.62M
+t=8s disk_free=6917MB engine_rss=2880MB footprint=6185MB swap_used=7347.62M
+t=10s disk_free=6917MB engine_rss=2886MB footprint=7203MB swap_used=7315.62M
+t=12s disk_free=6917MB engine_rss=2891MB footprint=8453MB swap_used=7315.62M
+t=14s disk_free=6917MB engine_rss=2896MB footprint=9250MB swap_used=7251.50M
+t=16s disk_free=6917MB engine_rss=2899MB footprint=9572MB swap_used=7243.50M
+t=18s disk_free=6917MB engine_rss=2905MB footprint=9830MB swap_used=7203.50M
+t=20s disk_free=6917MB engine_rss=2909MB footprint=10GB swap_used=7187.50M
+t=22s disk_free=6916MB engine_rss=2862MB footprint=10GB swap_used=7131.50M
+t=24s disk_free=6915MB engine_rss=MB footprint= swap_used=7107.50M
+t=26s disk_free=6914MB engine_rss=MB footprint= swap_used=7107.50M

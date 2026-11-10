@@ -1,0 +1,10 @@
+{
+  "totalWords" : 7136,
+  "wer" : 1.9899103139013452,
+  "totalErrors" : 142,
+  "filesProcessed" : 300,
+  "rtfx" : 48.68779076594214,
+  "chunkSize" : 1120,
+  "audioDuration" : 2641.0851250000014,
+  "processingTime" : 54.24532687664032
+}

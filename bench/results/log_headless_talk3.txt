@@ -1,0 +1,44 @@
+[17:20:04.746] [INFO] [FluidAudio.DownloadUtils] Host environment: macOS Version 15.2 (Build 24C101), arch=arm64, chip=Apple M4 Pro, cores=14/14, mem=24 GB, rosetta=false
+[17:20:04.748] [INFO] [FluidAudio.DownloadUtils] Found nemotron-streaming/560ms locally, no download needed
+[17:20:04.748] [INFO] [FluidAudio.NemotronStreaming] Loading Nemotron CoreML models from /Users/mojashi/.cache/fluidaudio/models/nemotron-streaming/560ms...
+[17:20:04.748] [INFO] [FluidAudio.NemotronStreaming] Loaded config: 560ms chunks, 56 mel frames
+[transformers] You are using a model of type `plamo3` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+[17:20:22.452] [INFO] [FluidAudio.NemotronStreaming] Loaded fused decoder_joint (B1) — merged inner-loop path enabled
+[17:20:22.486] [INFO] [FluidAudio.NemotronStreaming] Nemotron models loaded successfully (560ms chunks).
+models ready in 17749 ms
+[#1] EN: Okay, the next video will get roofing contractors mad at me, but it's not for them it's for you.
+[#1] JA: よし、次の動画では屋根工事業者にブチギレるけど、それは業者向けじゃなくてお前向けだ。   (sentence→final 96 ms)
+[#2] EN: If you are that person that cannot afford a roofing contractor, then you have to watch this video.
+[#2] JA: 屋根工事業者を雇う余裕がないっていうタイプなら、この動画を見ておけ。   (sentence→final 42 ms)
+[#3] EN: This will show you how you can do a cover over an existing old roof yourself and it's very simple.
+[#3] JA: この動画では、既存の古い屋根を自分でカバーする方法を解説するよ。やり方は至ってシンプルだ。   (sentence→final 31 ms)
+[#4] EN: Its appeal and stick system cheers y'all now check it out.
+[#4] JA: Its appeal and stick systemがみんなを後押ししてるよ。今すぐチェックしてくれ。   (sentence→final 45 ms)
+[#5] EN: I really didn't even eat enough to be wiping my mouth, but I can tell you this my mouth is salivating though you know what I mean.
+[#5] JA: 口を拭うほど食事をしたわけじゃないけど、これだけは言える。口の中がよだれ出てるよ。まあ、わかるだろ。   (sentence→final 73 ms)
+[#6] EN: So look, this is what I'm fixing to do.
+[#6] JA: ほら見てくれ、今これを直してるんだ。   (sentence→final 28 ms)
+[#7] EN: You guys let me know down in the comment section below what would you do, what type of veggie would you serve this with?
+[#7] JA: みんな、下のコメント欄でどうしたいか教えてね。どんな野菜と一緒に出す？   (sentence→final 34 ms)
+[#8] EN: And don't forget this is a budget friendly meal.
+[#8] JA: あと、これはコスパ抜群のメニューだってことも忘れないでね。   (sentence→final 50 ms)
+[#9] EN: Alright, so let me just go ahead and pour myself a glass of this great Kool Aid.
+[#9] JA: よし、じゃあ、この絶品クールエイドを一杯注いでいくよ。   (sentence→final 57 ms)
+[#10] EN: Yes sir, welcome to Cosa in Italy.
+[#10] JA: はい、Cosa in Italyへようこそ。   (sentence→final 28 ms)
+[#11] EN: Cosa is believed to be an ancient Roman settlement.
+[#11] JA: Cosaは古代ローマの集落だと考えられている。   (sentence→final 34 ms)
+[#12] EN: The site was excavated at least four times over the last century.
+[#12] JA: その遺跡は、過去1世紀の間に少なくとも4回発掘された。   (sentence→final 27 ms)
+[#13] EN: What is there to excavate if Cosa is originally a Roman site was the Pantheon in Rome excavated?
+[#13] JA: もしCosaがもともとローマの遺跡だとしたら、何を発掘すればいいんだろう？ローマのパンテオンが発掘されたのかな？   (sentence→final 94 ms)
+[#14] EN: No, the Pantheon is even at the same ground level as the surrounding contemporary buildings.
+[#14] JA: いや、パンテオンは周囲の当時の建物と同じ高さにあるんだ。   (sentence→final 619 ms)
+[#15] EN: And why is that?
+[#15] JA: それはどうして？   (sentence→final 61 ms)
+[#16] EN: Because the Pantheon was probably built during the Roman era.
+[#16] JA: だって、パンテオンはおそらくローマ時代に建てられたから。   (sentence→final 42 ms)
+[#17] EN: It is also almost cardinally oriented, which indicates that it cannot be very ancient
+[#17] JA: それに、ほぼ柱が垂直に立っているから、それほど古くはないってことだ。   (sentence→final 479 ms)
+lines=17 sentence→final median=45 ms p90=479 ms max=619 ms
+wall 77588 ms (realtime=true)

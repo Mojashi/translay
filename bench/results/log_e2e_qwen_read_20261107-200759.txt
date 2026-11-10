@@ -1,0 +1,148 @@
+[transformers] You are using a model of type `plamo3` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+translay: revise   63.9ms es:passes=5,steps=4,draft=0/0 ja:passes=2,steps=1,draft=0/0 | 'Okay so'
+translay: revise   42.5ms es:passes=5,steps=4,draft=3/4 ja:passes=5,steps=4,draft=0/1 | "Okay so let's get started."
+translay: revise   20.5ms es:passes=1,steps=0,draft=7/7 ja:passes=1,steps=0,draft=4/4 | "Okay so let's get started."
+translay: settle   12.8ms prefilled=[5, 1, 1]
+translay: ready in 3.2s (recogniser=qwen, asr=/Users/mojashi/repos/translay/models/Qwen3-ASR-1.7B-4bit, mt=/Users/mojashi/repos/translay/models/plamo-3-translate-0.8b-MLX-4bit)
+engine ready in 5111 ms
+translay: revise   32.0ms es:passes=3,steps=2,draft=0/0 ja:passes=3,steps=2,draft=0/0 | 'Oh.'
+translay: revise   47.6ms es:passes=1,steps=0,draft=2/2 ja:passes=1,steps=0,draft=2/2 | 'Oh.'
+[#1] SRC: Oh.   (finished→final 47 ms)
+[#1] EN: Oh.
+[#1] ES: Oh.
+[#1] JA: ああ。
+translay: settle   15.2ms prefilled=[5, 1, 1]
+translay: revise   51.5ms es:passes=4,steps=3,draft=0/0 ja:passes=2,steps=1,draft=0/0 | 'yeah.'
+translay: revise   31.6ms es:passes=4,steps=3,draft=0/3 ja:passes=3,steps=2,draft=0/1 | 'better.'
+translay: revise   36.6ms es:passes=4,steps=3,draft=0/3 ja:passes=3,steps=2,draft=0/2 | 'I want.'
+translay: revise   52.5ms es:passes=5,steps=4,draft=2/3 ja:passes=3,steps=2,draft=0/2 | 'I want to talk.'
+translay: revise   28.8ms es:passes=3,steps=2,draft=5/6 ja:passes=1,steps=0,draft=2/2 | 'I want to talk to.'
+translay: revise   54.6ms es:passes=6,steps=4,draft=6/10 ja:passes=5,steps=4,draft=0/2 | 'I want to talk to talk about.'
+translay: revise   47.4ms es:passes=3,steps=2,draft=10/11 ja:passes=5,steps=4,draft=0/4 | 'I want to talk to talk about this.'
+translay: revise   91.7ms es:passes=12,steps=11,draft=5/12 ja:passes=7,steps=6,draft=0/4 | 'nt to talk to talk and walk you through.'
+translay: revise  100.4ms es:passes=14,steps=13,draft=2/16 ja:passes=13,steps=12,draft=0/6 | 'to talk you, talk, walk you through the.'
+translay: revise   63.6ms es:passes=8,steps=7,draft=13/15 ja:passes=5,steps=4,draft=6/12 | 'k, walk you through the architecture of.'
+translay: revise   78.5ms es:passes=4,steps=3,draft=19/20 ja:passes=7,steps=5,draft=7/12 | 'alk you through the architecture of our.'
+translay: revise   99.0ms es:passes=3,steps=2,draft=21/22 ja:passes=9,steps=8,draft=8/13 | 'you through the architecture of our new.'
+translay: revise  117.9ms es:passes=8,steps=7,draft=20/23 ja:passes=16,steps=15,draft=0/16 | 'ough the architecture of our new search.'
+translay: revise   87.2ms es:passes=4,steps=3,draft=22/27 ja:passes=9,steps=5,draft=6/35 | ' the architecture of our new suggestion.'
+translay: revise  139.1ms es:passes=17,steps=15,draft=13/34 ja:passes=13,steps=12,draft=0/14 | 'he architecture of our new search agent.'
+translay: revise  140.3ms es:passes=15,steps=11,draft=21/54 ja:passes=15,steps=12,draft=4/27 | 'ture of our new search agent, the front.'
+translay: revise  121.0ms es:passes=5,steps=4,draft=30/35 ja:passes=16,steps=13,draft=2/35 | ' of our new search agent, the front end.'
+translay: revise  143.6ms es:passes=4,steps=2,draft=30/35 ja:passes=6,steps=3,draft=8/37 | ' of our new search agent. The front end.'
+translay: revise   91.6ms es:passes=2,steps=1,draft=29/33 ja:passes=10,steps=7,draft=7/22 | 'he architecture of our new search agent.'
+[#2] SRC: I want to talk you, talk, walk you through the architecture of our new search agent.   (finished→final 91 ms)
+[#2] EN: I want to talk you, talk, walk you through the architecture of our new search agent.
+[#2] ES: Quiero hablarte, hablarte, explicarte la arquitectura de nuestro nuevo agente de búsqueda.
+[#2] JA: 新しい検索エージェントのアーキテクチャについて、お話ししたい、お話ししたいし、順を追って説明したいんです。
+translay: settle    7.6ms prefilled=[1, 1, 1]
+translay: revise   70.5ms es:passes=10,steps=9,draft=0/0 ja:passes=5,steps=4,draft=0/0 | 'The front ends and the.'
+translay: revise   75.6ms es:passes=10,steps=9,draft=0/9 ja:passes=6,steps=5,draft=2/4 | 'The front end sends a query.'
+translay: revise   99.3ms es:passes=14,steps=13,draft=0/9 ja:passes=8,steps=7,draft=2/7 | 'The front ends, hands, equate to.'
+translay: revise   95.3ms es:passes=10,steps=9,draft=0/13 ja:passes=5,steps=4,draft=2/9 | 'the frontends and the way to.'
+translay: revise   80.1ms es:passes=8,steps=7,draft=4/9 ja:passes=8,steps=6,draft=0/10 | 'he frontends hands according to the API.'
+translay: revise  119.0ms es:passes=18,steps=17,draft=0/11 ja:passes=8,steps=6,draft=0/10 | 't end, and according to the API gateway.'
+translay: revise  142.7ms es:passes=15,steps=13,draft=6/23 ja:passes=8,steps=6,draft=2/9 | 't ends hands a query to the API gateway.'
+translay: revise   68.2ms es:passes=4,steps=3,draft=19/20 ja:passes=7,steps=5,draft=5/13 | 'hands a query to the API gateway, which.'
+translay: revise  137.3ms es:passes=15,steps=13,draft=7/30 ja:passes=11,steps=8,draft=1/26 | 'ployed to the API gateway, which routes.'
+translay: revise  158.8ms es:passes=18,steps=16,draft=7/32 ja:passes=15,steps=11,draft=0/25 | 'the API gateway, which routes it to the.'
+translay: revise  175.3ms es:passes=24,steps=21,draft=7/38 ja:passes=8,steps=6,draft=10/15 | 'ay, which routes it to the orchestrated.'
+translay: revise  250.5ms es:passes=25,steps=19,draft=6/67 ja:passes=16,steps=12,draft=9/41 | 't to the orchestrated, the orchestrated.'
+translay: revise  128.3ms es:passes=13,steps=10,draft=20/34 ja:passes=15,steps=12,draft=14/31 | 'e orchestrator. The orchestrator breaks.'
+translay: revise   59.2ms es:passes=2,steps=1,draft=24/32 ja:passes=1,steps=0,draft=19/28 | 'ay, which routes it to the orchestrator.'
+[#3] SRC: The frontends send the query to the API gateway, which routes it to the orchestrator.   (finished→final 59 ms)
+[#3] EN: The frontends send the query to the API gateway, which routes it to the orchestrator.
+[#3] ES: Los frontends envían la consulta a la puerta de API, que la remite al orquestador.
+[#3] JA: フロントエンドがクエリをAPIゲートウェイに送信し、それがオーケストレーターにルーティングされます。
+translay: settle    7.6ms prefilled=[1, 1, 1]
+translay: revise  101.0ms es:passes=12,steps=11,draft=0/0 ja:passes=10,steps=9,draft=0/0 | 'The orchestrator breaks the query.'
+translay: revise   84.5ms es:passes=10,steps=8,draft=5/12 ja:passes=5,steps=4,draft=5/9 | 'e orchestrator breaks the question into.'
+translay: revise   51.3ms es:passes=3,steps=2,draft=11/14 ja:passes=5,steps=4,draft=7/9 | 'chestrator breaks the question into sub.'
+translay: revise   70.6ms es:passes=4,steps=3,draft=12/13 ja:passes=5,steps=4,draft=8/11 | 'rator breaks the question into subtasks.'
+translay: revise   56.5ms es:passes=6,steps=5,draft=14/15 ja:passes=5,steps=4,draft=10/12 | 'aks the question into subtasks and runs.'
+translay: revise   52.7ms es:passes=4,steps=2,draft=17/21 ja:passes=5,steps=4,draft=11/14 | 'question into subtasks and runs them in.'
+translay: revise   75.2ms es:passes=6,steps=4,draft=19/29 ja:passes=5,steps=4,draft=13/15 | 'into subtasks and runs them in parallel.'
+translay: revise   92.8ms es:passes=8,steps=7,draft=24/24 ja:passes=8,steps=6,draft=14/27 | ' and runs them in parallel. Each worker.'
+translay: revise   84.0ms es:passes=1,steps=0,draft=24/31 ja:passes=4,steps=2,draft=14/33 | 'into subtasks and runs them in parallel.'
+[#4] SRC: The orchestrator breaks the question into subtasks and runs them in parallel.   (finished→final 84 ms)
+[#4] EN: The orchestrator breaks the question into subtasks and runs them in parallel.
+[#4] ES: El orquestador desglosa la consulta en subtareas y las ejecuta en paralelo.
+[#4] JA: オーケストレーターが質問をサブタスクに分割し、それらを並列に実行します。
+translay: settle    8.0ms prefilled=[1, 1, 1]
+translay: revise   41.3ms es:passes=5,steps=4,draft=0/0 ja:passes=4,steps=3,draft=0/0 | 'Each worker.'
+translay: revise   38.3ms es:passes=5,steps=4,draft=3/4 ja:passes=2,steps=1,draft=2/3 | 'Each worker calls the'
+translay: revise  112.9ms es:passes=14,steps=12,draft=3/9 ja:passes=7,steps=6,draft=2/3 | 'Each worker calls the language model.'
+translay: revise   39.5ms es:passes=3,steps=2,draft=15/16 ja:passes=2,steps=1,draft=7/8 | 'ach worker calls the language model and.'
+translay: revise  103.9ms es:passes=11,steps=9,draft=10/26 ja:passes=7,steps=5,draft=5/9 | 'calls the language model and web search.'
+translay: revise  168.8ms es:passes=18,steps=15,draft=7/43 ja:passes=7,steps=4,draft=4/18 | 'calls a language model and a website to.'
+translay: revise  114.3ms es:passes=15,steps=14,draft=18/24 ja:passes=10,steps=7,draft=4/16 | 'age model and a web search tool. We can.'
+translay: revise   98.9ms es:passes=6,steps=3,draft=21/55 ja:passes=4,steps=2,draft=9/21 | ' a language model and a web search tool.'
+[#5] SRC: Each worker calls a language model and a web search tool.   (finished→final 99 ms)
+[#5] EN: Each worker calls a language model and a web search tool.
+[#5] ES: Cada worker llama a un modelo de lenguaje y a una herramienta de búsqueda web.
+[#5] JA: 各ワーカーは、言語モデルとウェブ検索ツールを呼び出します。
+translay: settle    8.1ms prefilled=[1, 1, 1]
+translay: revise   64.8ms es:passes=8,steps=7,draft=0/0 ja:passes=5,steps=4,draft=0/0 | 'We cast the results.'
+translay: revise   43.5ms es:passes=5,steps=4,draft=3/7 ja:passes=1,steps=0,draft=4/4 | 'We cast the result to.'
+translay: revise   44.8ms es:passes=4,steps=3,draft=6/7 ja:passes=5,steps=4,draft=2/4 | 'We cast the result to embedding.'
+translay: revise   56.7ms es:passes=4,steps=3,draft=6/9 ja:passes=6,steps=4,draft=3/7 | 'We cast the result to in ready.'
+translay: revise   85.7ms es:passes=11,steps=9,draft=2/14 ja:passes=5,steps=4,draft=2/8 | 'We cache the result to reduce our'
+translay: revise  130.9ms es:passes=14,steps=12,draft=2/21 ja:passes=9,steps=8,draft=2/6 | ' cast the result to embeds, so repeated.'
+translay: revise  113.1ms es:passes=16,steps=15,draft=0/15 ja:passes=10,steps=9,draft=0/10 | 'esult to embeds some repeated questions.'
+translay: revise  116.9ms es:passes=14,steps=12,draft=8/23 ja:passes=11,steps=10,draft=0/9 | 'esult to remedy some repeated questions.'
+translay: revise  103.2ms es:passes=10,steps=8,draft=12/33 ja:passes=6,steps=5,draft=6/10 | ' some repeated questions. Came back and.'
+translay: revise  125.4ms es:passes=14,steps=12,draft=11/33 ja:passes=13,steps=12,draft=1/11 | ' questions. Came back in under a second.'
+translay: revise  146.1ms es:passes=13,steps=10,draft=8/40 ja:passes=13,steps=10,draft=1/18 | 'd questions came back in under a second.'
+translay: revise  140.8ms es:passes=19,steps=16,draft=9/42 ja:passes=4,steps=3,draft=13/13 | ' came back in under a second. Later she.'
+translay: revise  131.5ms es:passes=12,steps=9,draft=9/51 ja:passes=1,steps=0,draft=13/16 | 'd questions came back in under a second.'
+[#6] SRC: the result to embeds so repeated questions came back in under a second.   (finished→final 131 ms)
+[#6] EN: the result to embeds so repeated questions came back in under a second.
+[#6] ES: Los resultados de embedding devolvieron preguntas repetidas en menos de un segundo.
+[#6] JA: 埋め込み結果により、繰り返しの質問が1秒未満で返ってきました。
+translay: settle    8.9ms prefilled=[1, 1, 1]
+translay: revise   56.8ms es:passes=6,steps=5,draft=0/0 ja:passes=4,steps=3,draft=0/0 | 'Language is.'
+translay: revise   56.8ms es:passes=5,steps=4,draft=4/5 ja:passes=6,steps=5,draft=1/3 | 'Language is our biggest.'
+translay: revise  103.7ms es:passes=13,steps=12,draft=0/8 ja:passes=9,steps=7,draft=1/9 | 'Latency is our biggest concern.'
+translay: revise   80.1ms es:passes=5,steps=4,draft=11/12 ja:passes=8,steps=6,draft=1/16 | 'atency is our biggest concern right now.'
+translay: revise  117.2ms es:passes=8,steps=6,draft=11/21 ja:passes=12,steps=10,draft=1/10 | 'r biggest concern right now, especially.'
+translay: revise  105.5ms es:passes=6,steps=5,draft=17/18 ja:passes=12,steps=9,draft=4/23 | ' concern right now, especially for long.'
+translay: revise  115.4ms es:passes=11,steps=9,draft=14/34 ja:passes=8,steps=6,draft=7/27 | 'ight now, especially for long documents.'
+translay: revise   81.4ms es:passes=10,steps=8,draft=18/27 ja:passes=3,steps=2,draft=14/14 | 'ow, especially for long documents. Next.'
+translay: revise   79.7ms es:passes=7,steps=5,draft=18/34 ja:passes=1,steps=0,draft=14/16 | 'ight now, especially for long documents.'
+[#7] SRC: Latency is our biggest concern right now, especially for long documents.   (finished→final 79 ms)
+[#7] EN: Latency is our biggest concern right now, especially for long documents.
+[#7] ES: La latencia es nuestra principal preocupación en este momento, especialmente para los documentos extensos.
+[#7] JA: 現在、特に長文ドキュメントにおいて、レイテンシが最大の懸念事項となっています。
+translay: settle    8.7ms prefilled=[1, 1, 1]
+translay: revise   42.9ms es:passes=4,steps=3,draft=0/0 ja:passes=3,steps=2,draft=0/0 | 'Next for the.'
+translay: revise   43.7ms es:passes=6,steps=5,draft=2/3 ja:passes=5,steps=4,draft=0/2 | 'Next for the we plan.'
+translay: revise   95.6ms es:passes=12,steps=11,draft=0/7 ja:passes=8,steps=7,draft=0/4 | 'Next photo, we plan to fine.'
+translay: revise  192.2ms es:passes=15,steps=13,draft=5/14 ja:passes=6,steps=5,draft=2/7 | 'Next photo, we plan to fine tune.'
+translay: revise  312.7ms es:passes=26,steps=25,draft=0/19 ja:passes=12,steps=10,draft=2/9 | 'r, we plan to fine tune a smaller model.'
+translay: revise   24.9ms es:passes=1,steps=0,draft=25/25 ja:passes=1,steps=0,draft=13/13 | 'we plan to fine tune a smaller model on.'
+translay: revise   63.5ms es:passes=7,steps=5,draft=19/31 ja:passes=4,steps=3,draft=9/13 | 'lan to fine tune a smaller model on our.'
+translay: revise  156.9ms es:passes=18,steps=15,draft=12/34 ja:passes=10,steps=8,draft=7/18 | 'ne tune a smaller model on our own data.'
+translay: revise  122.4ms es:passes=14,steps=12,draft=19/41 ja:passes=3,steps=2,draft=16/16 | 'aller model on our own data. That means.'
+translay: revise  150.1ms es:passes=14,steps=12,draft=19/44 ja:passes=7,steps=4,draft=12/32 | 'ller model on our own data. Let me know.'
+translay: revise  124.7ms es:passes=13,steps=10,draft=18/54 ja:passes=5,steps=2,draft=12/32 | 'ne tune a smaller model on our own data.'
+[#8] SRC: Next quarter, we plan to fine tune a smaller model on our own data.   (finished→final 124 ms)
+[#8] EN: Next quarter, we plan to fine tune a smaller model on our own data.
+[#8] ES: El próximo trimestre, tenemos previsto ajustar un modelo más pequeño sobre nuestros propios datos.
+[#8] JA: 次四半期には、自社データを用いてより小規模なモデルのファインチューニングを行う予定です。
+translay: settle    7.5ms prefilled=[1, 1, 1]
+translay: revise   67.9ms es:passes=9,steps=8,draft=0/0 ja:passes=6,steps=5,draft=0/0 | 'Let me know if you have.'
+translay: revise   74.2ms es:passes=9,steps=8,draft=4/8 ja:passes=5,steps=4,draft=0/5 | 'Let me know if you have any questions.'
+translay: revise   47.1ms es:passes=3,steps=2,draft=11/12 ja:passes=4,steps=2,draft=2/6 | 'me know if you have any questions about.'
+translay: revise   60.2ms es:passes=6,steps=5,draft=12/13 ja:passes=5,steps=3,draft=2/7 | 'ave any questions about the development.'
+translay: revise   83.2ms es:passes=7,steps=6,draft=13/17 ja:passes=6,steps=4,draft=2/8 | 'questions about the deployment schedule.'
+translay: revise   21.1ms es:passes=1,steps=0,draft=19/19 ja:passes=1,steps=0,draft=7/7 | 'questions about the deployment schedule.'
+[#9] SRC: Let me know if you have any questions about the deployment schedule.   (finished→final 21 ms)
+[#9] EN: Let me know if you have any questions about the deployment schedule.
+[#9] ES: Avísame si tienes alguna pregunta sobre el calendario de despliegue.
+[#9] JA: デプロイスケジュールについてご質問があれば、お知らせください。
+translay: settle    7.2ms prefilled=[1, 1, 1]
+passes=175 pass median=236 ms p90=488 ms
+recogniser lag behind real time: median=199 ms p90=448 ms max=1102 ms
+lines=9 finished→final median=84 ms p90=131 ms
+wall 60764 ms (realtime=true)
+FINISHED_ENGLISH: Oh. I want to talk you, talk, walk you through the architecture of our new search agent. The frontends send the query to the API gateway, which routes it to the orchestrator. The orchestrator breaks the question into subtasks and runs them in parallel. Each worker calls a language model and a web search tool. the result to embeds so repeated questions came back in under a second. Latency is our biggest concern right now, especially for long documents. Next quarter, we plan to fine tune a smaller model on our own data. Let me know if you have any questions about the deployment schedule.

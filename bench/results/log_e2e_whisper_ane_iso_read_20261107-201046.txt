@@ -1,0 +1,38 @@
+engine ready in 10988 ms
+[#1] SRC: Today I want to walk you through the architecture of our new search agent.   (finished→final 77 ms)
+[#1] EN: Today I want to walk you through the architecture of our new search agent.
+[#1] ES: Hoy quiero guiarte a través de la arquitectura de nuestro nuevo agente de búsqueda.
+[#1] JA: 今日は、新しい検索エージェントのアーキテクチャについてご説明したいと思います。
+[#2] SRC: The front end sends a query to the API Gateway, which routes it to the orchestrator.   (finished→final 144 ms)
+[#2] EN: The front end sends a query to the API Gateway, which routes it to the orchestrator.
+[#2] ES: El front end envía una consulta al API Gateway, que la remite al orquestador.
+[#2] JA: フロントエンドはAPIゲートウェイにクエリを送信し、それがオーケストレーターにルーティングされます。
+[#3] SRC: The orchestrator breaks the question into sub-tasks and runs them in parallel.   (finished→final 161 ms)
+[#3] EN: The orchestrator breaks the question into sub-tasks and runs them in parallel.
+[#3] ES: El orquestador desglosa la consulta en subtareas y las ejecuta en paralelo.
+[#3] JA: オーケストレーターは質問をサブタスクに分割し、それらを並列に実行します。
+[#4] SRC: Each worker calls a language model and a web search tool.   (finished→final 195 ms)
+[#4] EN: Each worker calls a language model and a web search tool.
+[#4] ES: Cada trabajador llama a un modelo de lenguaje y a una herramienta de búsqueda web.
+[#4] JA: 各ワーカーは、言語モデルとウェブ検索ツールを呼び出します。
+[#5] SRC: We cast the results in Redis, so repeated questions come back in a second.   (finished→final 58 ms)
+[#5] EN: We cast the results in Redis, so repeated questions come back in a second.
+[#5] ES: Casteamos los resultados en Redis, por lo que las consultas repetidas regresan en un segundo.
+[#5] JA: 結果をRedisにキャストするため、繰り返しの質問が1秒以内に返ってきます。
+[#6] SRC: Latency is our biggest concern right now, especially for long documents.   (finished→final 149 ms)
+[#6] EN: Latency is our biggest concern right now, especially for long documents.
+[#6] ES: La latencia es nuestra principal preocupación en este momento, especialmente para los documentos extensos.
+[#6] JA: 現在、特に長文ドキュメントにおいて、レイテンシが最大の懸念事項となっています。
+[#7] SRC: Next quarter, we plan to fine-tune a smaller model on our own data.   (finished→final 180 ms)
+[#7] EN: Next quarter, we plan to fine-tune a smaller model on our own data.
+[#7] ES: El próximo trimestre, tenemos previsto ajustar un modelo más pequeño sobre nuestros propios datos.
+[#7] JA: 来四半期には、自社データを用いてより小規模なモデルをファインチューニングする予定です。
+[#8] SRC: Let me know if you have any questions about the deployment schedule.   (finished→final 121 ms)
+[#8] EN: Let me know if you have any questions about the deployment schedule.
+[#8] ES: Avísame si tienes alguna pregunta sobre el calendario de despliegue.
+[#8] JA: デプロイスケジュールについてご質問があれば、お知らせください。
+passes=77 pass median=0 ms p90=1207 ms
+recogniser lag behind real time: median=55 ms p90=1238 ms max=1351 ms
+lines=8 finished→final median=149 ms p90=195 ms
+wall 56253 ms (realtime=true)
+FINISHED_ENGLISH: Today I want to walk you through the architecture of our new search agent. The front end sends a query to the API Gateway, which routes it to the orchestrator. The orchestrator breaks the question into sub-tasks and runs them in parallel. Each worker calls a language model and a web search tool. We cast the results in Redis, so repeated questions come back in a second. Latency is our biggest concern right now, especially for long documents. Next quarter, we plan to fine-tune a smaller model on our own data. Let me know if you have any questions about the deployment schedule.

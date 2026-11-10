@@ -1,0 +1,105 @@
+[transformers] You are using a model of type `plamo3` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+translay: revise  180.0ms es:passes=5,steps=4,draft=0/0 ja:passes=2,steps=1,draft=0/0 | 'Okay so'
+translay: revise   46.6ms es:passes=5,steps=4,draft=3/4 ja:passes=5,steps=4,draft=0/1 | "Okay so let's get started."
+translay: revise   24.4ms es:passes=1,steps=0,draft=7/7 ja:passes=1,steps=0,draft=4/4 | "Okay so let's get started."
+translay: settle   13.3ms prefilled=[5, 1, 1]
+translay: ready in 46.6s (recogniser=whisper, asr=/Users/mojashi/repos/translay/models/whisper-large-v3-turbo, mt=/Users/mojashi/repos/translay/models/plamo-3-translate-0.8b-MLX-4bit)
+engine ready in 48573 ms
+translay: revise   51.7ms es:passes=4,steps=3,draft=0/0 ja:passes=2,steps=1,draft=0/0 | 'Yeah.'
+translay: revise   52.0ms es:passes=8,steps=7,draft=0/3 ja:passes=4,steps=3,draft=0/1 | 'Today I want to talk'
+translay: revise   42.3ms es:passes=3,steps=2,draft=7/7 ja:passes=6,steps=5,draft=1/3 | 'Today I want to talk to you'
+translay: revise  118.8ms es:passes=6,steps=4,draft=9/11 ja:passes=11,steps=9,draft=1/7 | 'ay I want to talk to you, talk to Marcus'
+translay: revise   90.7ms es:passes=12,steps=11,draft=4/14 ja:passes=10,steps=9,draft=1/11 | 'alk to you, talk to walk you through the'
+translay: revise  143.3ms es:passes=18,steps=16,draft=5/17 ja:passes=9,steps=7,draft=3/17 | 'ou, talk to you through the architecture'
+translay: revise  121.8ms es:passes=11,steps=9,draft=14/24 ja:passes=14,steps=13,draft=3/11 | 'lker through the architecture of our new'
+translay: revise  169.0ms es:passes=22,steps=20,draft=10/30 ja:passes=12,steps=11,draft=1/16 | 'he architecture of our new search agent.'
+translay: revise   82.5ms es:passes=7,steps=4,draft=29/49 ja:passes=7,steps=5,draft=4/17 | 'he architecture of our new search agent.'
+translay: revise   81.3ms es:passes=8,steps=7,draft=34/35 ja:passes=6,steps=5,draft=10/10 | 'r new search agent. The front-hand sends'
+translay: revise  106.6ms es:passes=12,steps=11,draft=34/41 ja:passes=5,steps=4,draft=13/15 | 'h agent. The front-hand sends a query to'
+translay: revise   60.2ms es:passes=8,steps=6,draft=35/49 ja:passes=6,steps=5,draft=11/17 | ' agent. The front-end sends according to'
+translay: revise  145.5ms es:passes=18,steps=13,draft=27/81 ja:passes=5,steps=4,draft=13/16 | 'The front-end sends according to the API'
+translay: revise   66.0ms es:passes=5,steps=4,draft=41/44 ja:passes=5,steps=4,draft=14/17 | '-end sends according to the API Gateway.'
+translay: revise  124.1ms es:passes=17,steps=15,draft=37/53 ja:passes=10,steps=7,draft=9/34 | 'hand sends according to the API gateway.'
+translay: revise  332.6ms es:passes=33,steps=27,draft=22/102 ja:passes=27,steps=24,draft=3/33 | 'e API gateway, which rules it to the Arc'
+translay: revise  212.5ms es:passes=23,steps=20,draft=41/67 ja:passes=16,steps=12,draft=14/49 | 'eway which rules it to the orchestrated.'
+translay: revise  217.1ms es:passes=22,steps=17,draft=51/96 ja:passes=14,steps=10,draft=23/57 | 'he orchestrated. The orchestrator breaks'
+translay: revise  262.1ms es:passes=28,steps=20,draft=36/147 ja:passes=16,steps=12,draft=27/61 | 'he orchestrator breaks the question into'
+translay: revise  172.8ms es:passes=18,steps=13,draft=50/101 ja:passes=18,steps=12,draft=23/88 | 'ator breaks the question into sub-tasks.'
+translay: revise  236.6ms es:passes=26,steps=20,draft=45/121 ja:passes=16,steps=11,draft=28/78 | 'aks the question into sub-tasks and runs'
+translay: revise  244.2ms es:passes=24,steps=17,draft=52/130 ja:passes=12,steps=7,draft=34/82 | 'nto sub-tasks and runs them in parallel.'
+translay: revise  255.6ms es:passes=25,steps=17,draft=50/149 ja:passes=19,steps=12,draft=25/107 | 'nto sub-tasks and runs them in parallel.'
+translay: revise  336.5ms es:passes=40,steps=32,draft=45/148 ja:passes=24,steps=17,draft=25/105 | ' them in parallel. Each worker calls the'
+translay: revise  215.1ms es:passes=21,steps=15,draft=74/133 ja:passes=6,steps=5,draft=48/48 | 'el. Each worker calls a language module.'
+translay: revise  108.8ms es:passes=7,steps=5,draft=95/106 ja:passes=6,steps=4,draft=51/54 | 'calls a language module and a web search'
+translay: revise  261.4ms es:passes=22,steps=16,draft=86/161 ja:passes=13,steps=7,draft=45/99 | 's a language module and web source tool.'
+translay: revise  279.5ms es:passes=28,steps=20,draft=83/183 ja:passes=25,steps=17,draft=34/125 | 'ule and web source to recast the result.'
+translay: revise  207.2ms es:passes=21,steps=15,draft=98/170 ja:passes=10,steps=9,draft=55/58 | 'eb source to recast the results in ready'
+translay: revise  114.2ms es:passes=9,steps=7,draft=116/130 ja:passes=5,steps=3,draft=61/66 | 'recast the results in ready sub-repeated'
+translay: revise  114.9ms es:passes=11,steps=8,draft=116/142 ja:passes=4,steps=2,draft=63/67 | ' results in ready sub-repeated questions'
+translay: revise  221.9ms es:passes=13,steps=11,draft=116/134 ja:passes=21,steps=16,draft=41/114 | 'ults in ready so repeated questions came'
+translay: revise  223.9ms es:passes=20,steps=18,draft=117/133 ja:passes=27,steps=21,draft=43/115 | 'd questions came back in under a second.'
+translay: revise  124.9ms es:passes=4,steps=2,draft=133/140 ja:passes=11,steps=8,draft=56/85 | 'd questions came back in under a second.'
+translay: revise   96.3ms es:passes=2,steps=1,draft=30/136 ja:passes=8,steps=6,draft=5/78 | 'he architecture of our new search agent.'
+[#1] SRC: Today I want to talk to you, talk to you through the architecture of our new search agent.   (finished→final 96 ms)
+[#1] EN: Today I want to talk to you, talk to you through the architecture of our new search agent.
+[#1] ES: Hoy quiero hablarte, hablarte a través de la arquitectura de nuestro nuevo agente de búsqueda.
+[#1] JA: 今日は皆さんにお話ししたいと思います。新しい検索エージェントのアーキテクチャについてお話しします。
+translay: settle    9.1ms prefilled=[5, 1, 1]
+translay: revise  132.0ms es:passes=23,steps=22,draft=0/0 ja:passes=18,steps=17,draft=0/0 | 'way, which rules it to the orchestrator.'
+[#2] SRC: The front-end stands according to the API Gateway, which rules it to the orchestrator.   (finished→final 132 ms)
+[#2] EN: The front-end stands according to the API Gateway, which rules it to the orchestrator.
+[#2] ES: El front-end se instala según el API Gateway, que lo regula al orquedor.
+[#2] JA: フロントエンドはAPIゲートウェイに準拠しており、それがオーケストレーターにルールを割り当てます。
+translay: settle    6.9ms prefilled=[1, 1, 1]
+translay: revise  139.2ms es:passes=25,steps=24,draft=0/0 ja:passes=18,steps=17,draft=0/0 | 'nto sub-tasks and runs them in parallel.'
+[#3] SRC: The orchestrator breaks the question into sub-tasks and runs them in parallel.   (finished→final 139 ms)
+[#3] EN: The orchestrator breaks the question into sub-tasks and runs them in parallel.
+[#3] ES: El orquedor desglosa la pregunta en subtareas y las ejecuta en paralelo.
+[#3] JA: オーケストレーターは質問をサブタスクに分割し、それらを並列に実行します。
+translay: settle    6.3ms prefilled=[1, 1, 1]
+translay: revise  313.1ms es:passes=57,steps=56,draft=0/0 ja:passes=26,steps=25,draft=0/0 | 'd questions came back in under a second.'
+translay: revise  180.1ms es:passes=26,steps=21,draft=44/91 ja:passes=24,steps=21,draft=12/42 | ' entry is our biggest concern right now.'
+translay: revise  109.4ms es:passes=8,steps=3,draft=61/113 ja:passes=2,steps=1,draft=35/35 | "y is our biggest concern right now. It's"
+translay: revise  173.4ms es:passes=16,steps=9,draft=59/132 ja:passes=15,steps=12,draft=22/58 | 'iggest concern right now, especially for'
+translay: revise  153.6ms es:passes=15,steps=11,draft=64/108 ja:passes=13,steps=10,draft=27/49 | 'ight now, especially for long documents.'
+translay: revise  228.8ms es:passes=27,steps=21,draft=59/138 ja:passes=9,steps=6,draft=34/54 | 'specially for long documents. Next book,'
+translay: revise  216.9ms es:passes=20,steps=13,draft=68/151 ja:passes=9,steps=7,draft=36/49 | 'r long documents. Next for the replanter'
+translay: revise  205.3ms es:passes=23,steps=15,draft=71/162 ja:passes=12,steps=10,draft=36/53 | 'ents. Next for the replant of fine tune,'
+translay: revise  225.6ms es:passes=27,steps=19,draft=69/177 ja:passes=9,steps=7,draft=38/59 | ' plan to find children a small amount of'
+translay: revise  154.1ms es:passes=14,steps=7,draft=78/160 ja:passes=6,steps=5,draft=41/46 | 'Next, we plan to find a smaller model on'
+translay: revise  234.3ms es:passes=16,steps=11,draft=73/138 ja:passes=19,steps=14,draft=33/80 | ', we plan to find a smaller model on our'
+translay: revise  331.7ms es:passes=34,steps=26,draft=67/172 ja:passes=17,steps=12,draft=34/91 | 'to find a smaller model on our own data.'
+translay: revise  270.2ms es:passes=25,steps=18,draft=81/172 ja:passes=17,steps=13,draft=36/73 | 'er model on our own data. Let me know if'
+translay: revise  374.3ms es:passes=42,steps=34,draft=71/186 ja:passes=31,steps=25,draft=26/107 | 'a. Let me know if you have any problems.'
+translay: revise  290.2ms es:passes=32,steps=23,draft=83/203 ja:passes=16,steps=12,draft=40/92 | 'have any questions about the department.'
+translay: revise  299.6ms es:passes=29,steps=21,draft=95/193 ja:passes=24,steps=18,draft=35/106 | 'uestions about the development schedule.'
+translay: revise  209.5ms es:passes=13,steps=8,draft=43/171 ja:passes=13,steps=10,draft=13/82 | 'd questions came back in under a second.'
+[#4] SRC: Each worker calls a language module and web source to recast the results in ready so repeated questions came back in under a second.   (finished→final 209 ms)
+[#4] EN: Each worker calls a language module and web source to recast the results in ready so repeated questions came back in under a second.
+[#4] ES: Cada trabajador llama a un módulo de idioma y a un código fuente web para reestructurar los resultados, de modo que las preguntas repetidas regresaran en menos de un segundo.
+[#4] JA: 各ワーカーは言語モジュールとウェブソースを呼び出して結果を再構成し、1秒未満で繰り返し質問が返ってくるようにしました。
+translay: settle    8.4ms prefilled=[1, 1, 1]
+translay: revise  137.8ms es:passes=24,steps=23,draft=0/0 ja:passes=14,steps=13,draft=0/0 | 'ight now, especially for long documents.'
+[#5] SRC: Lighting tree is our biggest concern right now, especially for long documents.   (finished→final 138 ms)
+[#5] EN: Lighting tree is our biggest concern right now, especially for long documents.
+[#5] ES: El lighting tree es nuestra principal preocupación en este momento, especialmente para documentos largos.
+[#5] JA: 現在、特に長文ドキュメントにおいて、ライティングツリーが最大の懸念事項となっています。
+translay: settle    5.3ms prefilled=[1, 1, 1]
+translay: revise  129.6ms es:passes=25,steps=24,draft=0/0 ja:passes=15,steps=14,draft=0/0 | 'ne-tune a smaller model on our own data.'
+[#6] SRC: Next, we plan to fine-tune a smaller model on our own data.   (finished→final 129 ms)
+[#6] EN: Next, we plan to fine-tune a smaller model on our own data.
+[#6] ES: A continuación, planeamos optimizar un modelo más pequeño sobre nuestro propio datos.
+[#6] JA: 次に、自社データを用いてより小規模なモデルをファインチューニングする予定です。
+translay: settle    6.2ms prefilled=[1, 1, 1]
+translay: revise  116.2ms es:passes=22,steps=21,draft=0/0 ja:passes=8,steps=7,draft=0/0 | 'uestions about the development schedule.'
+translay: revise   14.4ms es:passes=1,steps=0,draft=21/21 ja:passes=1,steps=0,draft=7/7 | 'uestions about the development schedule.'
+[#7] SRC: Let me know if you have any questions about the development schedule.   (finished→final 14 ms)
+[#7] EN: Let me know if you have any questions about the development schedule.
+[#7] ES: Avísame si tienes alguna pregunta sobre el cronograma de desarrollo.
+[#7] JA: 開発スケジュールについてご質問があれば、お知らせください。
+translay: settle    6.2ms prefilled=[1, 1, 1]
+passes=165 pass median=0 ms p90=679 ms
+recogniser lag behind real time: median=-82 ms p90=652 ms max=747 ms
+lines=7 finished→final median=132 ms p90=209 ms
+wall 60776 ms (realtime=true)
+FINISHED_ENGLISH: Today I want to talk to you, talk to you through the architecture of our new search agent. The front-end stands according to the API Gateway, which rules it to the orchestrator. The orchestrator breaks the question into sub-tasks and runs them in parallel. Each worker calls a language module and web source to recast the results in ready so repeated questions came back in under a second. Lighting tree is our biggest concern right now, especially for long documents. Next, we plan to fine-tune a smaller model on our own data. Let me know if you have any questions about the development schedule.
