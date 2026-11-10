@@ -14,6 +14,8 @@ In  (stdin):   {"type": "audio", "pcm16": "<base64 little-endian int16, 16 kHz m
                {"type": "language", "language": "English" | "auto"}
                {"type": "targets", "targets": ["ja"]}  — translate into these instead ([] = none)
                {"type": "end"}                       — the source stopped: finish what is pending
+                                                       (the engine stays up for the next source)
+               end of stdin                          — finish what is pending and exit
 Out (stdout):  {"type": "status", "text": "…"}         — start-up progress, for the user to see
                {"type": "ready", …}
                {"type": "speaking", "line": 3, "en": "…", "lang": "en"}   — "en" is the spoken text
@@ -46,7 +48,8 @@ from translay_mt.plamo_fast import load_plamo
 from translay_mt.sentences import Finished, SentenceCutter, Speaking, Utterance
 from translay_mt.translating import Interpreters, log
 
-_END = object()
+_SOURCE_STOPPED = object()      # the app stopped or switched the audio source
+_CLOSED = object()              # stdin ended: nobody is talking to the engine any more
 MLX_CACHE_LIMIT = 512 * 1024 * 1024
 
 
@@ -115,13 +118,14 @@ class Inbox:
             elif kind == "language":
                 self.items.put(Language(parse_language(str(msg["language"]))))
             elif kind == "end":
-                self.items.put(_END)
+                self.items.put(_SOURCE_STOPPED)
             else:
                 raise ValueError(f"unknown message type {kind!r}")
-        self.items.put(_END)
+        self.items.put(_CLOSED)
 
-    def take(self) -> tuple[np.ndarray, list, bool]:
-        """Everything that has arrived (waiting for at least one item): audio, controls, ended?"""
+    def take(self) -> tuple[np.ndarray, list, bool, bool]:
+        """Everything that has arrived (waiting for at least one item):
+        audio, controls, did the source stop?, was stdin closed?"""
         items = [self.items.get()]
         while True:
             try:
@@ -134,7 +138,7 @@ class Inbox:
         audio = [i for i in items if isinstance(i, np.ndarray)]
         controls = [i for i in items if isinstance(i, (Terms, Language, Targets))]
         pcm = np.concatenate(audio) if audio else np.zeros(0, dtype=np.float32)
-        return pcm, controls, any(i is _END for i in items)
+        return pcm, controls, any(i is _SOURCE_STOPPED for i in items), any(i is _CLOSED for i in items)
 
 
 def emit(message: dict) -> None:
@@ -156,7 +160,7 @@ class Engine:
     def run(self, inbox: Inbox) -> None:
         """音が来る限り: 取り込み → 聞き直し → 切り出し → 訳す"""
         while True:
-            pcm, controls, ended = inbox.take()
+            pcm, controls, source_stopped, closed = inbox.take()
             for c in controls:
                 if isinstance(c, Terms):
                     self.listener.terms = c.words
@@ -178,9 +182,17 @@ class Engine:
                     self._caption(self.cutter.cut_stable(self.listener.committed, self.listener.window_text, heard))
                 else:
                     self._caption(self.cutter.cut(text, heard))
-            if ended:
-                self._caption(self.cutter.flush())
+            if source_stopped or closed:
+                self._finish_what_is_pending()
+            if closed:
                 return
+
+    def _finish_what_is_pending(self) -> None:
+        """音源が止まった: 話し途中の文を言い終えたものとして訳し、次の音源をまっさらな耳で待つ"""
+        self._caption(self.cutter.flush())
+        self.listener.reset()
+        self.cutter = SentenceCutter()
+        log("source stopped: pending text finished, listening afresh")
 
     def _caption(self, utterances: list[Utterance]) -> None:
         # Only the newest unfinished sentence is worth translating; finished ones always are.
