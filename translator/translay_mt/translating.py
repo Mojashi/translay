@@ -34,6 +34,7 @@ class Interpreters:
         self.model, self.tokenizer = model, tokenizer
         self.translators: dict[str, StreamingTranslator] = {}     # the languages being translated into right now
         self.trace = trace
+        self._latest: tuple[str, str | None, dict[str, str]] | None = None    # the last revision: text, spoken language, its translations
         self.translate_into(targets)
 
     def translate_into(self, targets: list[str]) -> None:
@@ -44,6 +45,7 @@ class Interpreters:
         unknown = [lang for lang in targets if lang not in TARGET_LANGUAGES]
         if unknown:
             raise ValueError(f"PLaMo 3 does not translate into {unknown}; it knows {sorted(TARGET_LANGUAGES)}")
+        self._latest = None
         self.translators = {lang: self.translators.get(lang) or
                             StreamingTranslator(self.model, self.tokenizer, target_lang=lang,
                                                 draft_stickiness=DRAFT_STICKINESS) for lang in targets}
@@ -63,11 +65,17 @@ class Interpreters:
                                  f"draft={r.stats.draft_accepted}/{r.stats.draft_offered}"
                                  for lang, r in zip(active, revisions))
                 log(f"revise {revisions[0].stats.seconds * 1000:6.1f}ms {parts} | {text[-40:]!r}")
-        return {lang: texts[lang] for lang in self.translators}
+        texts = {lang: texts[lang] for lang in self.translators}
+        self._latest = (text, source_lang, texts)
+        return texts
 
     def finish(self, text: str, source_lang: str | None) -> dict[str, str]:
         """言い終えた文を確定訳し、履歴に積む"""
-        texts = self.revise(text, source_lang)      # same stickiness: the final does not jump away from the draft
+        if self._latest is not None and self._latest[:2] == (text, source_lang):
+            texts = self._latest[2]                 # exactly what was just translated: that translation stands
+        else:
+            texts = self.revise(text, source_lang)  # same stickiness: the final does not jump away from the draft
+        self._latest = None
         for tr in self.translators.values():
             tr.commit()            # a no-op for translators that skipped this sentence
         return texts
@@ -80,5 +88,6 @@ class Interpreters:
             log(f"settle {(time.perf_counter() - t0) * 1000:6.1f}ms prefilled={prefilled}")
 
     def reset(self) -> None:
+        self._latest = None
         for tr in self.translators.values():
             tr.reset()
