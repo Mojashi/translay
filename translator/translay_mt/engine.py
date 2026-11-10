@@ -217,6 +217,8 @@ class Engine:
         where = "skip(silent)" if s.skipped_silent else ("gpu" if s.encoded_on_gpu else "ok")
         if s.dropped_overflow:
             where += "+dropped-unagreed-audio"
+        if s.reheard_without_prompt:
+            where += "+reheard-without-prompt"
         tail = self.listener.text[-50:].replace("\n", " ")
         log(f"pass heard={self.listener.heard_seconds:7.2f}s got={len(pcm) / SAMPLE_RATE:5.2f}s "
             f"peak={float(np.abs(pcm).max()):.3f} rms={float(np.sqrt((pcm ** 2).mean())):.4f} "

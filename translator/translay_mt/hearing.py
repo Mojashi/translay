@@ -129,6 +129,7 @@ class PassStats:
     seconds: float = 0.0
     encoded_on_gpu: bool = False    # Whisper: the ANE encoder was unavailable for this pass
     skipped_silent: bool = False    # Whisper: no speech energy in the buffer, pass skipped
+    reheard_without_prompt: bool = False   # Whisper: the output copied the previous text; decoded again without it
     dropped_overflow: bool = False  # Whisper: nothing committable as the window filled; old audio dropped
 
 

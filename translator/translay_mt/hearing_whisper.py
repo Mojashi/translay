@@ -360,16 +360,37 @@ class WhisperListener:
 
     # ---- decoder: prompt + previous pass as draft, in one forward ----------------------------
 
-    def _prompt(self) -> list[int]:
-        text = self.committed[-600:]
+    def _prompt(self, with_what_was_said: bool = True) -> list[int]:
+        text = self.committed[-600:] if with_what_was_said else ""
         if self.terms:
             text = _spaced(", ".join(self.terms) + ".", text)
         return self.tok.encode(" " + text.strip())[-PROMPT_TOKENS:] if text.strip() else []
 
     def _decode(self, audio_features: mx.array, stats: PassStats) -> list[int]:
+        """聞き取る。出てきたのが直前の文の写しなら、前の文を見せずに聞き直す。
+
+        The committed text is Whisper's prompt. Once it ends in a repeated sentence, Whisper tends
+        to copy that sentence again whatever the audio says, each copy is committed, and the prompt
+        gets worse: "overview of the police. overview of the police. …" for minutes. Heard without
+        the previous text, real speech comes out as itself — and a speaker who really did repeat
+        the sentence still gets it.
+        """
+        tokens = self._decode_after(self._prompt(), audio_features, stats)
+        if self._copies_what_was_said(tokens):
+            self.draft = []
+            stats.reheard_without_prompt = True
+            tokens = self._decode_after(self._prompt(with_what_was_said=False), audio_features, stats)
+        return tokens
+
+    def _copies_what_was_said(self, tokens: list[int]) -> bool:
+        segments = self._segments(tokens)
+        said = _norm(self.committed[-600:])
+        first = _norm(self._text(segments[0].tokens)) if segments else ""
+        return bool(first) and first in said
+
+    def _decode_after(self, prev: list[int], audio_features: mx.array, stats: PassStats) -> list[int]:
         tok = self.tok
         dec = DecoderPass(self.model.decoder, audio_features)
-        prev = self._prompt()
         head = ([tok.sot_prev] + prev) if prev else []
         prompt = head + self._sot_sequence_after(dec, head)
         stats.prefilled = len(prompt)
