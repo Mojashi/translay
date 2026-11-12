@@ -4,7 +4,8 @@
 #     scripts/build-app.sh en,ja English   # translation targets switched on at first launch; spoken language
 #     scripts/build-app.sh en,ja auto      # â€¦ detect the spoken language
 #
-# Recognition is Whisper large-v3-turbo with its encoder on the Neural Engine.
+# Recognition is Whisper large-v3-turbo with its encoder on the Neural Engine, or Qwen3-ASR 1.7B on
+# the GPU; the menu switches between them.
 #
 # Paths the app needs at run time are written into Info.plist; the app refuses to start if any is
 # missing. Output: app/build/Translay.app
@@ -17,9 +18,10 @@ LANGUAGE="${2:?usage: scripts/build-app.sh <targets, e.g. en,ja> <English|auto|â
 UV="$(command -v uv)" || { echo "uv not found on PATH" >&2; exit 1; }
 WHISPER_MODEL="$ROOT/models/whisper-large-v3-turbo"
 WHISPER_ANE_ENCODER="$ROOT/models/whisperkit/openai_whisper-large-v3-v20240930/AudioEncoder.mlmodelc"
+QWEN_MODEL="$ROOT/models/Qwen3-ASR-1.7B-4bit"
 MT_MODEL="$ROOT/models/plamo-3-translate-0.8b-MLX-4bit"
 TERMS_FILE="$HOME/Library/Application Support/Translay/terms.txt"
-for p in "$WHISPER_MODEL" "$WHISPER_ANE_ENCODER" "$MT_MODEL" "$ROOT/translator"; do
+for p in "$WHISPER_MODEL" "$WHISPER_ANE_ENCODER" "$QWEN_MODEL" "$MT_MODEL" "$ROOT/translator"; do
   [ -e "$p" ] || { echo "missing: $p" >&2; exit 1; }
 done
 
@@ -48,6 +50,7 @@ cat > "$APP/Contents/Info.plist" <<PLIST
   <key>TranslayEngineProject</key><string>$ROOT/translator</string>
   <key>TranslayWhisperModel</key><string>$WHISPER_MODEL</string>
   <key>TranslayWhisperANEEncoder</key><string>$WHISPER_ANE_ENCODER</string>
+  <key>TranslayQwenModel</key><string>$QWEN_MODEL</string>
   <key>TranslayTranslationModel</key><string>$MT_MODEL</string>
   <key>TranslayTargetLanguages</key><string>$TARGETS</string>
   <key>TranslayTermsFile</key><string>$TERMS_FILE</string>

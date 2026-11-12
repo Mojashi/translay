@@ -6,7 +6,7 @@ requires-python = "==3.12.*"
 dependencies = [
     "coremltools==8.3.0",
     "mlx-lm==0.32.2",
-    "mlx-qwen3-asr==0.3.5",
+    "mlx-qwen3-asr==0.4.4",
     "mlx-whisper==0.4.3",
     "numba",
     "numpy",

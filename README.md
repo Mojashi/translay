@@ -19,6 +19,7 @@ PC の音（マイク or システム音声）を聞いて、話されている�
 hf download mlx-community/whisper-large-v3-turbo --local-dir models/whisper-large-v3-turbo
 hf download argmaxinc/whisperkit-coreml --include "openai_whisper-large-v3-v20240930/AudioEncoder.mlmodelc/*" \
   --local-dir models/whisperkit
+hf download mlx-community/Qwen3-ASR-1.7B-4bit --local-dir models/Qwen3-ASR-1.7B-4bit
 hf download pfnet/plamo-3-translate-0.8b-MLX-4bit --local-dir models/plamo-3-translate-0.8b-MLX-4bit
 
 scripts/vendor-fluidaudio.sh        # 比較用ツールの依存（パッケージの解決に必要）
@@ -31,6 +32,7 @@ open app/build/Translay.app
 
 - 音源（マイク / システム音声）、字幕の開始・停止・消去
 - 認識言語（自動判定も可）
+- 聞き取り（Whisper large-v3-turbo / Qwen3-ASR 1.7B。切り替えるとエンジンを立ち上げ直す）
 - 翻訳先（言語ごとにオン・オフ。エンジンを止めずに次の文から効く）
 - 記録（音声と字幕を `~/Library/Application Support/Translay/sessions/` に保存）
 - 単語登録（1 行 1 語。聞き取りが寄せられる）
@@ -51,4 +53,4 @@ PLaMo 3 Translate は PLaMo Community License（商用利用には別途手続�
 | `translator/translay_mt/streaming_translator.py`, `translating.py` | 状態を持つ翻訳器と、複数言語のまとめ訳 |
 | `bench/` | 計測スクリプトと結果。Qwen3-ASR や Nemotron など、比較した他の聞き取りエンジンの記録も含む |
 
-エンジンは `--recogniser qwen`（Qwen3-ASR）にも対応しているが、アプリは Whisper + Neural Engine だけを使う。
+聞き取りは 2 つから選べる。Whisper はエンコーダを Neural Engine で動かし、確定した音を捨てながら聞き直す。Qwen3-ASR は GPU だけで動き、確定した文の音を手放しながら、その終わりの数語を足場にして続きを聞き直す（`hearing_sentences.py`。部品は `hearing.py`）。

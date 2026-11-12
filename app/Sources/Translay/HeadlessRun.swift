@@ -5,8 +5,8 @@ import TranslayCore
 /// 画面なしで音声ファイルを字幕化し、遅れと精度を記録する（検証・計測用）。
 ///
 ///     translay --file talk.wav [--realtime] [--trace] [--reference script.txt] --targets es,ja
-///              --language English --uv … --engine-project …
-///              --whisper-model … --whisper-ane-encoder … --translation-model … --terms-file …
+///              --recogniser whisper|qwen --language English --uv … --engine-project …
+///              --whisper-model … --whisper-ane-encoder … --qwen-model … --translation-model … --terms-file …
 ///
 /// Reports: recogniser lag behind real time (wall clock − audio heard, per pass), pass time, and
 /// for each finished sentence the time from "finished" to its final translation. With
@@ -19,8 +19,12 @@ enum HeadlessRun {
         let url = URL(fileURLWithPath: arguments[i + 1])
         let realtime = arguments.contains("--realtime")
         let configuration = Configuration.fromArguments(arguments)
+        guard let r = arguments.firstIndex(of: "--recogniser"), r + 1 < arguments.count,
+              let recogniser = Recogniser(rawValue: arguments[r + 1]) else {
+            fatalError("--recogniser whisper|qwen が必要です")
+        }
         let engine = EngineProcess(configuration.engineLaunch(
-            language: configuration.recognitionLanguage, trace: true))
+            recogniser: recogniser, language: configuration.recognitionLanguage, trace: true))
         let board = await CaptionBoard(languages: configuration.targetLanguages, keep: 1000)
         let clock = Clocked()
 

@@ -80,11 +80,24 @@ class IsolatedNeuralEngineEncoder:
 
     def __call__(self, mel: mx.array) -> Optional[mx.array]:
         """mel: (1, 3000, n_mels) → (1, 1500, d), or None if the GPU must do this pass."""
+        return self.take() if self.ask(mel) else None
+
+    def ask(self, mel: mx.array) -> bool:
+        """Start encoding and return at once. False: the ANE is unavailable for this pass."""
         if not self._is_ready():
-            return None
+            return False
         self.mel[...] = np.array(mel[0]).astype(np.float16).T
         self.conn.send("encode")
-        if self.conn.poll(self.timeout):
+        self.deadline = time.monotonic() + self.timeout
+        return True
+
+    def has_answered(self) -> bool:
+        """The encoding asked for is there — or will never come (`take` then says so)."""
+        return self.conn.poll() or time.monotonic() >= self.deadline
+
+    def take(self) -> Optional[mx.array]:
+        """The encoding asked for, waiting for it up to the deadline; None if the ANE hung."""
+        if self.conn.poll(max(0.0, self.deadline - time.monotonic())):
             self.conn.recv()
             return mx.array(self.out.T[None].copy())
         self.restarts += 1

@@ -274,10 +274,14 @@ class DecodingRules:
 
 @dataclass
 class WhisperListener:
+    commits_text_itself = True      # the engine cuts sentences inside `committed`
     model: Any
     language: Optional[str] = "English"      # None = detect
     terms: list[str] = field(default_factory=list)
     ane_encoder: Optional[IsolatedNeuralEngineEncoder] = None   # None: encode with MLX on the GPU
+    padding_in_groups_of: Optional[int] = None   # encode the silence after the audio as one token per
+                                                 # this many positions (on the GPU); None: every position
+    padding_kept_whole: float = 0.5              # seconds of silence right after the audio left ungrouped
 
     def __post_init__(self) -> None:
         self.tok = get_tokenizer(multilingual=True, num_languages=self.model.num_languages, task="transcribe")
@@ -318,21 +322,46 @@ class WhisperListener:
 
     def listen(self) -> str:
         """確定していない音を聞き直し、2回続けて同じだった区間を確定する（1パス）"""
-        t0 = time.perf_counter()
-        stats = PassStats(audio_sec=len(self.buffer) / SAMPLE_RATE)
-        self.last = stats
+        if self.start_listening():
+            self.finish_listening()
+        return self.text
+
+    def start_listening(self) -> bool:
+        """聞き直しを始める: 音をエンコードに出す。声が無ければ何もしない（False）。
+
+        With the Neural Engine the encoding runs in its own process, so the caller may do other
+        work until `encoding_has_answered`, then `finish_listening`. Audio must not be added in
+        between: the pass is about the buffer as it is now.
+        """
+        self._started = time.perf_counter()
+        self.last = PassStats(audio_sec=len(self.buffer) / SAMPLE_RATE)
         if not self._has_speech(self.buffer):
             self._drop_silence()
-            stats.skipped_silent = True
-            self.last = stats
-            return self.text
-        audio_features = self._encode(stats)
+            self.last.skipped_silent = True
+            return False
+        padded = np.zeros(wa.N_SAMPLES, dtype=np.float32)
+        self._samples = min(len(self.buffer), wa.N_SAMPLES)
+        padded[: self._samples] = self.buffer[: self._samples]
+        self._mel = wa.log_mel_spectrogram(padded, n_mels=self.model.dims.n_mels)[None, : wa.N_FRAMES]
+        self._asked_ane = (self.ane_encoder is not None and self.padding_in_groups_of is None
+                           and self.ane_encoder.ask(self._mel))
+        return True
+
+    def encoding_has_answered(self) -> bool:
+        return not self._asked_ane or self.ane_encoder.has_answered()
+
+    def finish_listening(self) -> None:
+        """エンコードを受け取り、聞き取って、2回続けて同じだった区間を確定する"""
+        stats = self.last
+        t0 = time.perf_counter()
+        audio_features = self._encoded(stats)
+        mx.eval(audio_features)
+        stats.encode_seconds = time.perf_counter() - t0
         tokens = self._decode(audio_features, stats)
+        stats.decode_seconds = time.perf_counter() - t0 - stats.encode_seconds
         segments = [s for s in self._segments(tokens) if self._segment_has_speech(s)]
         self._commit(segments)
-        stats.seconds = time.perf_counter() - t0
-        self.last = stats
-        return self.text
+        stats.seconds = time.perf_counter() - self._started
 
     def reset(self) -> None:
         heard = self.heard
@@ -345,18 +374,50 @@ class WhisperListener:
 
     # ---- encoder ------------------------------------------------------------------------------
 
-    def _encode(self, stats: PassStats) -> mx.array:
-        padded = np.zeros(wa.N_SAMPLES, dtype=np.float32)
-        n = min(len(self.buffer), wa.N_SAMPLES)
-        padded[:n] = self.buffer[:n]
-        mel = wa.log_mel_spectrogram(padded, n_mels=self.model.dims.n_mels)[None, : wa.N_FRAMES]
-        stats.encoded_sec = n / SAMPLE_RATE
-        if self.ane_encoder is not None:
-            features = self.ane_encoder(mel)
+    def _encoded(self, stats: PassStats) -> mx.array:
+        if self.padding_in_groups_of is not None:
+            return self._encode_with_grouped_padding(self._mel, self._samples, stats)
+        stats.encoded_sec = self._samples / SAMPLE_RATE
+        if self._asked_ane:
+            features = self.ane_encoder.take()
             if features is not None:
                 return features.astype(mx.float16)
+        if self.ane_encoder is not None:
             stats.encoded_on_gpu = True          # the ANE is restarting: this pass on the GPU
-        return self.model.encoder(mel.astype(mx.float16))
+        return self.model.encoder(self._mel.astype(mx.float16))
+
+    def _encode_with_grouped_padding(self, mel: mx.array, samples: int, stats: PassStats) -> mx.array:
+        """Most of a 30 s window is padding, and padding positions are near-copies of their neighbours.
+        Each group of them is encoded as one token that counts for the whole group in attention, and
+        its state is handed to the decoder once per position it stands for. The audio keeps the full
+        30 s context it was trained with, at a fraction of the cost."""
+        enc, stride = self.model.encoder, self.padding_in_groups_of
+        x = nn.gelu(enc.conv1(mel.astype(mx.float16)))
+        x = nn.gelu(enc.conv2(x)) + enc._positional_embedding
+        n = min(x.shape[1], int(np.ceil((samples / SAMPLE_RATE + self.padding_kept_whole) * 50)))
+        padding = x[:, n:]
+        groups = padding.shape[1] // stride
+        rest = padding[:, groups * stride:]
+        grouped = padding[:, : groups * stride].reshape(1, groups, stride, -1).mean(axis=2)
+        x = mx.concatenate([x[:, :n], grouped, rest], axis=1)
+        counts = mx.concatenate([mx.ones(n), mx.full(groups, float(stride)), mx.ones(rest.shape[1])])
+        weight = mx.log(counts).astype(x.dtype)[None, None, None, :]
+        heads = enc.blocks[0].attn.n_head
+
+        def per_head(t: mx.array) -> mx.array:
+            return t.reshape(1, -1, heads, t.shape[-1] // heads).transpose(0, 2, 1, 3)
+
+        for block in enc.blocks:
+            h = block.attn_ln(x)
+            attended = mx.fast.scaled_dot_product_attention(
+                per_head(block.attn.query(h)), per_head(block.attn.key(h)), per_head(block.attn.value(h)),
+                scale=(h.shape[-1] // heads) ** -0.5, mask=weight)
+            x = x + block.attn.out(attended.transpose(0, 2, 1, 3).reshape(x.shape))
+            x = x + block.mlp2(nn.gelu(block.mlp1(block.mlp_ln(x))))
+        x = enc.ln_post(x)
+        stats.encoded_sec = x.shape[1] / 50
+        stats.encoded_on_gpu = True
+        return mx.concatenate([x[:, :n], mx.repeat(x[:, n: n + groups], stride, axis=1), x[:, n + groups:]], axis=1)
 
     # ---- decoder: prompt + previous pass as draft, in one forward ----------------------------
 

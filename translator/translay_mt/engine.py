@@ -43,6 +43,7 @@ import mlx.core as mx
 import numpy as np
 
 from translay_mt.hearing import SAMPLE_RATE, RollingListener
+from translay_mt.hearing_sentences import SentenceWindowListener
 from translay_mt.hearing_whisper import WhisperListener
 from translay_mt.plamo_fast import load_plamo
 from translay_mt.sentences import Finished, SentenceCutter, Speaking, Utterance
@@ -146,7 +147,7 @@ def emit(message: dict) -> None:
     sys.stdout.flush()
 
 
-Listener = RollingListener | WhisperListener
+Listener = RollingListener | WhisperListener        # SentenceWindowListener is a RollingListener
 
 
 class Engine:
@@ -178,7 +179,7 @@ class Engine:
                 self._log_pass(pcm)
                 self._report_pass()
                 heard = self.listener.heard_seconds
-                if isinstance(self.listener, WhisperListener):    # it commits text itself
+                if self.listener.commits_text_itself:
                     self._caption(self.cutter.cut_stable(self.listener.committed, self.listener.window_text, heard))
                 else:
                     self._caption(self.cutter.cut(text, heard))
@@ -222,7 +223,8 @@ class Engine:
         tail = self.listener.text[-50:].replace("\n", " ")
         log(f"pass heard={self.listener.heard_seconds:7.2f}s got={len(pcm) / SAMPLE_RATE:5.2f}s "
             f"peak={float(np.abs(pcm).max()):.3f} rms={float(np.sqrt((pcm ** 2).mean())):.4f} "
-            f"{where} {s.seconds * 1000:5.0f}ms window={s.audio_sec:5.1f}s | …{tail}")
+            f"{where} {s.seconds * 1000:5.0f}ms (encode {s.encode_seconds * 1000:.0f} decode {s.decode_seconds * 1000:.0f}) "
+            f"window={s.audio_sec:5.1f}s | …{tail}")
 
     def _report_pass(self) -> None:
         if not self.trace:
@@ -230,7 +232,8 @@ class Engine:
         s = self.listener.last
         emit({"type": "pass", "ms": round(s.seconds * 1000, 1), "window": s.audio_sec,
               "encoded": s.encoded_sec, "prefilled": s.prefilled, "drafted": s.drafted,
-              "accepted": s.accepted, "stepped": s.stepped, "heard": round(self.listener.heard_seconds, 2)})
+              "accepted": s.accepted, "stepped": s.stepped, "heard": round(self.listener.heard_seconds, 2),
+              "encode_ms": round(s.encode_seconds * 1000, 1), "decode_ms": round(s.decode_seconds * 1000, 1)})
 
 
 def read_terms(path: str | None) -> list[str]:
@@ -256,11 +259,17 @@ def warm(listener: Listener, interpreters: Interpreters) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--recogniser", required=True, choices=["qwen", "whisper"],
-                    help="qwen: Qwen3-ASR rolling 8 s blocks; whisper: Whisper with committed-segment trimming")
+    ap.add_argument("--recogniser", required=True, choices=["qwen", "qwen-blocks", "whisper"],
+                    help="qwen: Qwen3-ASR, letting go of the audio of settled sentences; "
+                         "qwen-blocks: Qwen3-ASR over the last 16–24 s whatever was said (kept for comparison); "
+                         "whisper: Whisper with committed-segment trimming")
     ap.add_argument("--asr-model", required=True)
     ap.add_argument("--whisper-ane-encoder",
                     help="with --recogniser whisper: WhisperKit AudioEncoder.mlmodelc, to encode on the Neural Engine")
+    ap.add_argument("--whisper-padding-groups", type=int,
+                    help="with --recogniser whisper: encode the silence that pads the 30 s window as one token "
+                         "per this many positions, on the GPU instead of the Neural Engine. Faster, but the "
+                         "text differs more from the exact encoding than the Neural Engine's does")
     ap.add_argument("--mt-model", required=True)
     ap.add_argument("--targets", required=True, help="comma-separated target languages, e.g. es,ja")
     ap.add_argument("--language", required=True, help='recognition language, e.g. English, or "auto" to detect')
@@ -286,9 +295,11 @@ def main() -> int:
     else:
         status("聞き取りモデルを読み込み中")
     listener: Listener = (WhisperListener.load(args.asr_model, terms=terms, language=language,
-                                               ane_encoder=args.whisper_ane_encoder, notify=status)
+                                               ane_encoder=args.whisper_ane_encoder, notify=status,
+                                               padding_in_groups_of=args.whisper_padding_groups)
                           if args.recogniser == "whisper"
-                          else RollingListener.load(args.asr_model, terms=terms, language=language))
+                          else {"qwen": SentenceWindowListener, "qwen-blocks": RollingListener}[args.recogniser]
+                          .load(args.asr_model, terms=terms, language=language))
     status("翻訳モデルを読み込み中")
     mt_model, mt_tokenizer = load_plamo(args.mt_model)
     interpreters = Interpreters(mt_model, mt_tokenizer, targets, trace=args.trace)

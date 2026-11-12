@@ -127,6 +127,8 @@ class PassStats:
     accepted: int = 0
     stepped: int = 0                # tokens decoded one at a time
     seconds: float = 0.0
+    encode_seconds: float = 0.0
+    decode_seconds: float = 0.0
     encoded_on_gpu: bool = False    # Whisper: the ANE encoder was unavailable for this pass
     skipped_silent: bool = False    # Whisper: no speech energy in the buffer, pass skipped
     reheard_without_prompt: bool = False   # Whisper: the output copied the previous text; decoded again without it
@@ -154,6 +156,7 @@ class MelStream:
 
 @dataclass
 class RollingListener:
+    commits_text_itself = False     # the engine finishes sentences by agreement over the whole text
     model: Any
     tokenizer: Tokenizer
     language: Optional[str] = "English"     # None = let the model detect the language
@@ -292,15 +295,16 @@ class RollingListener:
         self.prefilled_blocks = len(self.block_features)
 
         token = _ints(mx.argmax(logits, axis=-1))[-1]
+        most = self._most_new_tokens()
         generated = [token]
         draft = self.draft
         aligned = bool(draft) and draft[0] == token
-        while len(generated) < MAX_NEW:
+        while len(generated) < most:
             if token in EOS or _detect_repetition(generated):
                 break
             proposal = (draft[len(generated):len(generated) + 256] if aligned
                         else self._realigned(generated, draft))
-            proposal = proposal[:MAX_NEW - len(generated) - 1]
+            proposal = proposal[:most - len(generated) - 1]
             at = n + len(generated) - 1
             if not proposal:
                 p = mx.array([[[at]], [[at]], [[at]]]).reshape(1, 3, 1)
@@ -322,7 +326,7 @@ class RollingListener:
             stop = False
             for t in proposal[:ok]:
                 generated.append(t)
-                if t in EOS or _detect_repetition(generated) or len(generated) >= MAX_NEW:
+                if t in EOS or _detect_repetition(generated) or len(generated) >= most:
                     stop = True
                     break
             if stop:
@@ -335,6 +339,9 @@ class RollingListener:
         if generated and generated[-1] in EOS:
             generated.pop()
         return generated
+
+    def _most_new_tokens(self) -> int:
+        return MAX_NEW
 
     @staticmethod
     def _realigned(generated: list[int], draft: list[int], ngram: int = 2, span: int = 16) -> list[int]:

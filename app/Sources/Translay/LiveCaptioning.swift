@@ -14,6 +14,9 @@ final class LiveCaptioning {
     private(set) var isReady = false
     private var startupStage = "エンジンを起動中"
     var listeningMessage = ""
+    /// お役御免（エンジンを入れ替えるとき）: このあとエンジンが終わっても字幕板には何も言わない
+    private var dismissed = false
+    func dismiss() { dismissed = true }
 
     init(engine: EngineProcess, board: CaptionBoard, onFinished: @escaping (LineID) -> Void = { _ in }) {
         self.engine = engine
@@ -25,7 +28,7 @@ final class LiveCaptioning {
     func showEvents(observe: (EngineProcess.Event) -> Void = { _ in }) async {
         let started = ContinuousClock.now
         let ticker = Task { [weak self] in
-            while let self, !self.isReady, !Task.isCancelled {
+            while let self, !self.isReady, !self.dismissed, !Task.isCancelled {
                 let seconds = (ContinuousClock.now - started).components.seconds
                 await self.board.say("\(self.startupStage)… \(seconds)秒")
                 try? await Task.sleep(nanoseconds: 1_000_000_000)
@@ -55,7 +58,7 @@ final class LiveCaptioning {
             case .pass:
                 break
             case .exited(let status):
-                await board.say("エンジンが終了しました (exit \(status))")
+                if !dismissed { await board.say("エンジンが終了しました (exit \(status))") }
             }
         }
     }

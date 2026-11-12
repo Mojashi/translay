@@ -4,11 +4,25 @@ import Foundation
 ///
 /// The .app gets these from Info.plist (written by scripts/build-app.sh); the headless runner
 /// takes the same settings as command-line flags.
+/// 聞き取りエンジン。メニューで切り替えられる（モデルが違うので、切り替えるとエンジンを立ち上げ直す）。
+enum Recogniser: String, CaseIterable {
+    case whisper        // Whisper large-v3-turbo。エンコーダは Neural Engine
+    case qwen           // Qwen3-ASR 1.7B。GPU だけで動く
+
+    var title: String {
+        switch self {
+        case .whisper: return "Whisper large-v3-turbo"
+        case .qwen: return "Qwen3-ASR 1.7B"
+        }
+    }
+}
+
 struct Configuration {
     let uv: URL
     let engineProject: URL
     let whisperModel: URL               // Whisper（確定した区間を捨てながら聞き直す）
     let whisperANEEncoder: URL          // Whisper のエンコーダの Core ML 版（Neural Engine で動かす）
+    let qwenModel: URL                  // Qwen3-ASR（8 秒ブロックで聞き続ける）
     let translationModel: URL
     let targetLanguages: [String]       // 最初にオンにする翻訳先。例: ["en", "ja"]
     let termsFile: URL                  // 単語登録（1行1語）
@@ -23,6 +37,7 @@ struct Configuration {
         ("TranslayRecognitionLanguage", "--language"),
         ("TranslayWhisperModel", "--whisper-model"),
         ("TranslayWhisperANEEncoder", "--whisper-ane-encoder"),
+        ("TranslayQwenModel", "--qwen-model"),
     ]
 
     static func fromBundle(_ bundle: Bundle = .main) -> Configuration {
@@ -51,6 +66,7 @@ struct Configuration {
         let configuration = Configuration(
             uv: URL(fileURLWithPath: v[0]), engineProject: URL(fileURLWithPath: v[1]),
             whisperModel: URL(fileURLWithPath: v[6]), whisperANEEncoder: URL(fileURLWithPath: v[7]),
+            qwenModel: URL(fileURLWithPath: v[8]),
             translationModel: URL(fileURLWithPath: v[2]),
             targetLanguages: languages, termsFile: URL(fileURLWithPath: v[4]),
             recognitionLanguage: v[5].trimmingCharacters(in: .whitespaces))
@@ -61,6 +77,7 @@ struct Configuration {
     private func validate() {
         for (what, url) in [("uv", uv), ("engine project", engineProject),
                             ("Whisper model", whisperModel), ("Whisper ANE encoder", whisperANEEncoder),
+                            ("Qwen3-ASR model", qwenModel),
                             ("translation model", translationModel)] {
             guard FileManager.default.fileExists(atPath: url.path) else {
                 fatalError("\(what) が見つかりません: \(url.path)")
@@ -78,10 +95,14 @@ struct Configuration {
 
     /// Whisper's encoder runs on the Neural Engine (faster, frees the GPU). The engine keeps it in a
     /// supervised child process, because an ANE request was seen to hang in live use.
-    func engineLaunch(language: String, trace: Bool) -> EngineProcess.Launch {
-        .init(uv: uv, project: engineProject, recogniser: "whisper", asrModel: whisperModel,
-              aneEncoder: whisperANEEncoder, translationModel: translationModel, targets: targetLanguages, termsFile: termsFile,
-              language: language, trace: trace)
+    func engineLaunch(recogniser: Recogniser, language: String, trace: Bool) -> EngineProcess.Launch {
+        let (asrModel, aneEncoder): (URL, URL?) = switch recogniser {
+        case .whisper: (whisperModel, whisperANEEncoder)
+        case .qwen: (qwenModel, nil)
+        }
+        return .init(uv: uv, project: engineProject, recogniser: recogniser.rawValue, asrModel: asrModel,
+                     aneEncoder: aneEncoder, translationModel: translationModel, targets: targetLanguages,
+                     termsFile: termsFile, language: language, trace: trace)
     }
 
     /// 単語登録ファイルの中身（1行1語、# 行と空行は除く）

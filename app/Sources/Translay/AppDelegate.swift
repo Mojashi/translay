@@ -29,6 +29,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var choice: SourceChoice = .microphone
     private var recording = false
     private lazy var recognitionLanguage = configuration.recognitionLanguage
+    /// 聞き取りエンジン（次回起動にも引き継ぐ。選んだことがなければ Whisper）
+    private var recogniser = UserDefaults.standard.string(forKey: AppDelegate.recogniserKey)
+        .flatMap(Recogniser.init(rawValue:)) ?? .whisper
+    private static let recogniserKey = "TranslayRecogniser"
+    private var switchingRecogniser: Task<Void, Never>?
     /// 翻訳先に選べる言語: PLaMo 3 Translate が訳せる 53 言語（メニューと字幕の表示順）。
     private static let targetChoices = [
         "ja", "en", "zh-hans", "zh-hant", "ko", "es", "fr", "de", "it", "ru", "ar", "hi", "id", "ms",
@@ -73,24 +78,32 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         panel?.orderFrontRegardless()
         buildMenu()
         board.say("モデルを読み込み中…")
-        Task { await loadModelsAndStart() }
+        loadModels()
+        startCaptioning()
     }
 
     func applicationWillTerminate(_ notification: Notification) {
         engine?.terminate()
     }
 
-    /// エンジンを立ち上げ、すぐ聞き始める（モデルが載るまでの音はエンジンが貯めておく）。
-    private func loadModelsAndStart() async {
+    /// エンジンを立ち上げる（モデルが載るまでに届いた音はエンジンが貯めておくので、すぐ聞き始めてよい）。
+    private func loadModels() {
         let engine = EngineProcess(configuration.engineLaunch(
-            language: recognitionLanguage, trace: false))
+            recogniser: recogniser, language: recognitionLanguage, trace: false))
         self.engine = engine
         engine.translate(into: targetsInOrder)
         let captioning = LiveCaptioning(engine: engine, board: board)
         self.captioning = captioning
         Task { await captioning.showEvents() }
         if termsWatch == nil { watchTerms() }
-        startCaptioning()
+    }
+
+    /// 今のエンジンを片付ける（入れ替えのため。終了したことは字幕板に出さない）
+    private func retireEngine() {
+        captioning?.dismiss()
+        engine?.terminate()
+        captioning = nil
+        engine = nil
     }
 
     // MARK: 単語登録
@@ -188,6 +201,17 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
         languageItem.submenu = languages
         menu.addItem(languageItem)
+        let recogniserItem = NSMenuItem(title: "聞き取り: \(recogniser.title)", action: nil, keyEquivalent: "")
+        let recognisers = NSMenu()
+        for option in Recogniser.allCases {
+            let item = NSMenuItem(title: option.title, action: #selector(chooseRecogniser(_:)), keyEquivalent: "")
+            item.target = self
+            item.representedObject = option.rawValue
+            item.state = option == recogniser ? .on : .off
+            recognisers.addItem(item)
+        }
+        recogniserItem.submenu = recognisers
+        menu.addItem(recogniserItem)
         let targetsItem = NSMenuItem(title: "翻訳先: " + (targetsInOrder.isEmpty ? "なし（原文のみ）"
                                                         : targetsInOrder.map(Self.languageName).joined(separator: "・")),
                                      action: nil, keyEquivalent: "")
@@ -271,6 +295,25 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         engine?.recognise(language: value)
         board.say("認識言語: \(sender.title)")
         refreshMenu()
+    }
+
+    /// 聞き取りエンジンを切り替える: 字幕を止め、エンジンを入れ替え、聞いていたなら聞き直す。
+    /// 続けて選ばれても、前の入れ替えが終わってから次を始める。
+    @objc private func chooseRecogniser(_ sender: NSMenuItem) {
+        guard let raw = sender.representedObject as? String, let next = Recogniser(rawValue: raw),
+              next != recogniser else { return }
+        recogniser = next
+        UserDefaults.standard.set(next.rawValue, forKey: Self.recogniserKey)
+        let previous = switchingRecogniser
+        switchingRecogniser = Task {
+            await previous?.value
+            let wasRunning = running != nil
+            await stopCaptioning()
+            retireEngine()
+            board.say("\(next.title) を読み込み中…")
+            loadModels()
+            if wasRunning { startCaptioning() } else { refreshMenu() }
+        }
     }
 
     /// 翻訳先の言語をオン・オフする（エンジンは動かしたまま、次の文から効く）

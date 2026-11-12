@@ -23,7 +23,7 @@ from mlx_whisper.tokenizer import get_tokenizer
 
 from asr_user_score import REFERENCE, normalise
 
-MODEL = "mlx-community/whisper-large-v3-turbo"
+MODEL = "../models/whisper-large-v3-turbo"
 SR = 16_000
 
 model = load_model(MODEL)
